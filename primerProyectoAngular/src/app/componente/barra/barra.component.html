@@ -1,0 +1,30 @@
+<!-- <div class="container">
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" routerLink="filtro">Entidades</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="entidades">Cadena de trámite</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Suce pre-existente</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Mis favoritos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled">Disabled</a>
+  </li>
+</ul>
+</div> -->
+
+
+<div class="container">
+
+  <nav mat-tab-nav-bar ngClass = "tabs"><a mat-tab-link routerLink="/entidades" routerLinkActive="active-link">Entidades</a><a mat-tab-link routerLink="/manage-book" routerLinkActive="active-link">Cadena de trámite</a></nav><div><router-outlet></router-outlet></div>
+
+</div>
+
+
+
+
