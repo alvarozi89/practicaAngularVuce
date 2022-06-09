@@ -11,13 +11,17 @@ import {MatGridListModule} from '@angular/material/grid-list';
 
 import { FiltroEntidadesComponent } from './componente/entidades/filtro-entidades/filtro-entidades.component';
 import { EntidadesCardComponent } from './componente/entidades/entidades-card/entidades-card.component';
+import { FiltroCadenaComponent } from './componente/cadena-tramite/filtro-cadena/filtro-cadena.component';
+import { CardTramiteComponent } from './componente/cadena-tramite/card-tramite/card-tramite.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BarraComponent,
     FiltroEntidadesComponent,
-    EntidadesCardComponent
+    EntidadesCardComponent,
+    FiltroCadenaComponent,
+    CardTramiteComponent
   ],
   imports: [
     BrowserModule,
