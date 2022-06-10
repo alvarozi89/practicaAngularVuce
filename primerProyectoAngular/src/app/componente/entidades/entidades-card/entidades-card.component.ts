@@ -9,7 +9,20 @@ export class EntidadesCardComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+ 
+  public show:boolean = false;
+  public buttonName:any = 'Show';
 
+  ngOnInit () {
+    
+    }
+
+  desplegarComponente(valor:string) {
+    
+   if(valor =="2") { 
+      this.show=true;
+   }else if(valor=="1"){
+    this.show=false;
+   }
+  }
 }
