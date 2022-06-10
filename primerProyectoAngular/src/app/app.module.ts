@@ -15,6 +15,9 @@ import { FiltroCadenaComponent } from './componente/cadena-tramite/filtro-cadena
 import { CardTramiteComponent } from './componente/cadena-tramite/card-tramite/card-tramite.component';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatIconModule} from '@angular/material/icon';
+import { CardIpenComponent } from './componente/ipen/card-ipen/card-ipen.component';
+import { FiltroIpenComponent } from './componente/ipen/filtro-ipen/filtro-ipen.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import {MatIconModule} from '@angular/material/icon';
     FiltroEntidadesComponent,
     EntidadesCardComponent,
     FiltroCadenaComponent,
-    CardTramiteComponent
+    CardTramiteComponent,
+    CardIpenComponent,
+    FiltroIpenComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatTabsModule,
     MatGridListModule,
     MatRadioModule,
-    MatIconModule
+    MatIconModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

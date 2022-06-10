@@ -153,6 +153,42 @@
     <mat-card class="m-3">
       <mat-card-title>MINAM</mat-card-title>
       <mat-card-subtitle>Ministerio de ambiente</mat-card-subtitle>
+
+      <div class="tab-content" id="nav-tabContent">
+
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+
+        </div>
+
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+          <div class="col-lg-12 my-2">
+            <div class="form-group">
+              <select class="form-control">
+                <option value="">Tipo de operación</option>
+                <option value=""></option>
+              </select>
+
+                <div class="form-group m-2 text-center">
+                  <button type="button" class="btn btn-danger" routerLink="/ipen">Continuar</button>
+                </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <nav>
+        <div class="nav nav-tabs text-center" id="nav-tab" role="tablist">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked  id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="radio" role="tab" aria-controls="nav-home" aria-selected="true">
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"  id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="radio" role="tab" aria-controls="nav-profile" aria-selected="false">
+          </div>
+        </div>
+
+      </nav>
     </mat-card>
   </mat-grid-tile>
 
