@@ -13,6 +13,8 @@ import { FiltroEntidadesComponent } from './componente/entidades/filtro-entidade
 import { EntidadesCardComponent } from './componente/entidades/entidades-card/entidades-card.component';
 import { FiltroCadenaComponent } from './componente/cadena-tramite/filtro-cadena/filtro-cadena.component';
 import { CardTramiteComponent } from './componente/cadena-tramite/card-tramite/card-tramite.component';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { CardTramiteComponent } from './componente/cadena-tramite/card-tramite/c
     MatCardModule,
     MatButtonModule,
     MatTabsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatRadioModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
