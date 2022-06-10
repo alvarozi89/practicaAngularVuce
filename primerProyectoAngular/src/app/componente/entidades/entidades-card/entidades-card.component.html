@@ -174,21 +174,16 @@
 
             </div>
           </div>
-
         </div>
       </div>
-
-      <nav>
-        <div class="nav nav-tabs text-center" id="nav-tab" role="tablist">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked  id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="radio" role="tab" aria-controls="nav-home" aria-selected="true">
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"  id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="radio" role="tab" aria-controls="nav-profile" aria-selected="false">
-          </div>
+        <div class="text-center" id="nav-tab" role="tablist">
+          <mat-radio-group aria-label="Select an option" class="text-center" >
+            <div class="text-center">
+              <mat-radio-button value="1"  name="flexRadioDefault" id="flexRadioDefault1" checked  id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="radio" role="tab" aria-controls="nav-home"></mat-radio-button>
+              <mat-radio-button value="2"  name="flexRadioDefault" id="flexRadioDefault2"  id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="radio" role="tab" aria-controls="nav-profile" ></mat-radio-button>
+            </div>
+          </mat-radio-group>
         </div>
-
-      </nav>
     </mat-card>
   </mat-grid-tile>
 
