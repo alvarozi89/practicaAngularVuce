@@ -1,0 +1,17 @@
+<h1>
+  Formulario dinamico
+</h1>
+
+
+<form class="form">
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Producto</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let item of options" [value]="item.value">
+        {{item.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <lib-dynamicForm [jsonFormData]="formData" style="width: 100%;"></lib-dynamicForm>
+</form>
