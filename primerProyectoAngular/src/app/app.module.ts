@@ -18,6 +18,15 @@ import {MatIconModule} from '@angular/material/icon';
 import { CardIpenComponent } from './componente/ipen/card-ipen/card-ipen.component';
 import { FiltroIpenComponent } from './componente/ipen/filtro-ipen/filtro-ipen.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { TupaIpenComponent } from './componente/tupa-ipen/tupa-ipen.component';
+
+import {  FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {  MatNativeDateModule} from '@angular/material/core';
+import {  HttpClientModule} from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { DynamicFormModule } from 'dynamic-form/src/public-api';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -28,7 +37,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     FiltroCadenaComponent,
     CardTramiteComponent,
     CardIpenComponent,
-    FiltroIpenComponent
+    FiltroIpenComponent,
+    TupaIpenComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +50,16 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatGridListModule,
     MatRadioModule,
     MatIconModule,
-    MatTooltipModule
+    MatTooltipModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatNativeDateModule,
+    HttpClientModule,
+    CommonModule,
+    DynamicFormModule,
+    MatFormFieldModule,
+    MatSelectModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
