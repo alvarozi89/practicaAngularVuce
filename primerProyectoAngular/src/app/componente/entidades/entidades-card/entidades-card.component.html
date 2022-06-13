@@ -40,10 +40,25 @@
       <mat-card class="m-3">
       <mat-card-title>IPEN</mat-card-title>
       <mat-card-subtitle>Instituto peruano de energia nuclear</mat-card-subtitle>
+     
+      <div class="form-group" *ngIf="show">
+        <select class="form-control">
+          <option value="">Tipo operacion</option>
+          <option value=""></option>
+        </select>
+
+        <div class="form-group m-2 text-center">
+          <button type="button" class="btn btn-danger" routerLink="/ipen">Continuar</button>
+        </div>
+      </div>
+
       <mat-radio-group aria-label="Select an option" class="text-center" >
-        <mat-radio-button value="1"></mat-radio-button>
-        <mat-radio-button value="2"></mat-radio-button>
+        <div id="divRadio">
+        <mat-radio-button  (click)="desplegarComponente('1')" value="1" ></mat-radio-button>
+        <mat-radio-button  (click)="desplegarComponente('2')" value="2" ></mat-radio-button>
+        </div>
       </mat-radio-group>
+   
     </mat-card >
   </mat-grid-tile>
 
@@ -56,6 +71,7 @@
         <mat-radio-button value="2"></mat-radio-button>
       </mat-radio-group>
     </mat-card>
+
   </mat-grid-tile>
 
   <mat-grid-tile class="layout-row">
