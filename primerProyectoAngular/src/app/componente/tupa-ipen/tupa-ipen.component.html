@@ -1,3 +1,4 @@
+
   <app-tabs-number> </app-tabs-number>
 
   <div class="tituloPrincipal">
@@ -129,8 +130,22 @@
                 <div class="text-inside-grid">Referencia:</div>
               </mat-grid-tile>
             </mat-grid-list>
+      <div class="titulosSecundarios">Datos representante legal</div>
+
+      <form class="form">
+
+          <lib-dynamicForm [jsonFormData]="formData" style="width: 100%; "></lib-dynamicForm>
+          <div _ngcontent-bvl-c85="" class="form-group m-2 text-center">
+
+
+          </div>
+
+
+      </form>
         </mat-tab>
+
       </mat-tab-group>
+
     </mat-expansion-panel>
     <mat-expansion-panel (opened)="panelOpenState = true"
                          (closed)="panelOpenState = false">
@@ -146,20 +161,30 @@
 
 
 
-  <!--
-</mat-card >
-</mat-grid-tile>
-</mat-grid-list>
-  <mat-form-field class="full-width" appearance="fill">
-    <mat-label>Producto</mat-label>
-    <mat-select>
-      <mat-option *ngFor="let item of options" [value]="item.value">
-        {{item.viewValue}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field> -->
-
-  <!-- <lib-dynamicForm [jsonFormData]="formData" style="width: 100%;"></lib-dynamicForm> -->
 
 
-<!-- </form> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

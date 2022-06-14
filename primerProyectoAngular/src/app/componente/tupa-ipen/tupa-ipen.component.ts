@@ -24,7 +24,7 @@ export class TupaIpenComponent implements OnInit {
     this.formData = {controls:[]};
   }
   ngOnInit(): void {  this.http
-    .get('/assets/my-form.json')
+    .get('/assets/my-form-rl.json')
     .subscribe((formData: any) => {
       this.formData = formData;
     });
