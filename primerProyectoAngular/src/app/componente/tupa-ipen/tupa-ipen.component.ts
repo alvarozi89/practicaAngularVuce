@@ -25,7 +25,7 @@ export class TupaIpenComponent implements OnInit {
   title = 'formsTest';
   panelOpenState = false;
   public formData: JsonFormData;
-  displayedColumns = ['fechaRegistro', 'etapa', 'descripcion', 'fechaEstimada', 'responsable'];
+  displayedColumns = ['fechaRegistro', 'etapa', 'descripcion', 'fechaEstimada', ];
   dataSource = ELEMENT_DATA;
 
   constructor(private http: HttpClient) {
