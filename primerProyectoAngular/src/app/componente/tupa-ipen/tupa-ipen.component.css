@@ -6,6 +6,7 @@
     position: absolute;
     left: 5px;
     font-size: medium;
+    padding-top: 15px;
   }
 
   .example-container {
@@ -27,9 +28,10 @@
 
   .titulosSecundarios{
     display: inline-block;
-    padding: 15px;
+    padding: 5px;
     font-size: x-large;
-    font-weight: bolder;
+    font-weight: normal;
+    padding-top: 15px;
   }
 
   .comentarios{
@@ -38,7 +40,10 @@
     padding: 15px;
     color:gray;
   }
-
+  
+  .table{
+    padding-top: 15px;
+  }
   .tableColorTitulo{
     background-color: grey;
     color: white;

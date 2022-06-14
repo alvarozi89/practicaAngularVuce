@@ -42,11 +42,9 @@
             </mat-grid-list> 
           <div>
             <br>
-            <br>
-            <br>
             <div class="titulosSecundarios">Trazabilidad</div>
-
-            <table mat-table [dataSource]="dataSource" >
+            <div class="table">
+            <table mat-table [dataSource]="dataSource"  >
 
               <!-- Fecha registro Column -->
                <ng-container matColumnDef="fechaRegistro" >
@@ -81,12 +79,54 @@
               <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
               <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table> 
-
+            </div>
           </div>
           </mat-tab>
-         
-         
           <mat-tab label="Datos Solicitante">
+            <div class="titulosSecundarios">Datos generales usuario</div>
+            <mat-grid-list cols="3" rowHeight="35px" >
+              <mat-grid-tile>
+                <div class="text-inside-grid"> Identificación:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Razón social :</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Actividad:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Celular:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Teléfono:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Fax:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Email:</div>
+              </mat-grid-tile>
+            </mat-grid-list> 
+            <div class="titulosSecundarios">Ubicación</div>
+            <mat-grid-list cols="3" rowHeight="35px" >
+              <mat-grid-tile>
+                <div class="text-inside-grid">Departamento:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Provincia:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Distrito:</div>
+              </mat-grid-tile>
+            </mat-grid-list> 
+            <mat-grid-list cols="1" rowHeight="35px" >
+              <mat-grid-tile>
+                <div class="text-inside-grid">Dirección:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Referencia:</div>
+              </mat-grid-tile>
+            </mat-grid-list>
         </mat-tab>
       </mat-tab-group>
     </mat-expansion-panel>
@@ -103,27 +143,12 @@
   
 
   
-<!-- </form> -->
-<!-- <mat-grid-list cols="1" >
-<mat-grid-tile class="layout-row">
-  <mat-card >
-  <mat-card-title>Datos Generales</mat-card-title>
-  <mat-tab-group>
-    <mat-tab label="Datos Solicitud"> 
-      <mat-grid-list cols="3" rowHeight="100px">
-        <mat-grid-tile>Número Trámite: </mat-grid-tile>
-        <mat-grid-tile>Fecha Solicitud:</mat-grid-tile>
-        <mat-grid-tile>Hora Solicitud:</mat-grid-tile>
-        <mat-grid-tile>Fecha Actualización</mat-grid-tile>
-      </mat-grid-list>   
-    </mat-tab>
-    <mat-tab label="Datos Solicitante"></mat-tab>
-  </mat-tab-group>
-  
+
+  <!--
 </mat-card >
 </mat-grid-tile>
 </mat-grid-list>
-  <!-- <mat-form-field class="full-width" appearance="fill">
+  <mat-form-field class="full-width" appearance="fill">
     <mat-label>Producto</mat-label>
     <mat-select>
       <mat-option *ngFor="let item of options" [value]="item.value">
