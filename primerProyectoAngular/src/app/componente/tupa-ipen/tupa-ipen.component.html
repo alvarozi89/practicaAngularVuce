@@ -1,9 +1,153 @@
-<h1>
-  Formulario dinamico
-</h1>
+  <div class="tituloPrincipal">
+    MNM01- Autorización de importación de residuos sólidos no peligrosos (TUPA 3)
+  </div>
+  <div class="comentarios">
+    Para iniciar el registro de la solicitud, verifica los datos del solicitante y selecciona el representante legal
+  </div>
+  <mat-accordion >
+    <mat-expansion-panel (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false" >
+      <mat-expansion-panel-header>
+        <h2>
+          Datos generales
+        </h2>
+      </mat-expansion-panel-header>
+      <mat-tab-group mat-stretch-tabs  color="warn">
+          <mat-tab label="Datos Solicitud">
+            <mat-grid-list cols="3" rowHeight="35px" >
+              <mat-grid-tile>
+                <div class="text-inside-grid">Número Trámite:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Fecha Solicitud:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Hora Solicitud:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Fecha Actualización:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Hora Actualización:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Tasa:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Plazo:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Calificación:</div>
+              </mat-grid-tile>
+            </mat-grid-list> 
+          <div>
+            <br>
+            <div class="titulosSecundarios">Trazabilidad</div>
+            <div class="table">
+            <table mat-table [dataSource]="dataSource"  >
 
+              <!-- Fecha registro Column -->
+               <ng-container matColumnDef="fechaRegistro" >
+                <th mat-header-cell *matHeaderCellDef  class="tableColorTitulo"> Fecha Registro </th>
+                <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaRegistro}} </td>
+              </ng-container> 
+          
+              <!-- Etapa Column -->
+               <ng-container matColumnDef="etapa" >
+                <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Etapa </th>
+                <td mat-cell *matCellDef="let element"class="tableColorCeldas"> {{element.etapa}} </td>
+              </ng-container>
 
-<form class="form">
+               <!-- Descripcion Column -->
+               <ng-container matColumnDef="descripcion" >
+                <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Descripción detallada </th>
+                <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.descripcion}} </td>
+              </ng-container>
+
+               <!-- Fecha Estimada Column -->
+               <ng-container matColumnDef="fechaEstimada" >
+                <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Fecha Estimada </th>
+                <td mat-cell *matCellDef="let element"class="tableColorCeldas"> {{element.fechaEstimada}} </td>
+              </ng-container>
+
+               <!-- Name Column -->
+               <ng-container matColumnDef="responsable" >
+                <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Responsable </th>
+                <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.responsable}} </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table> 
+            </div>
+          </div>
+          </mat-tab>
+          <mat-tab label="Datos Solicitante">
+            <div class="titulosSecundarios">Datos generales usuario</div>
+            <mat-grid-list cols="3" rowHeight="35px" >
+              <mat-grid-tile>
+                <div class="text-inside-grid"> Identificación:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Razón social :</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Actividad:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Celular:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Teléfono:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Fax:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Email:</div>
+              </mat-grid-tile>
+            </mat-grid-list> 
+            <div class="titulosSecundarios">Ubicación</div>
+            <mat-grid-list cols="3" rowHeight="35px" >
+              <mat-grid-tile>
+                <div class="text-inside-grid">Departamento:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Provincia:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Distrito:</div>
+              </mat-grid-tile>
+            </mat-grid-list> 
+            <mat-grid-list cols="1" rowHeight="35px" >
+              <mat-grid-tile>
+                <div class="text-inside-grid">Dirección:</div>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <div class="text-inside-grid">Referencia:</div>
+              </mat-grid-tile>
+            </mat-grid-list>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <h2>
+         Registro de trámite
+        </h2>
+      </mat-expansion-panel-header>
+      <p>I'm visible because I am open</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+  
+
+  
+
+  <!--
+</mat-card >
+</mat-grid-tile>
+</mat-grid-list>
   <mat-form-field class="full-width" appearance="fill">
     <mat-label>Producto</mat-label>
     <mat-select>
@@ -11,7 +155,9 @@
         {{item.viewValue}}
       </mat-option>
     </mat-select>
-  </mat-form-field>
+  </mat-form-field> -->
 
-  <lib-dynamicForm [jsonFormData]="formData" style="width: 100%;"></lib-dynamicForm>
-</form>
+  <!-- <lib-dynamicForm [jsonFormData]="formData" style="width: 100%;"></lib-dynamicForm> --> 
+
+
+<!-- </form> -->
