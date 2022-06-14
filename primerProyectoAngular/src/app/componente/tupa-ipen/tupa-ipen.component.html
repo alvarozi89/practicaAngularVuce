@@ -1,3 +1,5 @@
+  <app-tabs-number> </app-tabs-number>
+
   <div class="tituloPrincipal">
     MNM01- Autorización de importación de residuos sólidos no peligrosos (TUPA 3)
   </div>
@@ -39,7 +41,7 @@
               <mat-grid-tile>
                 <div class="text-inside-grid">Calificación:</div>
               </mat-grid-tile>
-            </mat-grid-list> 
+            </mat-grid-list>
           <div>
             <br>
             <div class="titulosSecundarios">Trazabilidad</div>
@@ -50,8 +52,8 @@
                <ng-container matColumnDef="fechaRegistro" >
                 <th mat-header-cell *matHeaderCellDef  class="tableColorTitulo"> Fecha Registro </th>
                 <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaRegistro}} </td>
-              </ng-container> 
-          
+              </ng-container>
+
               <!-- Etapa Column -->
                <ng-container matColumnDef="etapa" >
                 <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Etapa </th>
@@ -78,7 +80,7 @@
 
               <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
               <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-            </table> 
+            </table>
             </div>
           </div>
           </mat-tab>
@@ -106,7 +108,7 @@
               <mat-grid-tile>
                 <div class="text-inside-grid">Email:</div>
               </mat-grid-tile>
-            </mat-grid-list> 
+            </mat-grid-list>
             <div class="titulosSecundarios">Ubicación</div>
             <mat-grid-list cols="3" rowHeight="35px" >
               <mat-grid-tile>
@@ -118,7 +120,7 @@
               <mat-grid-tile>
                 <div class="text-inside-grid">Distrito:</div>
               </mat-grid-tile>
-            </mat-grid-list> 
+            </mat-grid-list>
             <mat-grid-list cols="1" rowHeight="35px" >
               <mat-grid-tile>
                 <div class="text-inside-grid">Dirección:</div>
@@ -140,9 +142,9 @@
       <p>I'm visible because I am open</p>
     </mat-expansion-panel>
   </mat-accordion>
-  
 
-  
+
+
 
   <!--
 </mat-card >
@@ -157,7 +159,7 @@
     </mat-select>
   </mat-form-field> -->
 
-  <!-- <lib-dynamicForm [jsonFormData]="formData" style="width: 100%;"></lib-dynamicForm> --> 
+  <!-- <lib-dynamicForm [jsonFormData]="formData" style="width: 100%;"></lib-dynamicForm> -->
 
 
 <!-- </form> -->

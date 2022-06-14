@@ -27,15 +27,14 @@ import { CommonModule } from '@angular/common';
 import { DynamicFormModule } from 'dynamic-form/src/public-api';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
-<<<<<<< HEAD
 import { TabsNumberComponent } from './componente/tupa-ipen/tabs-number/tabs-number.component';
 import { MatInputModule } from '@angular/material/input';
 
 import {MatStepperModule} from '@angular/material/stepper';
-=======
+
 import { MaterialExampleModule } from 'dynamic-form/src/material.module';
 
->>>>>>> diana
+
 
 @NgModule({
   declarations: [
@@ -68,14 +67,14 @@ import { MaterialExampleModule } from 'dynamic-form/src/material.module';
     CommonModule,
     DynamicFormModule,
     MatFormFieldModule,
-<<<<<<< HEAD
+
     MatSelectModule,
     MatStepperModule,
     MatInputModule
-=======
-    MatSelectModule, 
+
+,
     MaterialExampleModule
->>>>>>> diana
+
 
   ],
   providers: [],
