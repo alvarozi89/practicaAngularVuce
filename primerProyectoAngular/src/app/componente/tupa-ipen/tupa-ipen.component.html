@@ -1,17 +1,41 @@
-<h1>
-  Formulario dinamico
-</h1>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>Datos representante legal</h1>
 <form class="form">
-  <mat-form-field class="full-width" appearance="fill">
-    <mat-label>Producto</mat-label>
-    <mat-select>
-      <mat-option *ngFor="let item of options" [value]="item.value">
-        {{item.viewValue}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
+ 
+    <lib-dynamicForm [jsonFormData]="formData" style="width: 100%; "></lib-dynamicForm>
+    <div _ngcontent-bvl-c85="" class="form-group m-2 text-center">
+      <button _ngcontent-bvl-c85="" type="button" routerlink="/ipen" class="btn btn-danger" tabindex="0"
+        ng-reflect-router-link="/ipen">
+        Continuar<mat-icon class="color-icono"></mat-icon></button>
+        <!-- <button _ngcontent-nbx-c88="" type="button" class="btn btn-danger">Buscar<mat-icon _ngcontent-nbx-c88="" role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">search</mat-icon></button> -->
+    </div>
+  
 
-  <lib-dynamicForm [jsonFormData]="formData" style="width: 100%;"></lib-dynamicForm>
 </form>
+
+
+

@@ -1,4 +1,4 @@
-<div *ngFor="let control of jsonFormData?.controls">
+<div *ngFor="let control of jsonFormData?.controls" class="row">
     
     <mat-form-field *ngIf="['text', 'password', 'email', 'number', 'search', 'tel', 'url'].includes(control.type)" 
     class="full-width" appearance="fill">
