@@ -2,17 +2,46 @@
   {{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}
 </button> -->
 
+
+<div class="tituloPrincipal">
+  MNM01- Autorización de importación de residuos sólidos no peligrosos (TUPA 3)
+</div>
+<div class="comentarios">
+  Para iniciar el registro de la solicitud, verifica los datos del solicitante y selecciona el representante legal
+</div>
+
+<div>
+  <button mat-raised-button color="warn"  style="width: 24px; height: 35px"><mat-icon  class="color-icono"> arrow_back  </mat-icon></button>
+  <button type="button" routerLink="/ipen" class="btn btn-danger d-inline" style="width: 34px; height: 35px"><mat-icon  class="color-icono"> arrow_back  </mat-icon></button>
+  <h3 class="text-danger d-inline"> <b> Volver IPEN</b> </h3>
+</div>
+
+
 <mat-stepper linear #stepper>
   <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Solicitud del proceso</ng-template>
-      <mat-form-field appearance="fill">
-        <mat-label>Name</mat-label>
-        <input matInput formControlName="firstCtrl" placeholder="Last name, First name" required>
-      </mat-form-field>
+
       <div>
         <button mat-button matStepperNext>Next</button>
       </div>
+
+      <div class="d-flex flex-row-reverse">
+
+        <div class="m-2">
+          <button type="button" class="btn btn-danger"><mat-icon>remove_red_eye</mat-icon></button>
+          <h3 class="text-danger d-inline"> <b> Vista Previa </b> </h3>
+        </div>
+
+        <div class="m-2">
+          <button type="button" class="btn btn-danger btn-xs"><mat-icon>add_circle_outline</mat-icon></button>
+          <h3 class="text-danger d-inline"> <b> Crear plantilla </b> </h3>
+        </div>
+
+
+
+      </div>
+      <app-tupa-ipen></app-tupa-ipen>
     </form>
   </mat-step>
   <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">

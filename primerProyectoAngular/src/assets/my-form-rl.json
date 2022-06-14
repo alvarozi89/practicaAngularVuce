@@ -1,6 +1,6 @@
 {
     "controls": [
-      
+
       {
         "name": "selectRepresentanteLegal",
         "label": "selecciona al Representante legal ",
@@ -38,9 +38,8 @@
         "type": "text",
         "validators": {"required":true}
       }
-      
+
     ],
     "id": 1,
     "version": 1
   }
-  
