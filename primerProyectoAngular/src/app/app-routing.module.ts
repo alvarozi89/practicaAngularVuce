@@ -6,12 +6,14 @@ import { FiltroCadenaComponent } from './componente/cadena-tramite/filtro-cadena
 import { FiltroIpenComponent } from './componente/ipen/filtro-ipen/filtro-ipen.component';
 import { CardIpenComponent } from './componente/ipen/card-ipen/card-ipen.component';
 import { TupaIpenComponent } from './componente/tupa-ipen/tupa-ipen.component';
+import { TabsNumberComponent } from './componente/tupa-ipen/tabs-number/tabs-number.component';
 
 const routes: Routes = [
   {path: 'entidades', component: FiltroEntidadesComponent},
   {path: 'cadena', component: FiltroCadenaComponent},
   {path: 'ipen', component: FiltroIpenComponent},
   {path: 'tupaipen', component: TupaIpenComponent},
+  {path: 'tabsNumber', component: TabsNumberComponent},
 ];
 
 @NgModule({

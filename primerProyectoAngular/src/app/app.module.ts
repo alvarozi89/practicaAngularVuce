@@ -27,6 +27,10 @@ import { CommonModule } from '@angular/common';
 import { DynamicFormModule } from 'dynamic-form/src/public-api';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { TabsNumberComponent } from './componente/tupa-ipen/tabs-number/tabs-number.component';
+import { MatInputModule } from '@angular/material/input';
+
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -38,7 +42,8 @@ import { MatSelectModule } from '@angular/material/select';
     CardTramiteComponent,
     CardIpenComponent,
     FiltroIpenComponent,
-    TupaIpenComponent
+    TupaIpenComponent,
+    TabsNumberComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +63,9 @@ import { MatSelectModule } from '@angular/material/select';
     CommonModule,
     DynamicFormModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatStepperModule,
+    MatInputModule
 
   ],
   providers: [],
