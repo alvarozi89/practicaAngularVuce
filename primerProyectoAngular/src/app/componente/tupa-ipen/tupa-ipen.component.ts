@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { JsonFormData } from 'dynamic-form/src/lib/dynamic-form.component'
 
+
 interface FixedOptions {
   value: string;
   viewValue: string;
@@ -14,25 +15,36 @@ interface FixedOptions {
 })
 export class TupaIpenComponent implements OnInit {
   title = 'formsTest';
-
-  options: FixedOptions[] = [
-    {value: 'producto-0', viewValue: 'Producto 1'},
-    {value: 'producto-1', viewValue: 'Producto 2'},
-    {value: 'producto-2', viewValue: 'Producto 3'},
-  ];
-
+  panelOpenState = false;
   public formData: JsonFormData;
+  displayedColumns = ['fechaRegistro', 'etapa', 'descripcion', 'fechaEstimada', 'responsable'];
+  dataSource = ELEMENT_DATA;
 
   constructor(private http: HttpClient) {
     this.formData = {controls:[]};
   }
-
-
   ngOnInit(): void {  this.http
     .get('/assets/my-form.json')
     .subscribe((formData: any) => {
       this.formData = formData;
     });
   }
+}
+export interface PeriodicElement {
+  fechaRegistro: Date;
+  etapa: string;
+  descripcion: string;
+  fechaEstimada: Date;
+  responsable: string;
 
 }
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  {fechaRegistro: new Date ('dd/mm/yyyy'), etapa: 'Hydrogen', descripcion:'descripcion', fechaEstimada:new Date('dd/mm/yyyy'), responsable:'responsable'},
+  {fechaRegistro: new Date ('dd/mm/yyyy'), etapa: 'Hydrogen', descripcion:'descripcion', fechaEstimada:new Date('dd/mm/yyyy'), responsable:'responsable'},
+  {fechaRegistro: new Date ('dd/mm/yyyy'), etapa: 'Hydrogen', descripcion:'descripcion', fechaEstimada:new Date('dd/mm/yyyy'), responsable:'responsable'},
+];
+  
+
+  
+

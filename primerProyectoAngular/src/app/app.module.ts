@@ -27,6 +27,8 @@ import { CommonModule } from '@angular/common';
 import { DynamicFormModule } from 'dynamic-form/src/public-api';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { MaterialExampleModule } from 'dynamic-form/src/material.module';
+
 
 @NgModule({
   declarations: [
@@ -58,7 +60,8 @@ import { MatSelectModule } from '@angular/material/select';
     CommonModule,
     DynamicFormModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule, 
+    MaterialExampleModule
 
   ],
   providers: [],

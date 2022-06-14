@@ -1,0 +1,51 @@
+.mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+ 
+  .text-inside-grid {
+    position: absolute;
+    left: 5px;
+    font-size: medium;
+  }
+
+  .example-container {
+    height: 400px;
+    overflow: auto;
+  }
+  
+  table {
+    width: 100%;
+  }
+
+
+  .tituloPrincipal{
+    display: inline-block;
+    padding: 15px;
+    font-size: xx-large;
+    font-weight: bolder;
+  }
+
+  .titulosSecundarios{
+    display: inline-block;
+    padding: 15px;
+    font-size: x-large;
+    font-weight: bolder;
+  }
+
+  .comentarios{
+    font-size: medium;
+    display: inline-block;
+    padding: 15px;
+    color:gray;
+  }
+
+  .tableColorTitulo{
+    background-color: grey;
+    color: white;
+    font-size: medium;
+    
+  }
+  .tableColorCeldas{
+    background-color: rgb(238, 236, 236);
+    font-size: medium;
+  }
