@@ -30,7 +30,7 @@
     display: inline-block;
     padding: 5px;
     font-size: x-large;
-    font-weight: normal;
+    font-weight: 500;
     padding-top: 15px;
   }
 
@@ -53,4 +53,15 @@
   .tableColorCeldas{
     background-color: rgb(238, 236, 236);
     font-size: medium;
+  }
+  .tituloDesplegable{
+    display: inline-block;
+    padding: 5px;
+    font-size: x-large;
+    font-weight: 500;
+    padding-top: 10px;
+  }
+  .tabs{
+    font-weight: 500;
+    text-decoration-color: red ;
   }
