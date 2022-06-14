@@ -10,12 +10,13 @@
   Para iniciar el registro de la solicitud, verifica los datos del solicitante y selecciona el representante legal
 </div>
 
-<div>
-  <button mat-raised-button color="warn"  style="width: 24px; height: 35px"><mat-icon  class="color-icono"> arrow_back  </mat-icon></button>
-  <button type="button" routerLink="/ipen" class="btn btn-danger d-inline" style="width: 34px; height: 35px"><mat-icon  class="color-icono"> arrow_back  </mat-icon></button>
+
+<div class="container example-button-container">
+  <button class="boton-perzonalizado" mat-raised-button color="accent" aria-label="Example icon button with a plus one icon" routerLink="/ipen">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
   <h3 class="text-danger d-inline"> <b> Volver IPEN</b> </h3>
 </div>
-
 
 <mat-stepper linear #stepper>
   <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
@@ -28,13 +29,17 @@
 
       <div class="d-flex flex-row-reverse">
 
-        <div class="m-2">
-          <button type="button" class="btn btn-danger"><mat-icon>remove_red_eye</mat-icon></button>
+        <div class="example-button-container m-2">
+          <button class="boton-perzonalizado" mat-raised-button color="accent" aria-label="Example icon button with a plus one icon" routerLink="/ipen">
+            <mat-icon>remove_red_eye</mat-icon>
+          </button>
           <h3 class="text-danger d-inline"> <b> Vista Previa </b> </h3>
         </div>
 
-        <div class="m-2">
-          <button type="button" class="btn btn-danger btn-xs"><mat-icon>add_circle_outline</mat-icon></button>
+        <div class="example-button-container m-2">
+          <button class="boton-perzonalizado" mat-raised-button color="accent" aria-label="Example icon button with a plus one icon" routerLink="/ipen">
+            <mat-icon>add_circle_outline</mat-icon>
+          </button>
           <h3 class="text-danger d-inline"> <b> Crear plantilla </b> </h3>
         </div>
 
