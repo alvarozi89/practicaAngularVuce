@@ -2,7 +2,7 @@
     <form class="row">
         <div class="form-group col-md-3" *ngFor="let control of jsonFormData?.controls">
                 <mat-form-field
-                    *ngIf="['text', 'password', 'email', 'number', 'search', 'tel', 'url'].includes(control.type)">
+                    *ngIf="['text', 'password', 'email', 'number', 'search', 'tel', 'url', 'date'].includes(control.type)">
                     <mat-label >{{control.label}}</mat-label>
                     <input matInput placeholder="{{control.options?.placeholder}}"
                         name="{{control.name}}" type="{{control.type}}">
@@ -18,7 +18,7 @@
                     </mat-select>
                 </mat-form-field>
                 <mat-form-field *ngIf="control.type === 'textarea'">
-                    <div class="form-group col-md-3">
+                    <div>
                     <mat-label>{{control.label}}</mat-label>
                     <textarea matInput placeholder="{{control.options?.placeholder}}" name="{{control.name}}"
                         value="{{control.value}}">

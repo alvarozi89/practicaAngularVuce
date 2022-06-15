@@ -1,0 +1,53 @@
+{
+    "controls": [
+      
+        {
+            "name": "numeroLicenciaIpen",
+            "label":"Número de licencia IPEN",
+            "value": "",
+            "type": "text",
+            "validators": {"required":true}
+          },
+       {        
+          "name": "tipoTramite",
+          "label": "Tipo trámite",
+          "type":"select",
+          "options": {
+            "items": [
+              {
+                "value": "1",
+                "viewValue": "IMPORTACIÓN"
+              },
+              {
+                "value": "2",
+                "viewValue": "RE-EXPORTACIÓN"
+              }
+            ]
+          },
+          "validators": {
+            "required": true
+            
+          }
+        },
+        {
+            "name": "lugarDeposito",
+            "label":"Lugar de depósito",
+            "value": "",
+            "type": "textarea",
+            "validators": {"required":true}
+          },{
+            "name": "fecha",
+            "label":"fecha",
+            "value": "",
+            "type": "date",
+            "format":"dateTime",
+            "validators": {"required":true}
+          }
+          
+        
+       
+        
+      ],
+      "id": 1,
+      "version": 1
+}
