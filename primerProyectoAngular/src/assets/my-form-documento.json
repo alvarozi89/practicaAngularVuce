@@ -27,12 +27,14 @@
         },
 
         {
+
           "name": "subpartidaNacional",
           "label":"Subpartida Nacional",
           "value": "",
-          "type": "textarea",
+          "type": "text-area-icon",
           "validators": {"required":true}
         },
+
 
         {
           "name": "unidadMedidaFisica",

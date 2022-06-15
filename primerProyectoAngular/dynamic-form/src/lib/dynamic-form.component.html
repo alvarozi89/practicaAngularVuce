@@ -8,8 +8,18 @@
                         name="{{control.name}}" type="{{control.type}}">
                 </mat-form-field>
 
+                <mat-form-field
+                  *ngIf="control.type === 'text-area-icon'">
+
+                  <mat-label  class="toggle-icon"> <mat-icon >search</mat-icon> {{control.label}}</mat-label>
+                  <textarea  matInput placeholder="{{control.options?.placeholder}}" name="{{control.name}}"
+                  value="{{control.value}}">
+                  </textarea>
+
+               </mat-form-field>
+
                 <mat-form-field *ngIf="control.type === 'select'">
-                    
+
                     <mat-label>{{control.label}}</mat-label>
                     <mat-select>
                         <mat-option *ngFor="let item of control.options?.items" [value]="item.value">
@@ -30,9 +40,9 @@
                 <mat-checkbox>{{control.label}}</mat-checkbox>
             </section>
             </div>
-            <mat-slide-toggle *ngIf="control.type === 'toggle'">{{control.label}}</mat-slide-toggle> 
+            <mat-slide-toggle *ngIf="control.type === 'toggle'">{{control.label}}</mat-slide-toggle>
 
         </div>
 </form>
-   
+
 </div>

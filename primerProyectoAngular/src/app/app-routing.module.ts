@@ -8,6 +8,7 @@ import { CardIpenComponent } from './componente/ipen/card-ipen/card-ipen.compone
 import { TupaIpenComponent } from './componente/tupa-ipen/tupa-ipen.component';
 import { TabsNumberComponent } from './componente/tupa-ipen/tabs-number/tabs-number.component';
 
+
 const routes: Routes = [
   {path: 'entidades', component: FiltroEntidadesComponent},
   {path: 'cadena', component: FiltroCadenaComponent},

@@ -134,7 +134,10 @@
 
       <form class="form">
 
-          <lib-dynamicForm [jsonFormData]="formData" style="width: 100%; "></lib-dynamicForm>
+          <lib-dynamicForm  [jsonFormData]="formData" style="width: 100%; "></lib-dynamicForm>
+
+
+
           <div _ngcontent-bvl-c85="" class="form-group m-2 text-center">
 
 
@@ -189,14 +192,14 @@
 
           <mat-grid-list cols="3" rowHeight="fit" >
 
-            <lib-dynamicForm [jsonFormData]="formDataDocumento" style="width: 100%; "></lib-dynamicForm>
 
-          <mat-grid-list cols="3" rowHeight="285px" >
             <div class="container example-button-container my-2">
               <div class="form-group">
-                <button class="boton-perzonalizado" mat-raised-button color="warn" style="background-color: rgb(227, 8, 8);">Nuevo Producto</button>
+                <button class="boton-perzonalizado" mat-raised-button color="warn" style="background-color: rgb(227, 8, 8);" (click)=" mostrarFormProducto()">Nuevo Producto</button>
               </div>
             </div>
+            <lib-dynamicForm *ngIf="vistaFormDocumento==true" [jsonFormData]="formDataDocumento" style="width: 100%; "></lib-dynamicForm>
+
             <div class="table">
               <table mat-table [dataSource]="dataSource"  >
 
@@ -291,3 +294,31 @@
     </mat-expansion-panel>
 
   </mat-accordion>
+
+<!-- modal -->
+  <div class="Modal">
+    <!-- Button trigger modal -->
+         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+           Launch demo modal
+         </button>
+
+         <!-- Modal -->
+         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+           <div class="modal-dialog">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                 ...
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                 <button type="button" class="btn btn-primary">Save changes</button>
+               </div>
+             </div>
+           </div>
+         </div>
+
+   </div>

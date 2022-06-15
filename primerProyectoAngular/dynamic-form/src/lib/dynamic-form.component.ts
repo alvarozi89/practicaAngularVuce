@@ -54,13 +54,13 @@ export class DynamicFormComponent implements OnInit {
 
   public myForm: FormGroup = this.fb.group({});
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder) {
     this.jsonFormData = {controls:[]};
   }
 
   toggleDarkModeHandler() {
     this.darkMode = !this.darkMode;
-  } 
+  }
 
 
   ngOnChanges(changes: SimpleChanges) {
@@ -136,6 +136,11 @@ export class DynamicFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+
   }
+
+  eventoIcono(){
+    alert("Hola")
+  }
+
 }

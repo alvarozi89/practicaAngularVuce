@@ -34,7 +34,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 
 import { MaterialExampleModule } from 'dynamic-form/src/material.module';
 
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -73,7 +73,8 @@ import { MaterialExampleModule } from 'dynamic-form/src/material.module';
     MatInputModule
 
 ,
-    MaterialExampleModule
+    MaterialExampleModule,
+    MatDialogModule
 
 
   ],

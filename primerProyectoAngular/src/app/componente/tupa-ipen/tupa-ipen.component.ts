@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { JsonFormData } from 'dynamic-form/src/lib/dynamic-form.component'
 import {FormBuilder, Validators} from '@angular/forms';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 
 
 interface FixedOptions {
@@ -14,8 +15,14 @@ interface FixedOptions {
   templateUrl: './tupa-ipen.component.html',
   styleUrls: ['./tupa-ipen.component.css']
 })
+
+
+
+
+
 export class TupaIpenComponent implements OnInit {
   checked = false;
+  vistaFormDocumento= false;
   indeterminate = true;
   labelPosition: 'before' | 'after' = 'after';
   disabled = false;
@@ -35,6 +42,9 @@ export class TupaIpenComponent implements OnInit {
     this.formDataDetalle = {controls:[]};
     this.formDataDocumento = {controls:[]};
   }
+
+
+
   ngOnInit(): void {  this.http
     .get('/assets/my-form-rl.json')
     .subscribe((formData: any) => {
@@ -60,6 +70,11 @@ export class TupaIpenComponent implements OnInit {
 
   habilitarRegistroTramite(){
     this.disabledRegistroTramite = !this.disabledRegistroTramite;
+
+  }
+
+  mostrarFormProducto(){
+    this.vistaFormDocumento=true;
 
   }
 
