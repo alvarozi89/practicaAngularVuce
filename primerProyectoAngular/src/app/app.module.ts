@@ -33,6 +33,10 @@ import { MatInputModule } from '@angular/material/input';
 import {MatStepperModule} from '@angular/material/stepper';
 
 import { MaterialExampleModule } from 'dynamic-form/src/material.module';
+import { FiltroSucePreexistenteComponent } from './componente/suce-preexistente/filtro-suce-preexistente/filtro-suce-preexistente.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
+
 
 
 
@@ -47,7 +51,8 @@ import { MaterialExampleModule } from 'dynamic-form/src/material.module';
     CardIpenComponent,
     FiltroIpenComponent,
     TupaIpenComponent,
-    TabsNumberComponent
+    TabsNumberComponent,
+    FiltroSucePreexistenteComponent
   ],
   imports: [
     BrowserModule,
@@ -70,10 +75,10 @@ import { MaterialExampleModule } from 'dynamic-form/src/material.module';
 
     MatSelectModule,
     MatStepperModule,
-    MatInputModule
-
-,
-    MaterialExampleModule
+    MatInputModule,
+    MatPaginatorModule,
+    MaterialExampleModule,
+    MatTableModule,
 
 
   ],

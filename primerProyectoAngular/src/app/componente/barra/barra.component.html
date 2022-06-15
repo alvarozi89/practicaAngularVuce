@@ -21,8 +21,18 @@
 
 <div class="container">
 
-  <nav mat-tab-nav-bar ngClass = "tabs"><a mat-tab-link routerLink="/entidades" routerLinkActive="active-link"><b>Entidades</b></a><a mat-tab-link routerLink="/cadena" routerLinkActive="active-link">Cadena de trámite   <mat-icon matTooltip="Usuario nuevo"
-    aria-label="Button that displays a tooltip when focused or hovered over"  class="color-icono"> error_outline  </mat-icon></a></nav><div><router-outlet></router-outlet></div>
+  <nav mat-tab-nav-bar ngClass = "tabs">
+    <a mat-tab-link routerLink="/entidades" routerLinkActive="active-link"><b>Entidades</b></a>
+    <a mat-tab-link routerLink="/cadena" routerLinkActive="active-link">Cadena de trámite
+      <mat-icon matTooltip="Usuario nuevo"
+        aria-label="Button that displays a tooltip when focused or hovered over"  class="color-icono"> error_outline  
+      </mat-icon>
+    </a>
+    <a mat-tab-link routerLink="/sucePreexistente" routerLinkActive="active-link"><b>SUCE pre-existente</b></a>
+  </nav>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
 
 </div>
 

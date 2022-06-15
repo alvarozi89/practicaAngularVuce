@@ -26,12 +26,14 @@ export class TupaIpenComponent implements OnInit {
   panelOpenState = false;
   public formData: JsonFormData;
   public formDataDetalle: JsonFormData;
+  public formDataDetalleSerfor: JsonFormData;
   displayedColumns = ['fechaRegistro', 'etapa', 'descripcion', 'fechaEstimada', ];
   dataSource = ELEMENT_DATA;
 
   constructor(private http: HttpClient) {
     this.formData = {controls:[]};
     this.formDataDetalle = {controls:[]};
+    this.formDataDetalleSerfor = {controls:[]};
   }
   ngOnInit(): void {  this.http
     .get('/assets/my-form-rl.json')
@@ -42,6 +44,11 @@ export class TupaIpenComponent implements OnInit {
     .get('/assets/my-form-detalle.json')
     .subscribe((formDataDetalle: any) => {
       this.formDataDetalle = formDataDetalle;
+    });
+    this.http
+    .get('/assets/my-form-detalle-serfor.json')
+    .subscribe((formDataDetalleSerfor: any) => {
+      this.formDataDetalleSerfor = formDataDetalleSerfor;
     });
   }
 
