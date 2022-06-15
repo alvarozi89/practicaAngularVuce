@@ -25,12 +25,24 @@
                     </textarea>
                     </div>
                 </mat-form-field>
+                <!---->
             <div class="form-group col-md-3">
             <section *ngIf="control.type === 'checkbox'">
                 <mat-checkbox>{{control.label}}</mat-checkbox>
             </section>
             </div>
-            <mat-slide-toggle *ngIf="control.type === 'toggle'">{{control.label}}</mat-slide-toggle> 
+            <!--Toggle-->
+            <mat-slide-toggle *ngIf="control.type === 'toggle'">{{control.label}}</mat-slide-toggle>
+            <!--RadioButtion-->
+            <div class="form-group col-md-3">
+                <section *ngIf="control.type === 'radiobutton'">
+                    <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
+                        <mat-radio-button *ngFor="let item of control.options?.items" class="example-radio-button" value="{{item.viewValue}}">
+                            {{item.viewValue}}
+                        </mat-radio-button>
+                    </mat-radio-group>
+                </section>
+            </div> 
 
         </div>
 </form>

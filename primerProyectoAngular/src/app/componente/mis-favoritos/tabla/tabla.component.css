@@ -1,0 +1,17 @@
+table {
+    width: 100%;
+  }
+
+.table{
+    padding-top: 15px;
+  }
+  .tableColorTitulo{
+    background-color: grey;
+    color: white;
+    font-size: medium;
+    
+  }
+  .tableColorCeldas{
+    background-color: rgb(238, 236, 236);
+    font-size: medium;
+  }

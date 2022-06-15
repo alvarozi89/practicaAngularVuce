@@ -36,6 +36,7 @@ import { MaterialExampleModule } from 'dynamic-form/src/material.module';
 import { FiltroSucePreexistenteComponent } from './componente/suce-preexistente/filtro-suce-preexistente/filtro-suce-preexistente.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
+import { TablaComponent } from './componente/mis-favoritos/tabla/tabla.component';
 
 
 
@@ -52,7 +53,8 @@ import { MatTableModule } from '@angular/material/table';
     FiltroIpenComponent,
     TupaIpenComponent,
     TabsNumberComponent,
-    FiltroSucePreexistenteComponent
+    FiltroSucePreexistenteComponent,
+    TablaComponent
   ],
   imports: [
     BrowserModule,

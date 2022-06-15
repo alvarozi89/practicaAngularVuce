@@ -72,7 +72,26 @@
       "value": "false",
       "type": "toggle",
       "validators": {}
+    },
+    {
+      "name": "simpleRadioButton",
+      "value": "false",
+      "type": "radiobutton",
+      "validators": {},
+      "options": {
+        "items": [
+          {
+            "value": "item-0",
+            "viewValue": "Item 0"
+          },
+          {
+            "value": "item-1",
+            "viewValue": "Item 1"
+          }
+        ]
+      }
     }
+
   ],
   "id": 1,
   "version": 1
