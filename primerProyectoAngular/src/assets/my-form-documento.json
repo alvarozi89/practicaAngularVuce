@@ -1,0 +1,137 @@
+{
+    "controls": [
+       {
+          "name": "tipoProducto",
+          "label": "Tipo producto",
+          "type":"select",
+          "options": {
+            "items": [
+              {
+                "value": "1",
+                "viewValue": "EQUIPO GENERADORES"
+              },
+              {
+                "value": "2",
+                "viewValue": "EQUIPO RADIACTIVOS"
+              },
+              {
+                "value": "3",
+                "viewValue": "FUENTE RADIACTIVOS"
+              }
+            ]
+          },
+          "validators": {
+            "required": true
+
+          }
+        },
+
+        {
+          "name": "subpartidaNacional",
+          "label":"Subpartida Nacional",
+          "value": "",
+          "type": "textarea",
+          "validators": {"required":true}
+        },
+
+        {
+          "name": "unidadMedidaFisica",
+          "label": "unidad de Medida Fisica",
+          "type":"select",
+          "options": {
+            "items": [
+
+            ]
+          },
+          "validators": {
+            "required": true
+
+          }
+        },
+
+        {
+          "name": "numeroLicenciaIpen",
+          "label":"Número de licencia IPEN",
+          "value": "",
+          "type": "text",
+          "validators": {"required":true}
+        },
+
+        {
+          "name": "cantidad",
+          "label":"cantidad",
+          "value": "",
+          "type": "number",
+          "validators": {"required":true, "pattern":"[0-9]*"}
+        },
+
+        {
+          "name": "usoEspecifico",
+          "label": "Uso especifico",
+          "type":"select",
+          "options": {
+            "items": [
+              {
+                "value": "1",
+                "viewValue": "ALMACENAMIENTO DE MATERIAL REACTIVO"
+              },
+              {
+                "value": "2",
+                "viewValue": "ANÁLISIS POR ACTIVACIÓN NEUTRÓNICA"
+              },
+              {
+                "value": "3",
+                "viewValue": "ANÁLISIS POR FLUORENCENCIA Y DIFRACCIÓN RAYOS X"
+              }
+            ]
+          },
+          "validators": {
+            "required": true
+
+          }
+        },
+
+          {
+            "name": "lugarDeposito",
+            "label":"Lugar de depósito",
+            "value": "",
+            "type": "textarea",
+            "validators": {"required":true}
+          },
+
+          {
+            "name": "marca",
+            "label":"Marca",
+            "value": "",
+            "type": "textarea",
+            "validators": {"required":true}
+          },
+
+          {
+            "name": "numeroSerie",
+            "label":"Número de serie",
+            "value": "",
+            "type": "textarea",
+            "validators": {"required":true}
+          },
+
+          {
+            "name": "radioisotopo",
+            "label":"Radioisótopo",
+            "value": "",
+            "type": "textarea",
+            "validators": {"required":true}
+          },
+
+          {
+            "name": "actividadBq",
+            "label":"Actividad (Bq)",
+            "value": "",
+            "type": "textarea",
+            "validators": {"required":true}
+          }
+
+      ],
+      "id": 1,
+      "version": 1
+}
