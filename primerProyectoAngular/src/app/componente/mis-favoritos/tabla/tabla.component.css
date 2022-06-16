@@ -9,6 +9,8 @@ table {
     background-color: grey;
     color: white;
     font-size: medium;
+    align-content: center;
+    text-align: center;
     
   }
   .tableColorCeldas{
