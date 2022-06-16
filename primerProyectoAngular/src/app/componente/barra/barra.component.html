@@ -21,22 +21,28 @@
 
 <div class="container">
 
-  <nav mat-tab-nav-bar ngClass = "tabs">
+  <div class="tituloPrincipal">
+    Nueva solicitud
+  </div>
+  <br>
+  <div class="comentarios">
+    Elige el proceso deseado para iniciar la solicitud
+  </div>
+  <div class="linkSeccion">
+  <nav mat-tab-nav-bar ngClass="tabs">
     <a mat-tab-link routerLink="/entidades" routerLinkActive="active-link"><b>Entidades</b></a>
     <a mat-tab-link routerLink="/cadena" routerLinkActive="active-link">Cadena de trámite
-      <mat-icon matTooltip="Usuario nuevo"
-        aria-label="Button that displays a tooltip when focused or hovered over"  class="color-icono"> error_outline  
+      <mat-icon matTooltip="Usuario nuevo" aria-label="Button that displays a tooltip when focused or hovered over"
+        class="color-icono"> error_outline
       </mat-icon>
     </a>
     <a mat-tab-link routerLink="/sucePreexistente" routerLinkActive="active-link"><b>SUCE pre-existente</b></a>
     <a mat-tab-link routerLink="/mis-favoritos" routerLinkActive="active-link"><b>Mis favoritos</b></a>
+    <a mat-tab-link routerLink="/tramites" routerLinkActive="active-link"><b>Trámites frecuentes</b></a>
   </nav>
+</div>
   <div>
     <router-outlet></router-outlet>
   </div>
 
 </div>
-
-
-
-

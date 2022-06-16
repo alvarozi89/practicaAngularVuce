@@ -44,7 +44,11 @@
         <ng-container matColumnDef="favoritos">
             <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Favoritos </th>
            
-            <td mat-cell *matCellDef="let element" class="tableColorCeldas">   <span class="material-icons">star_border</span> </td>
+            <td mat-cell *matCellDef="let element" class="tableColorCeldas">   
+                <div class="icon">
+                    <span class="material-icons red-color">star_border</span> 
+                </div>
+            </td>
         </ng-container>
 
         <!-- Entidad Column -->
@@ -93,7 +97,7 @@
            
                 <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Acciones </th>
                 <td mat-cell *matCellDef="let element"  class="tableColorCeldas">
-                    <mat-icon aria-hidden="false" aria-label="Star">list_alt</mat-icon>
+                    <mat-icon aria-hidden="false" class="material-icons red-color" routerLink="/plantillas" aria-label="Star">list_alt</mat-icon>
                 </td>
             
         </ng-container>
