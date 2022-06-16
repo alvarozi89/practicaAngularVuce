@@ -13,6 +13,7 @@ import { PlantillasComponent } from './componente/suce-preexistente/plantillas/p
 import { TramitesFrecuentesComponent } from './componente/tramites/tramites-frecuentes/tramites-frecuentes.component';
 
 
+
 const routes: Routes = [
   {path: 'entidades', component: FiltroEntidadesComponent},
   {path: 'cadena', component: FiltroCadenaComponent},

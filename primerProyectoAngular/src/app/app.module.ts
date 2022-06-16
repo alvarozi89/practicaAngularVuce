@@ -41,7 +41,7 @@ import { PlantillasComponent } from './componente/suce-preexistente/plantillas/p
 import { TramitesFrecuentesComponent } from './componente/tramites/tramites-frecuentes/tramites-frecuentes.component';
 
 
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -78,13 +78,15 @@ import { TramitesFrecuentesComponent } from './componente/tramites/tramites-frec
     CommonModule,
     DynamicFormModule,
     MatFormFieldModule,
-
     MatSelectModule,
     MatStepperModule,
     MatInputModule,
     MatPaginatorModule,
     MaterialExampleModule,
     MatTableModule,
+    MaterialExampleModule,
+    MatDialogModule
+
 
 
   ],

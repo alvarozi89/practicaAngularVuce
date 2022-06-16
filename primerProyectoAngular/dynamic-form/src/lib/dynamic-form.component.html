@@ -1,35 +1,45 @@
 <div class="container">
     <form class="row">
         <div class="form-group col-md-3" *ngFor="let control of jsonFormData?.controls">
-                <mat-form-field
-                    *ngIf="['text', 'password', 'email', 'number', 'search', 'tel', 'url', 'date'].includes(control.type)">
-                    <mat-label >{{control.label}}</mat-label>
-                    <input matInput placeholder="{{control.options?.placeholder}}"
-                        name="{{control.name}}" type="{{control.type}}">
-                </mat-form-field>
+           <!---->
+            <mat-form-field
+                *ngIf="['text', 'password', 'email', 'number', 'search', 'tel', 'url', 'date'].includes(control.type)">
+                <mat-label >{{control.label}}</mat-label>
+                <input matInput placeholder="{{control.options?.placeholder}}"
+                    name="{{control.name}}" type="{{control.type}}">
+            </mat-form-field>
+            <!---->
+            <mat-form-field
+                *ngIf="control.type === 'text-area-icon'">
 
-                <mat-form-field *ngIf="control.type === 'select'">
-                    
-                    <mat-label>{{control.label}}</mat-label>
-                    <mat-select>
-                        <mat-option *ngFor="let item of control.options?.items" [value]="item.value">
-                            {{item.viewValue}}
-                        </mat-option>
-                    </mat-select>
-                </mat-form-field>
-                <mat-form-field *ngIf="control.type === 'textarea'">
-                    <div>
+                <mat-label  class="toggle-icon"> <mat-icon >search</mat-icon> {{control.label}}</mat-label>
+                <textarea  matInput placeholder="{{control.options?.placeholder}}" name="{{control.name}}"
+                value="{{control.value}}">
+                </textarea>
+            </mat-form-field>
+            <!---->
+            <mat-form-field *ngIf="control.type === 'select'">
+                <mat-label>{{control.label}}</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let item of control.options?.items" [value]="item.value">
+                        {{item.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <!--TextArea-->
+            <mat-form-field *ngIf="control.type === 'textarea'">
+                <div>
                     <mat-label>{{control.label}}</mat-label>
                     <textarea matInput placeholder="{{control.options?.placeholder}}" name="{{control.name}}"
                         value="{{control.value}}">
                     </textarea>
-                    </div>
-                </mat-form-field>
-                <!---->
+                </div>
+            </mat-form-field>
+            <!--checkbox-->
             <div class="form-group col-md-3">
-            <section *ngIf="control.type === 'checkbox'">
-                <mat-checkbox>{{control.label}}</mat-checkbox>
-            </section>
+                <section *ngIf="control.type === 'checkbox'">
+                    <mat-checkbox>{{control.label}}</mat-checkbox>
+                </section>
             </div>
             <!--Toggle-->
             <mat-slide-toggle *ngIf="control.type === 'toggle'">{{control.label}}</mat-slide-toggle>
@@ -43,8 +53,6 @@
                     </mat-radio-group>
                 </section>
             </div> 
-
         </div>
-</form>
-   
+    </form>
 </div>

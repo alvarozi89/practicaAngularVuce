@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { JsonFormData } from 'dynamic-form/src/lib/dynamic-form.component'
 import {FormBuilder, Validators} from '@angular/forms';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 
 
 interface FixedOptions {
@@ -14,8 +15,14 @@ interface FixedOptions {
   templateUrl: './tupa-ipen.component.html',
   styleUrls: ['./tupa-ipen.component.css']
 })
+
+
+
+
+
 export class TupaIpenComponent implements OnInit {
   checked = false;
+  vistaFormDocumento= false;
   indeterminate = true;
   labelPosition: 'before' | 'after' = 'after';
   disabled = false;
@@ -27,6 +34,7 @@ export class TupaIpenComponent implements OnInit {
   public formData: JsonFormData;
   public formDataDetalle: JsonFormData;
   public formDataDetalleSerfor: JsonFormData;
+  public formDataDocumento: JsonFormData;
   displayedColumns = ['fechaRegistro', 'etapa', 'descripcion', 'fechaEstimada', ];
   dataSource = ELEMENT_DATA;
 
@@ -34,7 +42,11 @@ export class TupaIpenComponent implements OnInit {
     this.formData = {controls:[]};
     this.formDataDetalle = {controls:[]};
     this.formDataDetalleSerfor = {controls:[]};
+    this.formDataDocumento = {controls:[]};
   }
+
+
+
   ngOnInit(): void {  this.http
     .get('/assets/my-form-rl.json')
     .subscribe((formData: any) => {
@@ -50,6 +62,11 @@ export class TupaIpenComponent implements OnInit {
     .subscribe((formDataDetalleSerfor: any) => {
       this.formDataDetalleSerfor = formDataDetalleSerfor;
     });
+    this.http
+    .get('/assets/my-form-documento.json')
+    .subscribe((formDataElmento: any) => {
+      this.formDataDocumento= formDataElmento;
+    });
   }
 
   habilitarBoton(){
@@ -59,6 +76,11 @@ export class TupaIpenComponent implements OnInit {
 
   habilitarRegistroTramite(){
     this.disabledRegistroTramite = !this.disabledRegistroTramite;
+
+  }
+
+  mostrarFormProducto(){
+    this.vistaFormDocumento=true;
 
   }
 
