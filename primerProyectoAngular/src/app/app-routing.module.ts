@@ -11,6 +11,7 @@ import { FiltroSucePreexistenteComponent } from './componente/suce-preexistente/
 import { TablaComponent } from './componente/mis-favoritos/tabla/tabla.component';
 
 
+
 const routes: Routes = [
   {path: 'entidades', component: FiltroEntidadesComponent},
   {path: 'cadena', component: FiltroCadenaComponent},

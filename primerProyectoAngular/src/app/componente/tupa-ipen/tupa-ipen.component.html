@@ -1,148 +1,154 @@
- <div class="tituloPrincipal">
-    MNM01- Autorización de importación de residuos sólidos no peligrosos (TUPA 3)
-  </div>
-  <div class="comentarios">
-    Para iniciar el registro de la solicitud, verifica los datos del solicitante y selecciona el representante legal
-  </div> 
-<mat-accordion>
-  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+<div class="tituloPrincipal">
+  IPN003- Autorizacion para Importar Fuente de Radiaciones Usada  (TUPA 11)
+</div>
+<div class="comentarios">
+  Para iniciar el registro de la solicitud, verifica los datos del solicitante y selecciona el representante legal
+</div>
+<mat-accordion >
+  <mat-expansion-panel (opened)="panelOpenState = true"
+  (closed)="panelOpenState = false" >
     <mat-expansion-panel-header>
       <div class="tituloDesplegable">
         Datos generales
       </div>
     </mat-expansion-panel-header>
-    <mat-tab-group mat-stretch-tabs color="warn">
-      <mat-tab label="Datos Solicitud">
-        <mat-grid-list cols="3" rowHeight="35px">
-          <mat-grid-tile>
-            <div class="text-inside-grid">Número Trámite:</div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="text-inside-grid">Fecha Solicitud:</div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="text-inside-grid">Hora Solicitud:</div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="text-inside-grid">Fecha Actualización:</div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="text-inside-grid">Hora Actualización:</div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="text-inside-grid">Tasa:</div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="text-inside-grid">Plazo:</div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="text-inside-grid">Calificación:</div>
-          </mat-grid-tile>
-        </mat-grid-list>
+    <mat-tab-group mat-stretch-tabs  color="warn">
+        <mat-tab label="Datos Solicitud">
+          <mat-grid-list cols="3" rowHeight="35px" >
+            <mat-grid-tile>
+              <div class="text-inside-grid">Número Trámite:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="text-inside-grid">Fecha Solicitud:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="text-inside-grid">Hora Solicitud:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="text-inside-grid">Fecha Actualización:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="text-inside-grid">Hora Actualización:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="text-inside-grid">Tasa:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="text-inside-grid">Plazo:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="text-inside-grid">Calificación:</div>
+            </mat-grid-tile>
+          </mat-grid-list>
         <div>
           <br>
           <div class="titulosSecundarios">Trazabilidad</div>
           <div class="table">
-            <table mat-table [dataSource]="dataSource">
+          <table mat-table [dataSource]="dataSource"  >
 
-              <!-- Fecha registro Column -->
-              <ng-container matColumnDef="fechaRegistro">
-                <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Fecha Registro </th>
-                <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaRegistro}} </td>
-              </ng-container>
+            <!-- Fecha registro Column -->
+             <ng-container matColumnDef="fechaRegistro" >
+              <th mat-header-cell *matHeaderCellDef  class="tableColorTitulo"> Fecha Registro </th>
+              <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaRegistro}} </td>
+            </ng-container>
 
-              <!-- Etapa Column -->
-              <ng-container matColumnDef="etapa">
-                <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Etapa </th>
-                <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.etapa}} </td>
-              </ng-container>
+            <!-- Etapa Column -->
+             <ng-container matColumnDef="etapa" >
+              <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Etapa </th>
+              <td mat-cell *matCellDef="let element"class="tableColorCeldas"> {{element.etapa}} </td>
+            </ng-container>
 
-              <!-- Descripcion Column -->
-              <ng-container matColumnDef="descripcion">
-                <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Descripción detallada </th>
-                <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.descripcion}} </td>
-              </ng-container>
+             <!-- Descripcion Column -->
+             <ng-container matColumnDef="descripcion" >
+              <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Descripción detallada </th>
+              <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.descripcion}} </td>
+            </ng-container>
 
-              <!-- Fecha Estimada Column -->
-              <ng-container matColumnDef="fechaEstimada">
-                <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Fecha Estimada </th>
-                <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaEstimada}} </td>
-              </ng-container>
+             <!-- Fecha Estimada Column -->
+             <ng-container matColumnDef="fechaEstimada" >
+              <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Fecha Estimada </th>
+              <td mat-cell *matCellDef="let element"class="tableColorCeldas"> {{element.fechaEstimada}} </td>
+            </ng-container>
 
-              <!-- Name Column -->
-              <ng-container matColumnDef="responsable">
-                <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Responsable </th>
-                <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.responsable}} </td>
-              </ng-container>
+             <!-- Name Column -->
+             <ng-container matColumnDef="responsable" >
+              <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Responsable </th>
+              <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.responsable}} </td>
+            </ng-container>
 
-              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-            </table>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
           </div>
         </div>
-      </mat-tab>
-      <mat-tab label="Datos Solicitante">
-        <div class="titulosSecundarios">Datos generales usuario</div>
-        <mat-grid-list cols="3" rowHeight="35px">
-          <mat-grid-tile>
-            <div class="text-inside-grid"> Identificación:</div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="text-inside-grid">Razón social :</div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="text-inside-grid">Actividad:</div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="text-inside-grid">Celular:</div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="text-inside-grid">Teléfono:</div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="text-inside-grid">Fax:</div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="text-inside-grid">Email:</div>
-          </mat-grid-tile>
-        </mat-grid-list>
-        <div class="titulosSecundarios">Ubicación</div>
-        <mat-grid-list cols="3" rowHeight="35px">
-          <mat-grid-tile>
-            <div class="text-inside-grid">Departamento:</div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="text-inside-grid">Provincia:</div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="text-inside-grid">Distrito:</div>
-          </mat-grid-tile>
-        </mat-grid-list>
-        <mat-grid-list cols="1" rowHeight="35px">
-          <mat-grid-tile>
-            <div class="text-inside-grid">Dirección:</div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div class="text-inside-grid">Referencia:</div>
-          </mat-grid-tile>
+        </mat-tab>
+        <mat-tab label="Datos Solicitante">
+          <div class="titulosSecundarios">Datos generales usuario</div>
+          <mat-grid-list cols="3" rowHeight="35px" >
+            <mat-grid-tile>
+              <div class="text-inside-grid"> Identificación:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="text-inside-grid">Razón social :</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="text-inside-grid">Actividad:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="text-inside-grid">Celular:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="text-inside-grid">Teléfono:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="text-inside-grid">Fax:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="text-inside-grid">Email:</div>
+            </mat-grid-tile>
+          </mat-grid-list>
+          <div class="titulosSecundarios">Ubicación</div>
+          <mat-grid-list cols="3" rowHeight="35px" >
+            <mat-grid-tile>
+              <div class="text-inside-grid">Departamento:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="text-inside-grid">Provincia:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="text-inside-grid">Distrito:</div>
+            </mat-grid-tile>
+          </mat-grid-list>
+          <mat-grid-list cols="1" rowHeight="35px" >
+            <mat-grid-tile>
+              <div class="text-inside-grid">Dirección:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="text-inside-grid">Referencia:</div>
+            </mat-grid-tile>
 
-        </mat-grid-list>
+          </mat-grid-list>
 
-        <div class="titulosSecundarios">Datos representante legal</div>
-        <lib-dynamicForm [jsonFormData]="formData" style="width: 100%; "></lib-dynamicForm>
+    <div class="titulosSecundarios">Datos representante legal</div>
+
+    <form class="form">
+
+        <lib-dynamicForm  [jsonFormData]="formData" style="width: 100%; "></lib-dynamicForm>
+
+
+
         <div _ngcontent-bvl-c85="" class="form-group m-2 text-center">
 
 
         </div>
 
 
-
-        <div class="d-flex flex-row-reverse m-2">
-          <div class="form-group">
-            <button mat-raised-button color="warn" style="background-color: rgb(227, 8, 8);"
-              (click)="habilitarRegistroTramite()">Continuar <mat-icon>arrow_forward</mat-icon></button>
-          </div>
-        </div>
+    </form>
+    <div class="d-flex flex-row-reverse m-2">
+      <div class="form-group">
+        <button mat-raised-button color="warn" style="background-color: rgb(227, 8, 8);" (click)="habilitarRegistroTramite()">Continuar <mat-icon>arrow_forward</mat-icon></button>
+      </div>
+    </div>
 
 
 
@@ -154,77 +160,70 @@
 
   <!-- otro tab -->
 
-  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false"
-    [disabled]="disabledRegistroTramite">
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false" [disabled]="disabledRegistroTramite">
     <mat-expansion-panel-header>
-      <div class="tituloDesplegable">Registro de trámite</div>
+      <div class="tituloDesplegable">
+       Registro de trámite
+      </div>
     </mat-expansion-panel-header>
-    <mat-tab-group mat-stretch-tabs color="warn">
+    <mat-tab-group mat-stretch-tabs  color="warn">
 
       <mat-tab label="Detalle">
-        <mat-grid-list cols="6" rowHeight="285px">
+        <mat-grid-list cols="6" rowHeight="285px" >
           <section class="example-section">
-            <lib-dynamicForm [jsonFormData]="formDataDetalle" style="width: 100%; "></lib-dynamicForm>
-            <div _ngcontent-bvl-c85="" class="form-group m-2 text-center">
-            </div>
-            <!--  <h4>Detalle SERFOR</h4> -->
-            <!--  <lib-dynamicForm [jsonFormData]="formDataDetalleSerfor" style="width: 100%; "></lib-dynamicForm>
-              <div _ngcontent-bvl-c85="" class="form-group m-2 text-center">
-              </div> -->
-           <!--  <mat-checkbox class="example-margin" (change)="habilitarBoton()" [(ngModel)]="disabled">
-
-              <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem ducimus reiciendis
-                eveniet, quod perferendis laborum corporis ipsam obcaecati, delectus possimus itaque officiis soluta!
-                Ducimus enim eveniet tempore quasi nesciunt cumque.</p>
-            </mat-checkbox> -->
+            <mat-checkbox class="example-margin" (change)="habilitarBoton()" [(ngModel)]="disabled">
+              <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem ducimus reiciendis eveniet, quod perferendis laborum corporis ipsam obcaecati, delectus possimus itaque officiis soluta! Ducimus enim eveniet tempore quasi nesciunt cumque.</p> </mat-checkbox>
 
           </section>
 
 
         </mat-grid-list>
-        <div>
+      <div>
 
-        </div>
+      </div>
 
       </mat-tab>
 
       <mat-tab label="Producto">
 
-        <mat-grid-list cols="3" rowHeight="35px">
-
-        </mat-grid-list>
 
 
+        <mat-grid-list cols="3" rowHeight="fit" >
 
-      </mat-tab>
 
-      <mat-tab label="Requisitos adjuntos">
-        <mat-grid-list cols="3" rowHeight="350px">
+          <div class="container example-button-container my-2">
+            <div class="form-group">
+              <button class="boton-perzonalizado" mat-raised-button color="warn" style="background-color: rgb(227, 8, 8);" (click)=" mostrarFormProducto()">Nuevo Producto</button>
+            </div>
+          </div>
+          <lib-dynamicForm *ngIf="vistaFormDocumento==true" [jsonFormData]="formDataDocumento" style="width: 100%; "></lib-dynamicForm>
+
           <div class="table">
-            <table mat-table [dataSource]="dataSource">
+            <table mat-table [dataSource]="dataSource"  >
 
               <!-- Fecha registro Column -->
-              <ng-container matColumnDef="fechaRegistro">
-                <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Obligatorio </th>
+               <ng-container matColumnDef="fechaRegistro" >
+                <th mat-header-cell *matHeaderCellDef  class="tableColorTitulo"> Tipo producto </th>
                 <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaRegistro}} </td>
               </ng-container>
 
               <!-- Etapa Column -->
-              <ng-container matColumnDef="etapa">
-                <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Descripción </th>
-                <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.etapa}} </td>
+               <ng-container matColumnDef="etapa" >
+                <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Partida arancelaria </th>
+                <td mat-cell *matCellDef="let element"class="tableColorCeldas"> {{element.etapa}} </td>
               </ng-container>
 
-              <!-- Descripcion Column -->
-              <ng-container matColumnDef="descripcion">
-                <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> No. adjuntos </th>
+               <!-- Descripcion Column -->
+               <ng-container matColumnDef="descripcion" >
+                <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Subpartida nacional </th>
                 <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.descripcion}} </td>
               </ng-container>
 
-              <!-- Fecha Estimada Column -->
-              <ng-container matColumnDef="fechaEstimada">
-                <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Acciones </th>
-                <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaEstimada}} </td>
+               <!-- Fecha Estimada Column -->
+               <ng-container matColumnDef="fechaEstimada" >
+                <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Editar </th>
+                <td mat-cell *matCellDef="let element"class="tableColorCeldas"> {{element.fechaEstimada}} </td>
               </ng-container>
 
 
@@ -232,22 +231,92 @@
               <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
               <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
-          </div>
+            </div>
+
 
         </mat-grid-list>
-        <div>
-
-        </div>
-      </mat-tab>
 
 
-    </mat-tab-group>
 
-    <div class="text-center">
-      <button mat-stroked-button color="warn">Cancelar proceso</button>
-      <button mat-raised-button color="warn" class="m-2" [disabled]="disabledButton">Enviar solicitud</button>
+    </mat-tab>
+
+    <mat-tab label="Requisitos adjuntos">
+      <mat-grid-list cols="3" rowHeight="350px" >
+        <div class="table">
+          <table mat-table [dataSource]="dataSource"  >
+
+            <!-- Fecha registro Column -->
+             <ng-container matColumnDef="fechaRegistro" >
+              <th mat-header-cell *matHeaderCellDef  class="tableColorTitulo"> Obligatorio </th>
+              <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaRegistro}} </td>
+            </ng-container>
+
+            <!-- Etapa Column -->
+             <ng-container matColumnDef="etapa" >
+              <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Descripción </th>
+              <td mat-cell *matCellDef="let element"class="tableColorCeldas"> {{element.etapa}} </td>
+            </ng-container>
+
+             <!-- Descripcion Column -->
+             <ng-container matColumnDef="descripcion" >
+              <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> No. adjuntos </th>
+              <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.descripcion}} </td>
+            </ng-container>
+
+             <!-- Fecha Estimada Column -->
+             <ng-container matColumnDef="fechaEstimada" >
+              <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Acciones </th>
+              <td mat-cell *matCellDef="let element"class="tableColorCeldas"> {{element.fechaEstimada}} </td>
+            </ng-container>
+
+
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          </div>
+
+      </mat-grid-list>
+    <div>
+
     </div>
+    </mat-tab>
+
+
+  </mat-tab-group>
+
+  <div class="text-center">
+    <button mat-stroked-button color="warn">Cancelar proceso</button>
+    <button mat-raised-button color="warn" class="m-2" [disabled]="disabledButton">Enviar solicitud</button>
+  </div>
 
   </mat-expansion-panel>
 
 </mat-accordion>
+
+<!-- modal -->
+<div class="Modal">
+  <!-- Button trigger modal -->
+       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+         Launch demo modal
+       </button>
+
+       <!-- Modal -->
+       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+           <div class="modal-content">
+             <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+             </div>
+             <div class="modal-body">
+               ...
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Save changes</button>
+             </div>
+           </div>
+         </div>
+       </div>
+ </div>

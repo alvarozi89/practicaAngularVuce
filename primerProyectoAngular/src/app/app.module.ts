@@ -39,7 +39,7 @@ import { MatTableModule } from '@angular/material/table';
 import { TablaComponent } from './componente/mis-favoritos/tabla/tabla.component';
 
 
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -74,13 +74,15 @@ import { TablaComponent } from './componente/mis-favoritos/tabla/tabla.component
     CommonModule,
     DynamicFormModule,
     MatFormFieldModule,
-
     MatSelectModule,
     MatStepperModule,
     MatInputModule,
     MatPaginatorModule,
     MaterialExampleModule,
     MatTableModule,
+    MaterialExampleModule,
+    MatDialogModule
+
 
 
   ],
