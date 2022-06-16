@@ -44,6 +44,10 @@ import { TramitesFrecuentesComponent } from './componente/tramites/tramites-frec
 import {MatDialogModule} from '@angular/material/dialog';
 import { TupaIpenProductosComponent } from './componente/tupa-ipen/tupa-ipen-productos/tupa-ipen-productos.component';
 
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+import { ToastrModule, ToastContainerModule } from 'ngx-toastr';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +64,8 @@ import { TupaIpenProductosComponent } from './componente/tupa-ipen/tupa-ipen-pro
     TablaComponent,
     PlantillasComponent,
     TramitesFrecuentesComponent,
-    TupaIpenProductosComponent
+    TupaIpenProductosComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -87,7 +92,10 @@ import { TupaIpenProductosComponent } from './componente/tupa-ipen/tupa-ipen-pro
     MaterialExampleModule,
     MatTableModule,
     MaterialExampleModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule,
+    ToastrModule,
+    ToastContainerModule
 
 
 

@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { JsonFormData } from 'dynamic-form/src/lib/dynamic-form.component'
 import {FormBuilder, Validators} from '@angular/forms';
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+import {MatSnackBar} from '@angular/material/snack-bar';
+//import {ToastrService } from 'ngx-toastr';
 
 
 interface FixedOptions {
@@ -90,6 +92,11 @@ export class TupaIpenComponent implements OnInit {
     alert("hola")
   }
 
+
+
+  // showSuccess() {
+  //   this.toastr.success('Hello world!', 'Toastr fun!');
+  // }
 
 
 }

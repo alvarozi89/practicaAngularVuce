@@ -158,6 +158,7 @@
   <mat-expansion-panel (opened)="panelOpenState = true"
                        (closed)="panelOpenState = false" [disabled]="disabledRegistroTramite">
     <mat-expansion-panel-header>
+
       <div class="tituloDesplegable">
        Registro de trámite
       </div>
@@ -210,6 +211,7 @@
           </div>
 
           <div class="table">
+
             <table mat-table [dataSource]="dataSource"  >
 
               <!-- Fecha registro Column -->
@@ -253,6 +255,12 @@
     <mat-tab label="Requisitos adjuntos">
       <mat-grid-list cols="3" rowHeight="350px" >
         <div class="table">
+          <div class="example-button-container m-2">
+            <button class="boton-perzonalizado" mat-raised-button color="accent" aria-label="Example icon button with a plus one icon" routerLink="/ipen">
+              <mat-icon style="background-color: rgb(227, 8, 8);">cloud_download</mat-icon>
+            </button>
+            <h3 class="text-danger d-inline"> <b> Descargar adjuntos </b> </h3>
+          </div>
           <table mat-table [dataSource]="dataSourceRequisitos"  >
 
             <!-- Fecha registro Column -->
@@ -276,7 +284,9 @@
              <!-- Fecha Estimada Column -->
              <ng-container matColumnDef="fechaEstimada" >
               <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Acciones </th>
-              <td mat-cell *matCellDef="let element"class="tableColorCeldas"> <h5><mat-icon>cloud_upload</mat-icon><input type="file" class="form-control" ></h5>  </td>
+              <td mat-cell *matCellDef="let element"class="tableColorCeldas"><button class="text-danger" mat-icon-button aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <mat-icon>cloud_upload</mat-icon>
+              </button> </td>
             </ng-container>
 
 
@@ -306,28 +316,78 @@
 </mat-accordion>
 
 <!-- modal -->
-<div class="Modal">
-  <!-- Button trigger modal -->
-       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-         Launch demo modal
-       </button>
-
        <!-- Modal -->
-       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal fade modal-dialog modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
          <div class="modal-dialog">
            <div class="modal-content">
-             <div class="modal-header">
-               <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+             <!-- <div class="modal-header">
+
                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-             </div>
+             </div> -->
              <div class="modal-body">
-               ...
+              <h1 class="text-center"> <b>Cargue de archivos</b> </h1>
+
+              <div class="row">
+
+                <div class="col-6">
+                  <div class="mb-3">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Tipo de cargue *</option>
+                      <option value="1">Nuevo archivo</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="mb-3">
+                    <input class="form-control" type="file" id="formFile">
+                  </div>
+                </div>
+
+                <div class="12">
+                  <table class="table table-borderless">
+                    <thead>
+                      <tr>
+                        <th scope="col">Nombre archivo</th>
+                        <th scope="col">Tamaño</th>
+                        <th scope="col">Eliminar</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td><mat-icon class="text-danger">restore_from_trash</mat-icon></td>
+                      </tr>
+                      <tr>
+
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td><mat-icon class="text-danger">restore_from_trash</mat-icon></td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+                </div>
+
+              </div>
+
+
              </div>
-             <div class="modal-footer">
-               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-               <button type="button" class="btn btn-primary">Save changes</button>
+             <div class="comentarios">
+
+              Selecciona los documentos a adjuntar(Maximo de 10 MB): Archivos*.PDF, *.DOC
+
+            </div>
+
+             <div class="text-center">
+
+               <button type="button" class="btn btn-outline-danger m-2" data-bs-dismiss="modal">Cancelar</button>
+               <button mat-raised-button color="warn" style="background-color: rgb(227, 8, 8);" routerLink="/tabsNumber">Adjuntar archivo </button>
              </div>
            </div>
          </div>
        </div>
- </div>
+
