@@ -37,6 +37,8 @@ import { FiltroSucePreexistenteComponent } from './componente/suce-preexistente/
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { TablaComponent } from './componente/mis-favoritos/tabla/tabla.component';
+import { PlantillasComponent } from './componente/suce-preexistente/plantillas/plantillas.component';
+import { TramitesFrecuentesComponent } from './componente/tramites/tramites-frecuentes/tramites-frecuentes.component';
 
 
 import {MatDialogModule} from '@angular/material/dialog';
@@ -54,7 +56,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     TupaIpenComponent,
     TabsNumberComponent,
     FiltroSucePreexistenteComponent,
-    TablaComponent
+    TablaComponent,
+    PlantillasComponent,
+    TramitesFrecuentesComponent
   ],
   imports: [
     BrowserModule,

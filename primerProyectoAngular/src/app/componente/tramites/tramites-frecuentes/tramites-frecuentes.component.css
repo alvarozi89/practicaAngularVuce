@@ -1,5 +1,8 @@
+table {
+    width: 100%;
+  }
+
 .table{
-    padding: 10px;
     padding-top: 15px;
   }
   .tableColorTitulo{
@@ -9,26 +12,26 @@
     align-content: center;
     text-align: center;
     
+    
   }
   .tableColorCeldas{
     background-color: rgb(238, 236, 236);
     font-size: medium;
     align-content: center;
     text-align: center;
-    
   }
-  table {
-    width: 100%;
+
+  .red-color{
+    color: red;
+    padding: auto;
   }
+  
 
   .titulosSecundarios{
     display: inline-block;
     padding: 10px;
     font-size: x-large;
     font-weight: 500;
-    padding-top: 15px;
+    padding-top: 30px;
   }
   
-  .red-color{
-    color: red;
-  }

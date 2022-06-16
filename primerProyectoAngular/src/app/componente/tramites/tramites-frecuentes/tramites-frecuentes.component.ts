@@ -1,13 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {MatPaginator} from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-
+import { MatPaginator } from '@angular/material/paginator';
 @Component({
-  selector: 'app-tabla',
-  templateUrl: './tabla.component.html',
-  styleUrls: ['./tabla.component.css']
+  selector: 'app-tramites-frecuentes',
+  templateUrl: './tramites-frecuentes.component.html',
+  styleUrls: ['./tramites-frecuentes.component.css']
 })
-export class TablaComponent implements OnInit {
+export class TramitesFrecuentesComponent implements OnInit {
   displayedColumns = ['favoritos','entidad', 'tupa', 'formato', 'nombreFormato', 'tramiteCurso', 'tasa', 'plazo', 'acciones'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
    
@@ -18,15 +17,15 @@ export class TablaComponent implements OnInit {
     }
 
   }
+
   constructor() { }
+
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
-  }
   
-
+  }
 
 }
-
 export interface PeriodicElement {
   favoritos: string,
   entidad: string;
@@ -49,7 +48,4 @@ const ELEMENT_DATA: PeriodicElement[] = [
   { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
   { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
   { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  
-];
+]

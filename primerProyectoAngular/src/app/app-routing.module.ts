@@ -9,6 +9,8 @@ import { TupaIpenComponent } from './componente/tupa-ipen/tupa-ipen.component';
 import { TabsNumberComponent } from './componente/tupa-ipen/tabs-number/tabs-number.component';
 import { FiltroSucePreexistenteComponent } from './componente/suce-preexistente/filtro-suce-preexistente/filtro-suce-preexistente.component';
 import { TablaComponent } from './componente/mis-favoritos/tabla/tabla.component';
+import { PlantillasComponent } from './componente/suce-preexistente/plantillas/plantillas.component';
+import { TramitesFrecuentesComponent } from './componente/tramites/tramites-frecuentes/tramites-frecuentes.component';
 
 
 
@@ -19,7 +21,9 @@ const routes: Routes = [
   {path: 'tupaipen', component: TupaIpenComponent},
   {path: 'tabsNumber', component: TabsNumberComponent},
   {path: 'sucePreexistente',component: FiltroSucePreexistenteComponent},
-  {path: 'mis-favoritos', component: TablaComponent}
+  {path: 'mis-favoritos', component: TablaComponent},
+  {path: 'plantillas', component: PlantillasComponent},
+  {path: 'tramites', component: TramitesFrecuentesComponent}
 ];
 
 @NgModule({
