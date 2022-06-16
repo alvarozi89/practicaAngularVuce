@@ -37,6 +37,8 @@ export class TupaIpenComponent implements OnInit {
   public formDataDocumento: JsonFormData;
   displayedColumns = ['fechaRegistro', 'etapa', 'descripcion', 'fechaEstimada', ];
   dataSource = ELEMENT_DATA;
+  dataSourceRequisitos = ELEMENT_DATA_REQUISITOS;
+
 
   constructor(private http: HttpClient) {
     this.formData = {controls:[]};
@@ -84,6 +86,10 @@ export class TupaIpenComponent implements OnInit {
 
   }
 
+  cargarSubpartidaNacional(){
+    alert("hola")
+  }
+
 
 
 }
@@ -96,12 +102,26 @@ export interface PeriodicElement {
 
 }
 
+export interface Requisitos {
+  obligatorio: string;
+  descripcion: string;
+  nAdjuntos: number;
+  acciones: string;
+
+}
+
 const ELEMENT_DATA: PeriodicElement[] = [
   {fechaRegistro: new Date ('dd/mm/yyyy'), etapa: 'prueba', descripcion:'descripcion', fechaEstimada:new Date('dd/mm/yyyy'), responsable:'responsable'},
   {fechaRegistro: new Date ('dd/mm/yyyy'), etapa: 'prueba', descripcion:'descripcion', fechaEstimada:new Date('dd/mm/yyyy'), responsable:'responsable'},
   {fechaRegistro: new Date ('dd/mm/yyyy'), etapa: 'prueba', descripcion:'descripcion', fechaEstimada:new Date('dd/mm/yyyy'), responsable:'responsable'},
 ];
 
+const ELEMENT_DATA_REQUISITOS: Requisitos[] = [
+  {obligatorio: 'prueba', descripcion:'descripcion', nAdjuntos:1, acciones:''},
+  {obligatorio: 'prueba', descripcion:'descripcion', nAdjuntos:1, acciones:''},
+  {obligatorio: 'prueba', descripcion:'descripcion', nAdjuntos:1, acciones:''},
+  {obligatorio: 'prueba', descripcion:'descripcion', nAdjuntos:1, acciones:''},
 
+]
 
 

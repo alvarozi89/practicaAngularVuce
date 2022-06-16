@@ -11,6 +11,7 @@ import { FiltroSucePreexistenteComponent } from './componente/suce-preexistente/
 import { TablaComponent } from './componente/mis-favoritos/tabla/tabla.component';
 import { PlantillasComponent } from './componente/suce-preexistente/plantillas/plantillas.component';
 import { TramitesFrecuentesComponent } from './componente/tramites/tramites-frecuentes/tramites-frecuentes.component';
+import { TupaIpenProductosComponent } from './componente/tupa-ipen/tupa-ipen-productos/tupa-ipen-productos.component';
 
 
 
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path: 'sucePreexistente',component: FiltroSucePreexistenteComponent},
   {path: 'mis-favoritos', component: TablaComponent},
   {path: 'plantillas', component: PlantillasComponent},
-  {path: 'tramites', component: TramitesFrecuentesComponent}
+  {path: 'tramites', component: TramitesFrecuentesComponent},
+  {path: 'tupa-ipen-producto', component: TupaIpenProductosComponent}
 ];
 
 @NgModule({

@@ -139,8 +139,6 @@ export class DynamicFormComponent implements OnInit {
 
   }
 
-  eventoIcono(){
-    alert("Hola")
-  }
+
 
 }

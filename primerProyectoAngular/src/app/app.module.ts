@@ -42,6 +42,7 @@ import { TramitesFrecuentesComponent } from './componente/tramites/tramites-frec
 
 
 import {MatDialogModule} from '@angular/material/dialog';
+import { TupaIpenProductosComponent } from './componente/tupa-ipen/tupa-ipen-productos/tupa-ipen-productos.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     FiltroSucePreexistenteComponent,
     TablaComponent,
     PlantillasComponent,
-    TramitesFrecuentesComponent
+    TramitesFrecuentesComponent,
+    TupaIpenProductosComponent
   ],
   imports: [
     BrowserModule,
