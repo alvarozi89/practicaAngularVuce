@@ -11,8 +11,7 @@
             <!---->
             <mat-form-field
                 *ngIf="control.type === 'text-area-icon'">
-
-                <mat-label  class="toggle-icon"> <mat-icon >search</mat-icon> {{control.label}}</mat-label>
+                <mat-label  class="toggle-icon">  {{control.label}} <mat-icon >search</mat-icon></mat-label>
                 <textarea  matInput placeholder="{{control.options?.placeholder}}" name="{{control.name}}"
                 value="{{control.value}}">
                 </textarea>
@@ -52,7 +51,7 @@
                         </mat-radio-button>
                     </mat-radio-group>
                 </section>
-            </div> 
+            </div>
         </div>
     </form>
 </div>
