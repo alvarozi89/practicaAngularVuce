@@ -15,3 +15,19 @@
  .divRadio{
     align-items: center;
  }
+
+ .tituloPrincipal{
+  display: inline-block;
+  padding: 5px;
+  font-size: xx-large;
+  font-weight: bolder;
+  padding-top: 50px;
+}
+
+.titulosSecundarios{
+  display: inline-block;
+  padding: 5px;
+  font-size: x-large;
+  font-weight: 500;
+
+}

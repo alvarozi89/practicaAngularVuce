@@ -4,7 +4,10 @@ import { JsonFormData } from 'dynamic-form/src/lib/dynamic-form.component'
 import {FormBuilder, Validators} from '@angular/forms';
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 import {MatSnackBar} from '@angular/material/snack-bar';
-//import {ToastrService } from 'ngx-toastr';
+import {ToastrService } from 'ngx-toastr';
+import {NotificationService } from 'src/app/notification.service';
+
+
 
 
 interface FixedOptions {
@@ -23,6 +26,8 @@ interface FixedOptions {
 
 
 export class TupaIpenComponent implements OnInit {
+  botonDescargarAdjuntos =false;
+  title = 'toaster-not';
   checked = false;
   vistaFormDocumento= false;
   indeterminate = true;
@@ -30,8 +35,6 @@ export class TupaIpenComponent implements OnInit {
   disabled = false;
   disabledButton = true;
   disabledRegistroTramite = true;
-
-  title = 'formsTest';
   panelOpenState = false;
   public formData: JsonFormData;
   public formDataDetalle: JsonFormData;
@@ -42,7 +45,7 @@ export class TupaIpenComponent implements OnInit {
   dataSourceRequisitos = ELEMENT_DATA_REQUISITOS;
 
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,private notifyService : NotificationService) {
     this.formData = {controls:[]};
     this.formDataDetalle = {controls:[]};
     this.formDataDetalleSerfor = {controls:[]};
@@ -89,15 +92,16 @@ export class TupaIpenComponent implements OnInit {
   }
 
   cargarSubpartidaNacional(){
-    alert("hola")
+
   }
 
 
 
-  // showSuccess() {
-  //   this.toastr.success('Hello world!', 'Toastr fun!');
-  // }
+  showToasterSuccess(){
+    this.notifyService.showSuccess("Se cargaron los archivos exitosamente!", "Exito!")
+    this.botonDescargarAdjuntos=true
 
+}
 
 }
 export interface PeriodicElement {

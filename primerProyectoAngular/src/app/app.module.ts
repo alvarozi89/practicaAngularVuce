@@ -48,6 +48,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { ToastrModule, ToastContainerModule } from 'ngx-toastr';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -94,7 +95,7 @@ import { ToastrModule, ToastContainerModule } from 'ngx-toastr';
     MaterialExampleModule,
     MatDialogModule,
     MatSnackBarModule,
-    ToastrModule,
+    ToastrModule.forRoot(),
     ToastContainerModule
 
 

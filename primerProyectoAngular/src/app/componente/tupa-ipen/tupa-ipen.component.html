@@ -1,6 +1,8 @@
 
+
+
 <mat-accordion >
-  <mat-expansion-panel (opened)="panelOpenState = true"
+  <mat-expansion-panel class="m-3 p-3" (opened)="panelOpenState = true"
   (closed)="panelOpenState = false" >
     <mat-expansion-panel-header>
       <div class="tituloDesplegable">
@@ -155,7 +157,7 @@
 
   <!-- otro tab -->
 
-  <mat-expansion-panel (opened)="panelOpenState = true"
+  <mat-expansion-panel class="m-3 p-3" (opened)="panelOpenState = true"
                        (closed)="panelOpenState = false" [disabled]="disabledRegistroTramite">
     <mat-expansion-panel-header>
 
@@ -255,12 +257,13 @@
     <mat-tab label="Requisitos adjuntos">
       <mat-grid-list cols="3" rowHeight="350px" >
         <div class="table">
-          <div class="example-button-container m-2">
+          <div *ngIf="botonDescargarAdjuntos==true"  class="example-button-container m-2">
             <button class="boton-perzonalizado" mat-raised-button color="accent" aria-label="Example icon button with a plus one icon" routerLink="/ipen">
               <mat-icon style="background-color: rgb(227, 8, 8);">cloud_download</mat-icon>
             </button>
             <h3 class="text-danger d-inline"> <b> Descargar adjuntos </b> </h3>
           </div>
+          <div class="mat-headline"><b>Documentos para adjuntar</b></div>
           <table mat-table [dataSource]="dataSourceRequisitos"  >
 
             <!-- Fecha registro Column -->
@@ -284,12 +287,16 @@
              <!-- Fecha Estimada Column -->
              <ng-container matColumnDef="fechaEstimada" >
               <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Acciones </th>
-              <td mat-cell *matCellDef="let element"class="tableColorCeldas"><button class="text-danger" mat-icon-button aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <td mat-cell *matCellDef="let element"class="tableColorCeldas">
+                <button *ngIf="botonDescargarAdjuntos==true" class="text-danger" mat-icon-button aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <mat-icon>find_in_page</mat-icon>
+                </button>
+                <button class="text-danger" mat-icon-button aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <mat-icon>cloud_upload</mat-icon>
-              </button> </td>
+              </button>
+            </td>
+
             </ng-container>
-
-
 
 
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -385,7 +392,7 @@
              <div class="text-center">
 
                <button type="button" class="btn btn-outline-danger m-2" data-bs-dismiss="modal">Cancelar</button>
-               <button mat-raised-button color="warn" style="background-color: rgb(227, 8, 8);" routerLink="/tabsNumber">Adjuntar archivo </button>
+               <button (click)="showToasterSuccess()" data-bs-dismiss="modal" mat-raised-button color="warn" style="background-color: rgb(227, 8, 8);" routerLink="/tabsNumber">Adjuntar archivo </button>
              </div>
            </div>
          </div>
