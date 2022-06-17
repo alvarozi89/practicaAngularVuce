@@ -11,9 +11,8 @@
             <!---->
             <mat-form-field
                 *ngIf="control.type === 'text-area-icon'">
-                <mat-label  class="toggle-icon">  {{control.label}} <mat-icon >search</mat-icon></mat-label>
-                <textarea  matInput placeholder="{{control.options?.placeholder}}" name="{{control.name}}"
-                value="{{control.value}}">
+                <mat-label  routerLink="/tupa-ipen-producto">  {{control.label}} <mat-icon >search</mat-icon></mat-label>
+                <textarea routerLink="/tupa-ipen-producto"  matInput>
                 </textarea>
             </mat-form-field>
             <!---->

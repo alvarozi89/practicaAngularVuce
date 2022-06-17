@@ -27,16 +27,6 @@
         },
 
         {
-
-          "name": "subpartidaNacional",
-          "label":"Subpartida Nacional",
-          "value": "",
-          "type": "text-area-icon",
-          "validators": {"required":true}
-        },
-
-
-        {
           "name": "unidadMedidaFisica",
           "label": "unidad de Medida Fisica",
           "type":"select",
@@ -49,14 +39,6 @@
             "required": true
 
           }
-        },
-
-        {
-          "name": "numeroLicenciaIpen",
-          "label":"Número de licencia IPEN",
-          "value": "",
-          "type": "text",
-          "validators": {"required":true}
         },
 
         {
@@ -74,6 +56,10 @@
           "options": {
             "items": [
               {
+                "value": "0",
+                "viewValue": "--Seleccione--"
+
+              },{
                 "value": "1",
                 "viewValue": "ALMACENAMIENTO DE MATERIAL REACTIVO"
               },
@@ -94,16 +80,15 @@
         },
 
           {
-            "name": "lugarDeposito",
-            "label":"Lugar de depósito",
+            "name": "marca",
+            "label":"Marca",
             "value": "",
             "type": "textarea",
             "validators": {"required":true}
           },
-
           {
-            "name": "marca",
-            "label":"Marca",
+            "name": "Modelo",
+            "label":"Modelo",
             "value": "",
             "type": "textarea",
             "validators": {"required":true}
@@ -131,8 +116,32 @@
             "value": "",
             "type": "textarea",
             "validators": {"required":true}
+          },
+          {
+            "name": "anioFabricacion",
+            "label":"Año de fabricación",
+            "value": "",
+            "type": "textarea",
+            "validators": {"required":true}
+          },
+          {
+            "name": "condicion",
+            "label": "Condición",
+            "type":"select",
+            "options": {
+              "items": [
+                {
+                  "value": "0",
+                  "viewValue": "--Seleccione--"
+  
+                },{
+                  "value": "1",
+                  "viewValue": "Nuevo"
+                }
+              ]
+            }
+           
           }
-
       ],
       "id": 1,
       "version": 1

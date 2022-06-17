@@ -42,7 +42,6 @@ import { TramitesFrecuentesComponent } from './componente/tramites/tramites-frec
 
 
 import {MatDialogModule} from '@angular/material/dialog';
-import { TupaIpenProductosComponent } from './componente/tupa-ipen/tupa-ipen-productos/tupa-ipen-productos.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +59,6 @@ import { TupaIpenProductosComponent } from './componente/tupa-ipen/tupa-ipen-pro
     TablaComponent,
     PlantillasComponent,
     TramitesFrecuentesComponent,
-    TupaIpenProductosComponent
   ],
   imports: [
     BrowserModule,
