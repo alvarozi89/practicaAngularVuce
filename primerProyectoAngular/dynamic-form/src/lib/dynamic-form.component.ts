@@ -32,6 +32,7 @@ interface JsonFormControls {
   name: string;
   label: string;
   value: string;
+  router: string;
   type: string;
   options?: JsonFormControlOptions;
   required: boolean;

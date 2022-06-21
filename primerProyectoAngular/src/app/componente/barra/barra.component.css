@@ -9,7 +9,7 @@ a:hover {
 
 .tituloPrincipal {
   display: inline-block;
-  padding: 5px;
+  padding: 13px;
   font-size: xx-large;
   font-weight: bolder;
   padding-top: 50px;
@@ -17,7 +17,7 @@ a:hover {
 
 .titulosSecundarios {
   display: inline-block;
-  padding: 5px;
+  padding: 10px;
   font-size: x-large;
   font-weight: 500;
 
@@ -26,12 +26,13 @@ a:hover {
 .comentarios {
   font-size: medium;
   display: inline-block;
-  padding: 5px;
-  color: gray;
+  padding: 13px;
+  color:gray;
   padding-top: 25px;
 }
 
 .linkSeccion {
   padding-top: 25px;
+  padding: 13px;
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef  } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { JsonFormData } from 'dynamic-form/src/lib/dynamic-form.component'
 import { FormBuilder, Validators } from '@angular/forms';
@@ -20,22 +20,27 @@ interface FixedOptions {
 
 export class TupaIpenComponent implements OnInit {
   botonDescargarAdjuntos = false;
-  title = 'toaster-not';
   checked = false;
-  vistaFormDocumento = false;
+  vistaFormDocumento= false;
+  vistaBusqueda= false;
   indeterminate = true;
   labelPosition: 'before' | 'after' = 'after';
   disabled = false;
   disabledButton = true;
   disabledRegistroTramite = true;
+  id=null;
+  title = 'formsTest';
   panelOpenState = false;
   public formData: JsonFormData;
   public formDataDetalle: JsonFormData;
   public formDataDetalleSerfor: JsonFormData;
   public formDataDocumento: JsonFormData;
-  displayedColumns = ['fechaRegistro', 'etapa', 'descripcion', 'fechaEstimada',];
+  displayedColumnsBusqueda: string[] = ['producto', 'seccion'];
+  clickedRows = new Set<TablaBusqueda>();
+  displayedColumns = ['fechaRegistro', 'etapa', 'descripcion', 'fechaEstimada', ];
   dataSource = ELEMENT_DATA;
   dataSourceRequisitos = ELEMENT_DATA_REQUISITOS;
+  dataSourceBusquedaTabla= ELEMENT_DATA_BUSQUEDA;
 
   constructor(private http: HttpClient, private notifyService: NotificationService) {
     this.formData = { controls: [] };
@@ -91,7 +96,30 @@ export class TupaIpenComponent implements OnInit {
     this.botonDescargarAdjuntos = true
 
   }
+  mostrarBusquedaSubpartida(){
+    this.vistaBusqueda=true;
+   
+  }
 
+  clicked(row: any){
+    this.id=row.producto;
+    this.cerrarBusqueda();
+  }
+  cerrarBusqueda(){
+    this.vistaBusqueda=false;
+  }
+
+  guardarProducto(){
+
+   this.vistaFormDocumento=false;
+    
+  }
+  
+}
+export interface TablaBusqueda {
+  seccion: string;
+  producto: string;
+  
 }
 export interface PeriodicElement {
   fechaRegistro: Date;
@@ -123,5 +151,15 @@ const ELEMENT_DATA_REQUISITOS: Requisitos[] = [
   { obligatorio: 'prueba', descripcion: 'descripcion', nAdjuntos: 1, acciones: '' },
 
 ]
+
+const ELEMENT_DATA_BUSQUEDA: TablaBusqueda[] = [
+  {producto: "Productos del reino vegetal", seccion: 'SECCIÓN (01 05)'},
+  {producto: "Productos del reino vegetal 2", seccion: 'SECCIÓN (01 05)'},
+  {producto: "Productos del reino vegetal 3", seccion: 'SECCIÓN (01 05)'},
+  {producto: "Productos del reino vegetal 4", seccion: 'SECCIÓN (01 05)'},
+  {producto: "Productos del reino vegetal 5", seccion: 'SECCIÓN (01 05)'},
+  {producto: "Productos del reino vegetal 6", seccion: 'SECCIÓN (01 05)'},
+ 
+];
 
 

@@ -41,7 +41,6 @@ import { PlantillasComponent } from './componente/suce-preexistente/plantillas/p
 import { TramitesFrecuentesComponent } from './componente/tramites/tramites-frecuentes/tramites-frecuentes.component';
 
 import { MatDialogModule } from '@angular/material/dialog';
-import { TupaIpenProductosComponent } from './componente/tupa-ipen/tupa-ipen-productos/tupa-ipen-productos.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ToastrModule, ToastContainerModule } from 'ngx-toastr';
 import { AlertasComponent } from './componente/alertas/alertas.component';
@@ -64,7 +63,6 @@ import { AlertasComponent } from './componente/alertas/alertas.component';
     TablaComponent,
     PlantillasComponent,
     TramitesFrecuentesComponent,
-    TupaIpenProductosComponent,
     AlertasComponent
 
   ],
