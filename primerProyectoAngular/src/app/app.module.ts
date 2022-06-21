@@ -68,17 +68,12 @@ import { ProductosComponent } from './componente/configuracionesParametros/conte
     TablaComponent,
     PlantillasComponent,
     TramitesFrecuentesComponent,
-<<<<<<< HEAD
-    TupaIpenProductosComponent,
     AlertasComponent,
     TabsComponent,
     GeneralesComponent,
     ProcesosSubprocesosComponent,
-    ProductosComponent,
+    ProductosComponent
 
-=======
-    AlertasComponent
->>>>>>> main
 
   ],
   imports: [

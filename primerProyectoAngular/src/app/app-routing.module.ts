@@ -11,8 +11,6 @@ import { FiltroSucePreexistenteComponent } from './componente/suce-preexistente/
 import { TablaComponent } from './componente/mis-favoritos/tabla/tabla.component';
 import { PlantillasComponent } from './componente/suce-preexistente/plantillas/plantillas.component';
 import { TramitesFrecuentesComponent } from './componente/tramites/tramites-frecuentes/tramites-frecuentes.component';
-<<<<<<< HEAD
-import { TupaIpenProductosComponent } from './componente/tupa-ipen/tupa-ipen-productos/tupa-ipen-productos.component';
 import { TabsComponent } from './componente/configuracionesParametros/tabs/tabs.component';
 import { GeneralesComponent } from './componente/configuracionesParametros/contenidos-tabs/generales/generales.component';
 import { ProcesosSubprocesosComponent } from './componente/configuracionesParametros/contenidos-tabs/procesos-subprocesos/procesos-subprocesos.component';
@@ -27,27 +25,12 @@ const routes: Routes = [
   { path: 'mis-favoritos', component: TablaComponent },
   { path: 'plantillas', component: PlantillasComponent },
   { path: 'tramites', component: TramitesFrecuentesComponent },
-  { path: 'tupa-ipen-producto', component: TupaIpenProductosComponent },
   { path: 'configuraciones-parametros', component: TabsComponent },
   { path: 'contenido-generales', component: GeneralesComponent },
   { path: 'procesos-subprocesos', component: ProcesosSubprocesosComponent }
 
 
-=======
 
-
-
-const routes: Routes = [
-  {path: 'entidades', component: FiltroEntidadesComponent},
-  {path: 'cadena', component: FiltroCadenaComponent},
-  {path: 'ipen', component: FiltroIpenComponent},
-  {path: 'tupaipen', component: TupaIpenComponent},
-  {path: 'tabsNumber', component: TabsNumberComponent},
-  {path: 'sucePreexistente',component: FiltroSucePreexistenteComponent},
-  {path: 'mis-favoritos', component: TablaComponent},
-  {path: 'plantillas', component: PlantillasComponent},
-  {path: 'tramites', component: TramitesFrecuentesComponent},
->>>>>>> main
 
 ];
 
