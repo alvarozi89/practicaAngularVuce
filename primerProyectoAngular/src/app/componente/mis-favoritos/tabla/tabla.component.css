@@ -23,6 +23,7 @@ table {
   .red-color{
     color: red;
     padding: auto;
+   
   }
 
   
@@ -32,4 +33,12 @@ table {
     font-size: x-large;
     font-weight: 500;
     padding-top: 30px;
+  }
+
+  .modal-header-start{
+    padding: 12px;
+  }
+
+  .modal-icon-start{
+   font-size: 75px;
   }
