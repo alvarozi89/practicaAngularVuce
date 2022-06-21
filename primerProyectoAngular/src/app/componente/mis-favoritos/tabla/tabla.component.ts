@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { NotificationService } from 'src/app/notification.service';
+
 
 @Component({
   selector: 'app-tabla',
@@ -18,10 +20,36 @@ export class TablaComponent implements OnInit {
     }
 
   }
-  constructor() { }
+  constructor(private notifyService : NotificationService) { }
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
   }
+
+  
+  //Notificaciónes de alerta
+  title = 'toaster-not';
+   
+  showToasterSuccess(){
+      this.notifyService.showSuccess("Agregada a mis favoritos exitosamente", "Éxito");
+     
+  }
+
+  funcion(){
+    this.notifyService.showError("Something is wrong", "tutsmake.com");
+  }
+ /*  
+  showToasterError(){
+      this.notifyService.showError("Something is wrong", "tutsmake.com")
+  }
+   
+  showToasterInfo(){
+      this.notifyService.showInfo("This is info", "tutsmake.com")
+  }
+   
+  showToasterWarning(){
+      this.notifyService.showWarning("This is warning", "tutsmake.com")
+  }*/
+
 
 }
 

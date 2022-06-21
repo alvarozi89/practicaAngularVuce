@@ -40,13 +40,12 @@ import { TablaComponent } from './componente/mis-favoritos/tabla/tabla.component
 import { PlantillasComponent } from './componente/suce-preexistente/plantillas/plantillas.component';
 import { TramitesFrecuentesComponent } from './componente/tramites/tramites-frecuentes/tramites-frecuentes.component';
 
-
 import { MatDialogModule } from '@angular/material/dialog';
 import { TupaIpenProductosComponent } from './componente/tupa-ipen/tupa-ipen-productos/tupa-ipen-productos.component';
-
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
 import { ToastrModule, ToastContainerModule } from 'ngx-toastr';
+import { AlertasComponent } from './componente/alertas/alertas.component';
+
 
 
 @NgModule({
@@ -66,6 +65,7 @@ import { ToastrModule, ToastContainerModule } from 'ngx-toastr';
     PlantillasComponent,
     TramitesFrecuentesComponent,
     TupaIpenProductosComponent,
+    AlertasComponent
 
   ],
   imports: [
@@ -97,6 +97,7 @@ import { ToastrModule, ToastContainerModule } from 'ngx-toastr';
     MatSnackBarModule,
     ToastrModule.forRoot(),
     ToastContainerModule
+
 
 
 
