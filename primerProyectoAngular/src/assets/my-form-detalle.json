@@ -1,14 +1,15 @@
 {
     "controls": [
-      
         {
             "name": "numeroLicenciaIpen",
-            "label":"Número de licencia IPEN",
+            "label": "Número de licencia IPEN",
             "value": "",
             "type": "text",
-            "validators": {"required":true}
-          }
-      ],
-      "id": 1,
-      "version": 1
+            "validators": {
+                "required": true
+            }
+        }
+    ],
+    "id": 1,
+    "version": 1
 }

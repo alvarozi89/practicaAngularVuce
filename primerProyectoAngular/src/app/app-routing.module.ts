@@ -14,18 +14,17 @@ import { TramitesFrecuentesComponent } from './componente/tramites/tramites-frec
 import { TupaIpenProductosComponent } from './componente/tupa-ipen/tupa-ipen-productos/tupa-ipen-productos.component';
 
 
-
 const routes: Routes = [
-  {path: 'entidades', component: FiltroEntidadesComponent},
-  {path: 'cadena', component: FiltroCadenaComponent},
-  {path: 'ipen', component: FiltroIpenComponent},
-  {path: 'tupaipen', component: TupaIpenComponent},
-  {path: 'tabsNumber', component: TabsNumberComponent},
-  {path: 'sucePreexistente',component: FiltroSucePreexistenteComponent},
-  {path: 'mis-favoritos', component: TablaComponent},
-  {path: 'plantillas', component: PlantillasComponent},
-  {path: 'tramites', component: TramitesFrecuentesComponent},
-  {path: 'tupa-ipen-producto', component: TupaIpenProductosComponent}
+  { path: 'entidades', component: FiltroEntidadesComponent },
+  { path: 'cadena', component: FiltroCadenaComponent },
+  { path: 'ipen', component: FiltroIpenComponent },
+  { path: 'tupaipen', component: TupaIpenComponent },
+  { path: 'tabsNumber', component: TabsNumberComponent },
+  { path: 'sucePreexistente', component: FiltroSucePreexistenteComponent },
+  { path: 'mis-favoritos', component: TablaComponent },
+  { path: 'plantillas', component: PlantillasComponent },
+  { path: 'tramites', component: TramitesFrecuentesComponent },
+  { path: 'tupa-ipen-producto', component: TupaIpenProductosComponent }
 ];
 
 @NgModule({

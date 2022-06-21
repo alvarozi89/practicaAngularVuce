@@ -9,26 +9,26 @@ import { ViewChild } from '@angular/core';
 })
 export class FiltroSucePreexistenteComponent implements OnInit {
 
-  displayedColumns = ['favoritos','entidad', 'tupa', 'formato', 'nombreFormato', 'tramiteCurso', 'tasa', 'plazo', 'acciones'];
+  displayedColumns = ['favoritos', 'entidad', 'tupa', 'formato', 'nombreFormato', 'tramiteCurso', 'tasa', 'plazo', 'acciones'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
-  @ViewChild(MatPaginator, {static: false})
+  @ViewChild(MatPaginator, { static: false })
   set paginator(value: MatPaginator) {
-    if (this.dataSource){
+    if (this.dataSource) {
       this.dataSource.paginator = value;
     }
   }
-    
-  constructor() { 
-    
-  }
-  
-  
-  ngOnInit(): void {
-       this.dataSource.paginator = this.paginator;
+
+  constructor() {
+
   }
 
-  
+
+  ngOnInit(): void {
+    this.dataSource.paginator = this.paginator;
+  }
+
+
 
 }
 export interface PeriodicElement {
@@ -44,40 +44,40 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' }, { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
 ];

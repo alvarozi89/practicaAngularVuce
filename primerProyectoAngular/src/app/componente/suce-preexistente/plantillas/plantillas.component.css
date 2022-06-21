@@ -1,53 +1,58 @@
-.tituloPrincipal{
-    display: inline-block;
-    padding: 15px;
-    font-size: xx-large;
-    font-weight: bolder;
-  }
+.tituloPrincipal {
+  display: inline-block;
+  padding: 15px;
+  font-size: xx-large;
+  font-weight: bolder;
+}
 
-  .comentarios{
-    font-size: medium;
-    display: inline-block;
-    padding: 15px;
-    color:gray;
-  }
+.comentarios {
+  font-size: medium;
+  display: inline-block;
+  padding: 15px;
+  color: gray;
+}
 
-  .titulosSecundarios{
-    display: inline-block;
-    padding: 10px;
-    font-size: x-large;
-    font-weight: 500;
-    padding-top: 15px;
-  }
+.titulosSecundarios {
+  display: inline-block;
+  padding: 10px;
+  font-size: x-large;
+  font-weight: 500;
+  padding-top: 15px;
+}
 
-  .radioButton{
-    padding: 10px;
-    padding-left: 15%;
-    padding-right: 30%;
-    border-color: red;
-  }
-  .table{
-    padding: 10px;
-    padding-top: 15px;
-  }
-  .tableColorTitulo{
-    background-color: grey;
-    color: white;
-    font-size: medium;
-    align-content: center;
-    text-align: center;
-    
-  }
-  .tableColorCeldas{
-    background-color: rgb(238, 236, 236);
-    font-size: medium;
-    align-content: center;
-    text-align: center;
-    
-  }
-  table {
-    width: 100%;
-  }
-  .red-color{
-    color: red;
-  }
+.radioButton {
+  padding: 10px;
+  padding-left: 15%;
+  padding-right: 30%;
+  border-color: red;
+}
+
+.table {
+  padding: 10px;
+  padding-top: 15px;
+}
+
+.tableColorTitulo {
+  background-color: grey;
+  color: white;
+  font-size: medium;
+  align-content: center;
+  text-align: center;
+
+}
+
+.tableColorCeldas {
+  background-color: rgb(238, 236, 236);
+  font-size: medium;
+  align-content: center;
+  text-align: center;
+
+}
+
+table {
+  width: 100%;
+}
+
+.red-color {
+  color: red;
+}

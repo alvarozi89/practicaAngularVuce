@@ -7,12 +7,12 @@ import { MatPaginator } from '@angular/material/paginator';
   styleUrls: ['./tramites-frecuentes.component.css']
 })
 export class TramitesFrecuentesComponent implements OnInit {
-  displayedColumns = ['favoritos','entidad', 'tupa', 'formato', 'nombreFormato', 'tramiteCurso', 'tasa', 'plazo', 'acciones'];
+  displayedColumns = ['favoritos', 'entidad', 'tupa', 'formato', 'nombreFormato', 'tramiteCurso', 'tasa', 'plazo', 'acciones'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-   
-  @ViewChild(MatPaginator, {static: false})
+
+  @ViewChild(MatPaginator, { static: false })
   set paginator(value: MatPaginator) {
-    if (this.dataSource){
+    if (this.dataSource) {
       this.dataSource.paginator = value;
     }
 
@@ -22,7 +22,7 @@ export class TramitesFrecuentesComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
-  
+
   }
 
 }
@@ -33,19 +33,19 @@ export interface PeriodicElement {
   formato: string;
   nombreFormato: string;
   tramiteCurso: number;
-  tasa:string;
-  plazo:string;
+  tasa: string;
+  plazo: string;
   acciones: string;
 
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa:'descripcion', formato:'prueba', nombreFormato:'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
 ]

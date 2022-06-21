@@ -8,9 +8,9 @@ describe('FiltroSucePreexistenteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FiltroSucePreexistenteComponent ]
+      declarations: [FiltroSucePreexistenteComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(FiltroSucePreexistenteComponent);
     component = fixture.componentInstance;

@@ -1,17 +1,14 @@
 .full.width {
-    width: 100%;
+  width: 100%;
 }
 
 .text-inside-grid {
-    position: absolute;
-    left: 5px;
-    font-size: medium;
-    padding-top: 15px;
-  }
+  position: absolute;
+  left: 5px;
+  font-size: medium;
+  padding-top: 15px;
+}
 
-  .toggle-icon{
-
-    cursor: pointer;
-
-
+.toggle-icon {
+  cursor: pointer;
 }
