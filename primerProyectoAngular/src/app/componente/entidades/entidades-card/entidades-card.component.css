@@ -1,8 +1,8 @@
-.m-3 {
+.m-3{
 
   display: block;
   align-items: stretch;
-  width: 100%;
+  width:100%;
   min-height: 130px;
   max-height: fit-content;
   border-radius: 7%;
@@ -12,22 +12,29 @@
   text-align: center;
 }
 
-.divRadio {
+.divRadio{
   align-items: center;
 }
 
-.tituloPrincipal {
+.tituloPrincipal{
   display: inline-block;
-  padding: 5px;
+  padding: 12px;
   font-size: xx-large;
   font-weight: bolder;
   padding-top: 50px;
 }
 
-.titulosSecundarios {
+.titulosSecundarios{
   display: inline-block;
-  padding: 5px;
+  padding: 14px;
   font-size: x-large;
-  font-weight: 500;
+  font-weight: bold;
+  padding-top: 40px;
+  
+  
+}
 
+.cards{
+  padding-top: 5px;
+  padding: -5%;
 }
