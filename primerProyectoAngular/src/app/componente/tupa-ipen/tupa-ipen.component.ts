@@ -101,6 +101,12 @@ export class TupaIpenComponent implements OnInit {
   cerrarBusqueda(){
     this.vistaBusqueda=false;
   }
+
+  guardarProducto(){
+
+   this.vistaFormDocumento=false;
+    
+  }
   
 }
 export interface TablaBusqueda {

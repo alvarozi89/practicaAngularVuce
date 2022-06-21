@@ -24,7 +24,7 @@
 
 .tituloPrincipal{
   display: inline-block;
-  padding: 13px;
+  padding: 12px;
   font-size: xx-large;
   font-weight: bolder;
   padding-top: 50px;
@@ -32,7 +32,7 @@
 
 .titulosSecundarios{
   display: inline-block;
-  padding: 10px;
+  padding: 12px;
   font-size: x-large;
   font-weight: 500;
   
@@ -47,5 +47,11 @@
 }
 
 .alinear{
-  padding: 5px;
+  display: inline-block;
+  padding: 12px;
+  
+}
+
+.paddingControl{
+  padding-left: 1090px;
 }
