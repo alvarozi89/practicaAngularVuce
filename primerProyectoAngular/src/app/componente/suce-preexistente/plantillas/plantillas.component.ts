@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { NotificationService } from 'src/app/notification.service';
 
 @Component({
   selector: 'app-plantillas',
@@ -12,7 +13,7 @@ export class PlantillasComponent implements OnInit {
   public buttonName:any = 'Show';
   displayedColumns = ['solicitud','fechaRegistro','acciones'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-  constructor() { }
+  constructor(private notifyService : NotificationService) { }
 
   ngOnInit(): void {
   }
@@ -25,6 +26,11 @@ export class PlantillasComponent implements OnInit {
      this.show=false;
     }
    }
+
+   //notificaciones
+   showToasterInfo(){
+    this.notifyService.showInfo("This is info", "tutsmake.com");
+}
 }
 
 export interface PeriodicElement {

@@ -40,8 +40,12 @@ import { TablaComponent } from './componente/mis-favoritos/tabla/tabla.component
 import { PlantillasComponent } from './componente/suce-preexistente/plantillas/plantillas.component';
 import { TramitesFrecuentesComponent } from './componente/tramites/tramites-frecuentes/tramites-frecuentes.component';
 
-
 import {MatDialogModule} from '@angular/material/dialog';
+import { ToastrModule } from 'ngx-toastr';
+
+import { AlertasComponent } from './componente/alertas/alertas.component';
+
+
 
 @NgModule({
   declarations: [
@@ -58,7 +62,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     FiltroSucePreexistenteComponent,
     TablaComponent,
     PlantillasComponent,
-    TramitesFrecuentesComponent
+    TramitesFrecuentesComponent,
+    AlertasComponent
   ],
   imports: [
     BrowserModule,
@@ -85,7 +90,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MaterialExampleModule,
     MatTableModule,
     MaterialExampleModule,
-    MatDialogModule
+    MatDialogModule,
+    ToastrModule.forRoot()
 
 
 

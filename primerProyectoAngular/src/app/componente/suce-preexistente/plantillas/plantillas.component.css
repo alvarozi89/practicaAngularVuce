@@ -51,3 +51,11 @@
   .red-color{
     color: red;
   }
+
+  .boton-perzonalizado{
+    padding: 0 8px;
+    background-color: rgb(227, 8, 8);
+    min-width: 30px;
+    line-height: 34px
+  }
+  
