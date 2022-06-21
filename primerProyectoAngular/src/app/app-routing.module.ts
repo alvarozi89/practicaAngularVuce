@@ -14,7 +14,8 @@ import { TramitesFrecuentesComponent } from './componente/tramites/tramites-frec
 import { TabsComponent } from './componente/configuracionesParametros/tabs/tabs.component';
 import { GeneralesComponent } from './componente/configuracionesParametros/contenidos-tabs/generales/generales.component';
 import { ProcesosSubprocesosComponent } from './componente/configuracionesParametros/contenidos-tabs/procesos-subprocesos/procesos-subprocesos.component';
-
+import { ConsultarPsComponent } from './componente/configuracionesParametros/contenidos-tabs/procesos-subprocesos/consultar-ps/consultar-ps.component';
+import { GestionTramitePSComponent } from './componente/configuracionesParametros/contenidos-tabs/procesos-subprocesos/consultar-ps/gestion-tramite-ps/gestion-tramite-ps.component';
 const routes: Routes = [
   { path: 'entidades', component: FiltroEntidadesComponent },
   { path: 'cadena', component: FiltroCadenaComponent },
@@ -26,8 +27,10 @@ const routes: Routes = [
   { path: 'plantillas', component: PlantillasComponent },
   { path: 'tramites', component: TramitesFrecuentesComponent },
   { path: 'configuraciones-parametros', component: TabsComponent },
-  { path: 'contenido-generales', component: GeneralesComponent },
-  { path: 'procesos-subprocesos', component: ProcesosSubprocesosComponent }
+  { path: 'contenidos-generales', component: GeneralesComponent },
+  { path: 'procesos-subprocesos', component: ProcesosSubprocesosComponent },
+  { path: 'consultas-PS', component: ConsultarPsComponent },
+  { path: 'gestion-tramite-PS', component: GestionTramitePSComponent },
 
 
 

@@ -9,7 +9,7 @@ export class ProcesosSubprocesosComponent implements OnInit {
   vistaFormProcesos=false
   dataSource = ELEMENT_DATA;
   dataSourceRequisitos = ELEMENT_DATA_REQUISITOS;
-  displayedColumns = ['fechaRegistro', 'etapa', 'descripcion', 'fechaEstimada',];
+  displayedColumns = ['entidad', 'procedimiento', 'codigoTupa', 'fechaCreacion','fechaModificacion', 'acciones'];
 
 
   constructor() { }
@@ -26,12 +26,13 @@ export class ProcesosSubprocesosComponent implements OnInit {
 }
 
 
-export interface PeriodicElement {
-  fechaRegistro: Date;
-  etapa: string;
-  descripcion: string;
-  fechaEstimada: Date;
-  responsable: string;
+export interface ProductosElement {
+  entidad: string;
+  procedimiento: string;
+  codigoTupa: string;
+  fechaCreacion: Date;
+  fechaModificacion: Date;
+  acciones: string;
 
 }
 
@@ -43,10 +44,10 @@ export interface Requisitos {
 
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  { fechaRegistro: new Date('dd/mm/yyyy'), etapa: 'prueba', descripcion: 'descripcion', fechaEstimada: new Date('dd/mm/yyyy'), responsable: 'responsable' },
-  { fechaRegistro: new Date('dd/mm/yyyy'), etapa: 'prueba', descripcion: 'descripcion', fechaEstimada: new Date('dd/mm/yyyy'), responsable: 'responsable' },
-  { fechaRegistro: new Date('dd/mm/yyyy'), etapa: 'prueba', descripcion: 'descripcion', fechaEstimada: new Date('dd/mm/yyyy'), responsable: 'responsable' },
+const ELEMENT_DATA: ProductosElement[] = [
+  { entidad: 'entidad', procedimiento: 'procedimiento',codigoTupa: 'codigoTupa', fechaCreacion: new Date('dd/mm/yyyy'), fechaModificacion: new Date('dd/mm/yyyy'), acciones: ''},
+  { entidad: 'entidad', procedimiento: 'procedimiento',codigoTupa: 'codigoTupa', fechaCreacion: new Date('dd/mm/yyyy'), fechaModificacion: new Date('dd/mm/yyyy'), acciones: ''},
+  { entidad: 'entidad', procedimiento: 'procedimiento',codigoTupa: 'codigoTupa', fechaCreacion: new Date('dd/mm/yyyy'), fechaModificacion: new Date('dd/mm/yyyy'), acciones: ''},
 ];
 
 const ELEMENT_DATA_REQUISITOS: Requisitos[] = [

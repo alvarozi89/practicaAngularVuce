@@ -32,33 +32,51 @@
 
   <!-- contenido oculto -->
 
-  <div class="formDatos" *ngIf="vistaFormProcesos==true">
+  <div class="container formDatos" *ngIf="vistaFormProcesos==true">
     <div class="table">
       <table mat-table [dataSource]="dataSource">
 
-        <!-- Fecha registro Column -->
-        <ng-container matColumnDef="fechaRegistro">
-          <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Tipo producto </th>
-          <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaRegistro}} </td>
+
+        <ng-container matColumnDef="entidad">
+          <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Entidad </th>
+          <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.entidad}} </td>
         </ng-container>
 
-        <!-- Etapa Column -->
-        <ng-container matColumnDef="etapa">
-          <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Partida arancelaria </th>
-          <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.etapa}} </td>
+
+        <ng-container matColumnDef="procedimiento">
+          <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Procedimiento </th>
+          <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.procedimiento}} </td>
         </ng-container>
 
-        <!-- Descripcion Column -->
-        <ng-container matColumnDef="descripcion">
-          <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Subpartida nacional </th>
-          <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.descripcion}} </td>
+
+        <ng-container matColumnDef="codigoTupa">
+          <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Código TUPA</th>
+          <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.codigoTupa}} </td>
         </ng-container>
 
-        <!-- Fecha Estimada Column -->
-        <ng-container matColumnDef="fechaEstimada">
-          <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Editar </th>
-          <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaEstimada}} </td>
+
+        <ng-container matColumnDef="fechaCreacion">
+          <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Fecha de creación </th>
+          <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaCreacion}} </td>
         </ng-container>
+
+
+          <ng-container matColumnDef="fechaModificacion">
+            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Fecha de modificación </th>
+            <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaModificacion}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="acciones">
+            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Acciones </th>
+            <td mat-cell *matCellDef="let element" class="tableColorCeldas">
+              <button routerLink="/consultas-PS" class="text-danger" mat-icon-button
+                aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                <mat-icon>find_in_page</mat-icon>
+              </button>
+            </td>
+
+          </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

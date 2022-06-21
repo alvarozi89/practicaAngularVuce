@@ -48,6 +48,8 @@ import { TabsComponent } from './componente/configuracionesParametros/tabs/tabs.
 import { GeneralesComponent } from './componente/configuracionesParametros/contenidos-tabs/generales/generales.component';
 import { ProcesosSubprocesosComponent } from './componente/configuracionesParametros/contenidos-tabs/procesos-subprocesos/procesos-subprocesos.component';
 import { ProductosComponent } from './componente/configuracionesParametros/contenidos-tabs/productos/productos.component';
+import { ConsultarPsComponent } from './componente/configuracionesParametros/contenidos-tabs/procesos-subprocesos/consultar-ps/consultar-ps.component';
+import { GestionTramitePSComponent } from './componente/configuracionesParametros/contenidos-tabs/procesos-subprocesos/consultar-ps/gestion-tramite-ps/gestion-tramite-ps.component';
 
 
 
@@ -72,7 +74,9 @@ import { ProductosComponent } from './componente/configuracionesParametros/conte
     TabsComponent,
     GeneralesComponent,
     ProcesosSubprocesosComponent,
-    ProductosComponent
+    ProductosComponent,
+    ConsultarPsComponent,
+    GestionTramitePSComponent
 
 
   ],
