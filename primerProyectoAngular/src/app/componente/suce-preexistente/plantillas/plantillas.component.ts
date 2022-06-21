@@ -28,8 +28,6 @@ export class PlantillasComponent implements OnInit {
 
   }
 
-   }
-
    //notificaciones
    showToasterInfo(){
     this.notifyService.showInfo("This is info", "tutsmake.com");
