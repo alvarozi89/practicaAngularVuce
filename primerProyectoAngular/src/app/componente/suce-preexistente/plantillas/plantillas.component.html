@@ -19,16 +19,18 @@
             </div>
             <div>
                 <mat-radio-group col="2" aria-label="Select an option">
-                    <mat-radio-button  class="radioButton" (click)="desplegarComponente('1')" value="1">Mis plantillas</mat-radio-button>
-                    <mat-radio-button (click)="desplegarComponente('2')" value="2">Mis trámites expirados</mat-radio-button>
+                    <mat-radio-button class="radioButton" (click)="desplegarComponente('1')" value="1">Mis plantillas
+                    </mat-radio-button>
+                    <mat-radio-button (click)="desplegarComponente('2')" value="2">Mis trámites expirados
+                    </mat-radio-button>
                 </mat-radio-group>
 
-                
+
             </div>
            
                <div id="funcion"></div>
 
-            
+
         </div>
     </div>
 </div>
@@ -37,36 +39,34 @@
     <div class="titulosSecundarios">Mis trámites con CB expirados</div>
     <div class="table">
         <table mat-table [dataSource]="dataSource">
-     
+
             <!-- Entidad Column -->
             <ng-container matColumnDef="solicitud">
                 <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Solicitud </th>
                 <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.solicitud}} </td>
             </ng-container>
-    
+
             <!-- Tupa Column -->
             <ng-container matColumnDef="fechaRegistro">
                 <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Fecha/hora registro </th>
                 <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaRegistro}} </td>
             </ng-container>
-    
+
             <!-- Acciones Column -->
             <ng-container matColumnDef="acciones">
-               
-                    <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Acciones </th>
-                    <td mat-cell *matCellDef="let element"  class="tableColorCeldas">
-                        <mat-icon aria-hidden="false" class="material-icons red-color" aria-label="Star">file_copy</mat-icon>
-                    </td>
-                
+
+                <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Acciones </th>
+                <td mat-cell *matCellDef="let element" class="tableColorCeldas">
+                    <mat-icon aria-hidden="false" class="material-icons red-color" aria-label="Star">file_copy
+                    </mat-icon>
+                </td>
+
             </ng-container>
-    
+
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    
-        
-    
-        
+
         </table>
         <mat-paginator [pageSizeOptions]="[5, 10, 25, 50, 100]" [pageSize]="5" [showFirstLastButtons]></mat-paginator>
-    
-</div>
+
+    </div>

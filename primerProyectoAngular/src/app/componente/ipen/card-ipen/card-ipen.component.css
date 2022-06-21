@@ -1,23 +1,29 @@
-.m-3{
+.m-3 {
 
   display: block;
   align-items: stretch;
-  width:100%;
+  width: 100%;
   min-height: 130px;
   max-height: fit-content;
   border-radius: 7%;
 }
-.red-color{
-  color:red
- }
 
- .title_center {
-  display: flex;
-  justify-content: center; /* align horizontal */
-  align-items: center; /* align vertical */
+.red-color {
+  color: red
 }
+
+.title_center {
+  display: flex;
+  justify-content: center;
+  /* align horizontal */
+  align-items: center;
+  /* align vertical */
+}
+
 .title_center2 {
- display: flex;
-  justify-content: left; /* align horizontal */
-  align-items: left; /* align vertical */
+  display: flex;
+  justify-content: left;
+  /* align horizontal */
+  align-items: left;
+  /* align vertical */
 }

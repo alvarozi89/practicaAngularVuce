@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, Validators} from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-tabs-number',
@@ -9,8 +9,6 @@ import {FormBuilder, Validators} from '@angular/forms';
 export class TabsNumberComponent implements OnInit {
 
   public boton_pulsado: boolean = false;
-
-
 
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
@@ -25,10 +23,9 @@ export class TabsNumberComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-  funcion(){
+  funcion() {
     this.boton_pulsado = !this.boton_pulsado;
- }
+  }
 
 
 }

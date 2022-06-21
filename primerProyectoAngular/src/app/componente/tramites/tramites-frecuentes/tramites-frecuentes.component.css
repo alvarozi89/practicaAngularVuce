@@ -1,37 +1,38 @@
 table {
-    width: 100%;
-  }
+  width: 100%;
+}
 
-.table{
-    padding-top: 15px;
-  }
-  .tableColorTitulo{
-    background-color: grey;
-    color: white;
-    font-size: medium;
-    align-content: center;
-    text-align: center;
-    
-    
-  }
-  .tableColorCeldas{
-    background-color: rgb(238, 236, 236);
-    font-size: medium;
-    align-content: center;
-    text-align: center;
-  }
+.table {
+  padding-top: 15px;
+}
 
-  .red-color{
-    color: red;
-    padding: auto;
-  }
-  
+.tableColorTitulo {
+  background-color: grey;
+  color: white;
+  font-size: medium;
+  align-content: center;
+  text-align: center;
 
-  .titulosSecundarios{
-    display: inline-block;
-    padding: 10px;
-    font-size: x-large;
-    font-weight: 500;
-    padding-top: 30px;
-  }
-  
+
+}
+
+.tableColorCeldas {
+  background-color: rgb(238, 236, 236);
+  font-size: medium;
+  align-content: center;
+  text-align: center;
+}
+
+.red-color {
+  color: red;
+  padding: auto;
+}
+
+
+.titulosSecundarios {
+  display: inline-block;
+  padding: 10px;
+  font-size: x-large;
+  font-weight: 500;
+  padding-top: 30px;
+}

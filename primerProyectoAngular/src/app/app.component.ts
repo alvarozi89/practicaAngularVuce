@@ -7,10 +7,10 @@ import { MAT_RADIO_DEFAULT_OPTIONS } from '@angular/material/radio';
   styleUrls: ['./app.component.css'],
   providers: [{
     provide: MAT_RADIO_DEFAULT_OPTIONS,
-    useValue: {color:'warn'}
+    useValue: { color: 'warn' }
   }]
 })
 export class AppComponent {
   title = 'primerProyectoAngular';
- 
+
 }
