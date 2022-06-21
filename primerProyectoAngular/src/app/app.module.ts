@@ -45,6 +45,11 @@ import { TupaIpenProductosComponent } from './componente/tupa-ipen/tupa-ipen-pro
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ToastrModule, ToastContainerModule } from 'ngx-toastr';
 import { AlertasComponent } from './componente/alertas/alertas.component';
+import { TabsComponent } from './componente/configuracionesParametros/tabs/tabs.component';
+import { GeneralesComponent } from './componente/configuracionesParametros/contenidos-tabs/generales/generales.component';
+import { ProcesosSubprocesosComponent } from './componente/configuracionesParametros/contenidos-tabs/procesos-subprocesos/procesos-subprocesos.component';
+import { ProductosComponent } from './componente/configuracionesParametros/contenidos-tabs/productos/productos.component';
+
 
 
 
@@ -65,7 +70,12 @@ import { AlertasComponent } from './componente/alertas/alertas.component';
     PlantillasComponent,
     TramitesFrecuentesComponent,
     TupaIpenProductosComponent,
-    AlertasComponent
+    AlertasComponent,
+    TabsComponent,
+    GeneralesComponent,
+    ProcesosSubprocesosComponent,
+    ProductosComponent,
+
 
   ],
   imports: [

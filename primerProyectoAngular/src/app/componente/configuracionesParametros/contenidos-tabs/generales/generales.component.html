@@ -1,0 +1,163 @@
+<app-tabs></app-tabs>
+<div class="container">
+  <div class="card m-2">
+    <div class="card-body">
+      <div class="row">
+        <h4><b>Filtros de búsqueda</b></h4>
+        <div class="col-lg-3 my-2">
+          <div class="form-group">
+            <select class="form-control">
+              <option value="">Entidad</option>
+              <option value=""></option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-2 my-2">
+          <div class="form-group">
+            <button mat-raised-button color="warn" style="background-color: rgb(227, 8, 8);" (click)=" mostrarContenidoGenerales()">Buscar <mat-icon>search
+              </mat-icon></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- contenido oculto -->
+  <div class="formDatos" *ngIf="vistaFormGenerales==true">
+
+    <div class="card m-2">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-6 my-2">
+            <div class="form-group">
+              <select class="form-control">
+                <option value="">Procedimiento</option>
+                <option value=""></option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-lg-3 my-2">
+            <div class="form-group">
+              <select class="form-control">
+                <option value="">Mercancia restringida</option>
+                <option value=""></option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-lg-3 my-2">
+            <div class="form-group">
+              <select class="form-control">
+                <option value="">Tipo de trámite</option>
+                <option value=""></option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-lg-3 my-2">
+            <div class="form-group">
+              <select class="form-control">
+                <option value="">16</option>
+                <option value=""></option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- aqui inicia la card -->
+  <br>
+
+  <div class="example-button-container m-2">
+    <button class="boton-perzonalizado" mat-raised-button color="accent"
+      aria-label="Example icon button with a plus one icon" routerLink="/ipen">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <h3 class="text-danger d-inline"> <b> Editar </b> </h3>
+  </div>
+  <mat-grid-list cols="3" rowHeight="1:1">
+
+    <mat-grid-tile class="layout-row">
+      <mat-card class="m-3">
+        <mat-card-title><h3> <b>Habilitar trámite de requerimiento de inspección posterior *</b> </h3></mat-card-title>
+        <hr>
+        <mat-card class="m-2">
+          <mat-radio-group aria-label="Select an option" class="text-center">
+            <mat-radio-button value="1"></mat-radio-button>
+          </mat-radio-group>
+          <mat-label>Si</mat-label>
+        </mat-card>
+        <mat-card class="m-2">
+          <mat-radio-group aria-label="Select an option" class="text-center">
+            <mat-radio-button value="1"></mat-radio-button>
+          </mat-radio-group>
+          <mat-label>No</mat-label>
+        </mat-card>
+        <mat-card class="m-2">
+          <mat-radio-group aria-label="Select an option" class="text-center">
+            <mat-radio-button value="1"></mat-radio-button>
+          </mat-radio-group>
+          <mat-label>No aplica</mat-label>
+        </mat-card>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile class="layout-row">
+      <mat-card class="m-3">
+        <mat-card-title><h3> <b>Habilitar trámite de ingreso o salida temporal *</b> </h3></mat-card-title>
+        <hr>
+        <mat-card class="m-2">
+          <mat-radio-group aria-label="Select an option" class="text-center">
+            <mat-radio-button value="1"></mat-radio-button>
+          </mat-radio-group>
+          <mat-label>Si</mat-label>
+        </mat-card>
+        <mat-card class="m-2">
+          <mat-radio-group aria-label="Select an option" class="text-center">
+            <mat-radio-button value="1"></mat-radio-button>
+          </mat-radio-group>
+          <mat-label>No</mat-label>
+        </mat-card>
+        <mat-card class="m-2">
+          <mat-radio-group aria-label="Select an option" class="text-center">
+            <mat-radio-button value="1"></mat-radio-button>
+          </mat-radio-group>
+          <mat-label>No aplica</mat-label>
+        </mat-card>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile class="layout-row">
+      <mat-card class="m-3">
+        <mat-card-title><h3> <b>Habilitar trámite que permite recurso administrativo *</b> </h3></mat-card-title>
+        <hr>
+        <mat-card class="m-2">
+          <mat-radio-group aria-label="Select an option" class="text-center">
+            <mat-radio-button value="1"></mat-radio-button>
+          </mat-radio-group>
+          <mat-label>Si</mat-label>
+        </mat-card>
+        <mat-card class="m-2">
+          <mat-radio-group aria-label="Select an option" class="text-center">
+            <mat-radio-button value="1"></mat-radio-button>
+          </mat-radio-group>
+          <mat-label>No</mat-label>
+        </mat-card>
+        <mat-card class="m-2">
+          <mat-radio-group aria-label="Select an option" class="text-center">
+            <mat-radio-button value="1"></mat-radio-button>
+          </mat-radio-group>
+          <mat-label>No aplica</mat-label>
+        </mat-card>
+      </mat-card>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+  </div>
+
+
+</div>
+

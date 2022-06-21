@@ -1,0 +1,72 @@
+<app-tabs></app-tabs>
+<div class="container">
+  <div class="card m-2">
+    <div class="card-body">
+      <div class="row">
+        <h4><b>Filtros de búsqueda</b></h4>
+        <div class="col-lg-3 my-2">
+          <div class="form-group">
+            <select class="form-control">
+              <option value="">Entidad</option>
+              <option value=""></option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-3 my-2">
+          <div class="form-group">
+            <select class="form-control">
+              <option value="">Procedimiento</option>
+              <option value=""></option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-2 my-2">
+          <div class="form-group">
+            <button mat-raised-button color="warn" style="background-color: rgb(227, 8, 8);" (click)="mostrarContenidoProcesos()">Buscar <mat-icon>search
+              </mat-icon></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- contenido oculto -->
+
+  <div class="formDatos" *ngIf="vistaFormProcesos==true">
+    <div class="table">
+      <table mat-table [dataSource]="dataSource">
+
+        <!-- Fecha registro Column -->
+        <ng-container matColumnDef="fechaRegistro">
+          <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Tipo producto </th>
+          <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaRegistro}} </td>
+        </ng-container>
+
+        <!-- Etapa Column -->
+        <ng-container matColumnDef="etapa">
+          <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Partida arancelaria </th>
+          <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.etapa}} </td>
+        </ng-container>
+
+        <!-- Descripcion Column -->
+        <ng-container matColumnDef="descripcion">
+          <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Subpartida nacional </th>
+          <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.descripcion}} </td>
+        </ng-container>
+
+        <!-- Fecha Estimada Column -->
+        <ng-container matColumnDef="fechaEstimada">
+          <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Editar </th>
+          <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaEstimada}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+
+  </div>
+
+</div>
+
+
