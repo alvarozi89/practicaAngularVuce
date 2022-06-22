@@ -20,7 +20,7 @@
             </select>
           </div>
         </div>
-        <div class="col-lg-2 my-2">
+        <div class="d-flex flex-row-reverse col-lg-6 my-2">
           <div class="form-group">
             <button mat-raised-button color="warn" style="background-color: rgb(227, 8, 8);" (click)="mostrarContenidoProcesos()">Buscar <mat-icon>search
               </mat-icon></button>
@@ -72,10 +72,13 @@
               <button routerLink="/consultas-PS" class="text-danger" mat-icon-button
                 aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
                 data-bs-target="#exampleModal">
-                <mat-icon>find_in_page</mat-icon>
+                <mat-icon matTooltip="Consultar" aria-label="Button that displays a tooltip when focused or hovered over"
+                  class="color-icono">
+                  <mat-icon>find_in_page</mat-icon>
+                </mat-icon>
               </button>
             </td>
-
+          
           </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
