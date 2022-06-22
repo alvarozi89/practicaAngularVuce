@@ -1,10 +1,5 @@
-<!-- <button mat-raised-button (click)="isEditable = !isEditable">
-  {{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}
-</button> -->
-
-
 <div class="tituloPrincipal">
-  MNM01- Autorización de importación de residuos sólidos no peligrosos (TUPA 3)
+  IPN003- Autorizacion para Importar Fuente de Radiaciones Usada (TUPA 11)
 </div>
 <div class="comentarios">
   Para iniciar el registro de la solicitud, verifica los datos del solicitante y selecciona el representante legal
@@ -12,7 +7,8 @@
 
 
 <div class="container example-button-container">
-  <button class="boton-perzonalizado" mat-raised-button color="accent" aria-label="Example icon button with a plus one icon" routerLink="/ipen">
+  <button class="boton-perzonalizado" mat-raised-button color="accent"
+    aria-label="Example icon button with a plus one icon" routerLink="/ipen">
     <mat-icon>arrow_back</mat-icon>
   </button>
   <h3 class="text-danger d-inline"> <b> Volver IPEN</b> </h3>
@@ -23,21 +19,20 @@
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Solicitud del proceso</ng-template>
 
-      <div>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-
+      
       <div class="d-flex flex-row-reverse">
 
         <div class="example-button-container m-2">
-          <button class="boton-perzonalizado" mat-raised-button color="accent" aria-label="Example icon button with a plus one icon" routerLink="/ipen">
+          <button class="boton-perzonalizado" mat-raised-button color="accent"
+            aria-label="Example icon button with a plus one icon" routerLink="/ipen">
             <mat-icon>remove_red_eye</mat-icon>
           </button>
           <h3 class="text-danger d-inline"> <b> Vista Previa </b> </h3>
         </div>
 
         <div class="example-button-container m-2">
-          <button class="boton-perzonalizado" mat-raised-button color="accent" aria-label="Example icon button with a plus one icon" routerLink="/ipen">
+          <button class="boton-perzonalizado" mat-raised-button color="accent"
+            aria-label="Example icon button with a plus one icon" routerLink="/ipen">
             <mat-icon>add_circle_outline</mat-icon>
           </button>
           <h3 class="text-danger d-inline"> <b> Crear plantilla </b> </h3>
@@ -54,8 +49,7 @@
       <ng-template matStepLabel>SUCE pendiente</ng-template>
       <mat-form-field appearance="fill">
         <mat-label>Address</mat-label>
-        <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-               required>
+        <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
       </mat-form-field>
       <div>
         <button mat-button matStepperPrevious>Back</button>
@@ -73,7 +67,7 @@
   </mat-step>
 
   <mat-step>
-    <ng-template matStepLabel >Concluido pendiente</ng-template>
+    <ng-template matStepLabel>Concluido pendiente</ng-template>
     <p>You are now done.</p>
     <div>
       <button mat-button matStepperPrevious>Back</button>
@@ -81,35 +75,3 @@
     </div>
   </mat-step>
 </mat-stepper>
-
-
-<!-- <hr>
-
-<mat-tab-group>
-  <mat-tab>
-    <ng-template mat-tab-label>
-
-      <button mat-mini-fab style="background-color:rgb(255, 116, 10)">1</button>
-      <h4>  Solicitud en proceso</h4>
-
-    </ng-template>
-    Content 1
-  </mat-tab>
-
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <button mat-mini-fab style="background-color:rgb(255, 116, 10)">2</button>
-      <h4> SUCE pendiente</h4>
-    </ng-template>
-    Content 2
-  </mat-tab>
-
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <button mat-mini-fab style="background-color:rgb(255, 116, 10)">3</button>
-      <h4> Evaluación pendiente</h4>
-    </ng-template>
-
-    Content 3
-  </mat-tab>
-</mat-tab-group> -->

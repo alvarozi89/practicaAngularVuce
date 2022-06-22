@@ -32,6 +32,7 @@ interface JsonFormControls {
   name: string;
   label: string;
   value: string;
+  router: string;
   type: string;
   options?: JsonFormControlOptions;
   required: boolean;
@@ -45,23 +46,21 @@ export interface JsonFormData {
 @Component({
   selector: 'lib-dynamicForm',
   templateUrl: './dynamic-form.component.html',
-  styleUrls: ['./dynamic-form.component.css'
-  ]
+  styleUrls: ['./dynamic-form.component.css'],
 })
 export class DynamicFormComponent implements OnInit {
-  @Input()jsonFormData: JsonFormData;
+  @Input() jsonFormData: JsonFormData;
   darkMode: boolean = false;
 
   public myForm: FormGroup = this.fb.group({});
 
-  constructor(private fb: FormBuilder) { 
-    this.jsonFormData = {controls:[]};
+  constructor(private fb: FormBuilder) {
+    this.jsonFormData = { controls: [] };
   }
 
   toggleDarkModeHandler() {
     this.darkMode = !this.darkMode;
-  } 
-
+  }
 
   ngOnChanges(changes: SimpleChanges) {
     if (!changes['jsonFormData'].firstChange) {
@@ -125,17 +124,15 @@ export class DynamicFormComponent implements OnInit {
   }
 
   onSubmit() {
-    if(this.myForm.valid)
+    if (this.myForm.valid)
       document.body.classList.toggle('dark', this.darkMode);
-    if(this.myForm.valid){
+    if (this.myForm.valid) {
       let fechaActual = new Date();
-      this.myForm.addControl("fecha", this.fb.control(fechaActual, []));
+      this.myForm.addControl('fecha', this.fb.control(fechaActual, []));
     }
     console.log('Form valid: ', this.myForm.valid);
     console.log('Form values: ', this.myForm.value);
   }
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 }

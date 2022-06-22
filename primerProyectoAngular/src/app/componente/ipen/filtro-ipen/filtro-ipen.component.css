@@ -1,6 +1,37 @@
 .boton-perzonalizado{
-  padding: 0 8px;
+
   background-color: rgb(227, 8, 8);
-  min-width: 30px;
-  line-height: 34px
+  min-width: 40px;
+  line-height: 34px;
+  padding: 0 8px;
+  
+}
+
+.tituloPrincipal{
+  display: inline-block;
+  padding: 13px;
+  font-size: xx-large;
+  font-weight: bolder;
+  padding-top: 50px;
+}
+
+.titulosSecundarios{
+  display: inline-block;
+  padding: 10px;
+  font-size: x-large;
+  font-weight: 500;
+  
+}
+
+.comentarios{
+  font-size: medium;
+  display: inline-block;
+  padding: 13px;
+  color:gray;
+  padding-top: 25px;
+}
+
+.alinear{
+  padding: 5px;
+  padding-top: 15px;
 }

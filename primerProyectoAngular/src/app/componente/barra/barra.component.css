@@ -1,8 +1,38 @@
-a:hover{
+a:hover {
   background-color: rgb(255, 205, 205);
 
 }
 
-.color-icono{
- color:red
+.color-icono {
+  color: red
+}
+
+.tituloPrincipal {
+  display: inline-block;
+  padding: 13px;
+  font-size: xx-large;
+  font-weight: bolder;
+  padding-top: 50px;
+}
+
+.titulosSecundarios {
+  display: inline-block;
+  padding: 10px;
+  font-size: x-large;
+  font-weight: 500;
+
+}
+
+.comentarios {
+  font-size: medium;
+  display: inline-block;
+  padding: 13px;
+  color:gray;
+  padding-top: 25px;
+}
+
+.linkSeccion {
+  padding-top: 25px;
+  padding: 13px;
+
 }

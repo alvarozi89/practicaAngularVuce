@@ -1,45 +1,45 @@
 {
-    "controls": [
-
-      {
-        "name": "selectRepresentanteLegal",
-        "label": "selecciona al Representante legal ",
-        "value": "",
-        "type": "select",
-        "validators": {},
-        "options": {
-          "items": [
-            {
-              "value": "rl-0",
-              "viewValue": "nombre rl-0"
-            },
-            {
-              "value": "rl-1",
-              "viewValue": "nombre rl-2"
-            }
-          ]
-        }
-      },
-      {
-        "name": "TipoDocumentoTxt",
-        "label": "Tipo de Documento",
-        "value": "",
-        "type": "text",
-        "validators": {
-          "required": true,
-          "minLength": 1,
-          "maxLength": 15
-        }
-      },
-      {
-        "name": "numeroDocumentoTxt",
-        "label": "Número de documento",
-        "value": "",
-        "type": "text",
-        "validators": {"required":true}
+  "controls": [
+    {
+      "name": "selectRepresentanteLegal",
+      "label": "selecciona al Representante legal ",
+      "value": "",
+      "type": "select",
+      "validators": {},
+      "options": {
+        "items": [
+          {
+            "value": "rl-0",
+            "viewValue": "nombre rl-0"
+          },
+          {
+            "value": "rl-1",
+            "viewValue": "nombre rl-2"
+          }
+        ]
       }
-
-    ],
-    "id": 1,
-    "version": 1
-  }
+    },
+    {
+      "name": "TipoDocumentoTxt",
+      "label": "Tipo de Documento",
+      "value": "",
+      "type": "text",
+      "validators": {
+        "required": true,
+        "minLength": 1,
+        "maxLength": 15
+      }
+    },
+    {
+      "name": "numeroDocumentoTxt",
+      "label": "Número de documento",
+      "value": "",
+      "type": "text",
+      "validators": {
+        "required": true
+      }
+    }
+  ],
+  "id": 1,
+  "version": 1
+}
