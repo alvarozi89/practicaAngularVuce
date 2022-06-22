@@ -1,10 +1,63 @@
+
+
 <div class="container">
+  <div class="container example-button-container mt-5">
+    <button class="boton-perzonalizado" mat-raised-button color="accent"
+    aria-label="Example icon button with a plus one icon" routerLink="/consultas-PS">
+    <mat-icon>arrow_back</mat-icon>
+    </button>
+    <h3 class="text-danger d-inline"> <b> Volver</b> </h3>
+    </div>
   <div class="card m-2">
     <div class="card-body">
       <div class="row">
         <div class="col-lg-3 my-2">
           <div class="form-group">
             <h1> <b>Gestión de trámite</b> </h1>
+          </div>
+        </div>
+        <div class="col-lg-2 my-2">
+          <div class="form-group">
+            <button (click)="mostrarContenidoGestion()"  routerLink="/gestion-tramite-PS" class="text-danger" mat-icon-button
+            aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            <mat-icon>add_circle_outline</mat-icon>
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card m-2">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-lg-3 my-2">
+          <div class="form-group">
+            <h1> <b>Registro solicitud</b> </h1>
+          </div>
+        </div>
+        <div class="col-lg-2 my-2">
+          <div class="form-group">
+            <button (click)="mostrarContenidoGestion()"  routerLink="/gestion-tramite-PS" class="text-danger" mat-icon-button
+            aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            <mat-icon>add_circle_outline</mat-icon>
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card m-2">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-lg-3 my-2">
+          <div class="form-group">
+            <h1> <b>Creacion SUCE</b> </h1>
           </div>
         </div>
         <div class="col-lg-2 my-2">
@@ -30,7 +83,7 @@
 
     <mat-grid-tile class="layout-row">
       <mat-card class="m-3">
-        <mat-card-title><h3> <b>Habilitar trámite de requerimiento de inspección posterior *</b> </h3></mat-card-title>
+        <mat-card-title><h3> <b>Requiere revisión Previa *</b> </h3></mat-card-title>
         <hr>
         <mat-card class="m-2">
           <mat-radio-group aria-label="Select an option" class="text-center">
@@ -55,7 +108,7 @@
 
     <mat-grid-tile class="layout-row">
       <mat-card class="m-3">
-        <mat-card-title><h3> <b>Habilitar trámite de ingreso o salida temporal *</b> </h3></mat-card-title>
+        <mat-card-title><h3> <b>Resultado de la Revisión *</b> </h3></mat-card-title>
         <hr>
         <mat-card class="m-2">
           <mat-radio-group aria-label="Select an option" class="text-center">
@@ -80,7 +133,7 @@
 
     <mat-grid-tile class="layout-row">
       <mat-card class="m-3">
-        <mat-card-title><h3> <b>Habilitar trámite que permite recurso administrativo *</b> </h3></mat-card-title>
+        <mat-card-title><h3> <b>El trámite requiere Pago *</b> </h3></mat-card-title>
         <hr>
         <mat-card class="m-2">
           <mat-radio-group aria-label="Select an option" class="text-center">
