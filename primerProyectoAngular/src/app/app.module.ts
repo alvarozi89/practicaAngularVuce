@@ -51,9 +51,8 @@ import { ProductosComponent } from './componente/configuracionesParametros/conte
 import { ConsultarPsComponent } from './componente/configuracionesParametros/contenidos-tabs/procesos-subprocesos/consultar-ps/consultar-ps.component';
 import { GestionTramitePSComponent } from './componente/configuracionesParametros/contenidos-tabs/procesos-subprocesos/consultar-ps/gestion-tramite-ps/gestion-tramite-ps.component';
 import { DocumentosResolutivosComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos-resolutivos/documentos-resolutivos.component';
-
-
-
+import { ConfiguracionEmisionComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos-resolutivos/configuracion-emision/configuracion-emision.component';
+import { GestionfirmasComponent } from './componente/configuracionesParametros/contenidos-tabs/gestionfirmas/gestionfirmas.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +77,9 @@ import { DocumentosResolutivosComponent } from './componente/configuracionesPara
     ProductosComponent,
     ConsultarPsComponent,
     GestionTramitePSComponent,
-    DocumentosResolutivosComponent
+    DocumentosResolutivosComponent,
+    ConfiguracionEmisionComponent,
+    GestionfirmasComponent,
 
 
   ],
