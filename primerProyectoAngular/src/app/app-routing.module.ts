@@ -21,9 +21,8 @@ import { GestionAreasComponent } from './componente/configuracionesParametros/co
 import { ConfiguracionesGestionAreasComponent } from './componente/configuracionesParametros/contenidos-tabs/gestion-areas/configuraciones-gestion-areas/configuraciones-gestion-areas.component';
 import { ProductosComponent } from './componente/configuracionesParametros/contenidos-tabs/productos/productos.component';
 import { DocumentosResolutivosComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos-resolutivos/documentos-resolutivos.component';
-
-
 import { DocumentosComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos/documentos.component';
+import { ConfiguracionVisualizacionDocumentosComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos/configuracion-visualizacion-documentos/configuracion-visualizacion-documentos.component';
 
 const routes: Routes = [
   { path: 'entidades', component: FiltroEntidadesComponent },
@@ -46,6 +45,7 @@ const routes: Routes = [
   { path: 'productos-PS', component:ProductosComponent},
   { path: 'documentosResolutivos-PS', component:DocumentosResolutivosComponent},
   { path: 'documentos-CP', component: DocumentosComponent },
+  { path: 'configuracion-visualizacion-de-documentos', component: ConfiguracionVisualizacionDocumentosComponent },
 
 
 

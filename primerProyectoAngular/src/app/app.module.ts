@@ -59,6 +59,7 @@ import { DocumentosResolutivosComponent } from './componente/configuracionesPara
 
 import { DocumentosComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos/documentos.component';
 import { DocumentosDigitalizadosComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos/documentos-digitalizados/documentos-digitalizados.component';
+import { ConfiguracionVisualizacionDocumentosComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos/configuracion-visualizacion-documentos/configuracion-visualizacion-documentos.component';
 
 
 
@@ -91,7 +92,8 @@ import { DocumentosDigitalizadosComponent } from './componente/configuracionesPa
     ConfiguracionesGestionAreasComponent,
     DocumentosResolutivosComponent,
     DocumentosComponent,
-    DocumentosDigitalizadosComponent
+    DocumentosDigitalizadosComponent,
+    ConfiguracionVisualizacionDocumentosComponent
 
 
 

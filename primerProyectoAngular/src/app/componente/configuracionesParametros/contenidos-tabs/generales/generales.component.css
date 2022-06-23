@@ -18,15 +18,17 @@
 
 .tituloPrincipal {
   display: inline-block;
-  padding: 5px;
+  padding: 15px;
+  padding-left: 0px;
   font-size: xx-large;
   font-weight: bolder;
-  padding-top: 50px;
+  
 }
 
 .titulosSecundarios {
   display: inline-block;
-  padding: 5px;
+  padding: 15px;
+  padding-left: 0px;
   font-size: x-large;
   font-weight: 500;
 
@@ -36,6 +38,7 @@
   font-size: medium;
   display: inline-block;
   padding: 15px;
+  padding-left: 0px;
   color: gray;
 }
 
@@ -48,6 +51,7 @@
 }
 
 .alinear{
-  padding: 5px;
-  padding-top: 15px;
+ 
+  padding-top: 30px;
 }
+

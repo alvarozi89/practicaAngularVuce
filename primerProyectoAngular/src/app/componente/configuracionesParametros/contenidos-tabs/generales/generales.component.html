@@ -6,9 +6,9 @@
     Aqui puede registrar las configuraciones.
   </div>
 
-<app-tabs></app-tabs>
-<div class="alinear">
-  <div class="container">
+  <app-tabs></app-tabs>
+
+  <div class="alinear">
     <div class="card m-2">
       <div class="card-body">
         <div class="row">
@@ -48,7 +48,7 @@
                   </select>
                 </div>
               </div>
-  
+
               <div class="col-lg-3 my-2">
                 <div class="form-group">
                   <select class="form-control">
@@ -57,7 +57,7 @@
                   </select>
                 </div>
               </div>
-  
+
               <div class="col-lg-3 my-2">
                 <div class="form-group">
                   <select class="form-control">
@@ -66,7 +66,7 @@
                   </select>
                 </div>
               </div>
-  
+
               <div class="col-lg-3 my-2">
                 <div class="form-group">
                   <select class="form-control">
@@ -82,7 +82,7 @@
     </div>
     <!-- aqui inicia la card -->
     <br>
-    <div class="container">
+    <div class="alinear">
       <div class="example-button-container m-2">
         <button class="boton-perzonalizado" mat-raised-button color="accent"
           aria-label="Example icon button with a plus one icon">
@@ -90,170 +90,179 @@
         </button>
         <h3 class="text-danger d-inline"> <b> Editar </b> </h3>
       </div>
+
+      <mat-grid-list cols="3" rowHeight="1:1">
+
+        <mat-grid-tile class="layout-row ">
+          <mat-card class="m-3">
+            <mat-card-title>
+              <h3> <b>Habilitar trámite de requerimiento de inspección posterior *</b> </h3>
+            </mat-card-title>
+            <hr>
+            <mat-card class="m-2">
+              <mat-radio-group aria-label="Select an option" class="text-center">
+                <mat-radio-button value="1"></mat-radio-button>
+              </mat-radio-group>
+              <mat-label>Si</mat-label>
+            </mat-card>
+            <mat-card class="m-2">
+              <mat-radio-group aria-label="Select an option" class="text-center">
+                <mat-radio-button value="1"></mat-radio-button>
+              </mat-radio-group>
+              <mat-label>No</mat-label>
+            </mat-card>
+            <mat-card class="m-2">
+              <mat-radio-group aria-label="Select an option" class="text-center">
+                <mat-radio-button value="1"></mat-radio-button>
+              </mat-radio-group>
+              <mat-label>No aplica</mat-label>
+            </mat-card>
+          </mat-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile class="layout-row">
+          <mat-card class="m-3">
+            <mat-card-title>
+              <h3> <b>Habilitar trámite de ingreso o salida temporal *</b> </h3>
+            </mat-card-title>
+            <hr>
+            <mat-card class="m-2">
+              <mat-radio-group aria-label="Select an option" class="text-center">
+                <mat-radio-button value="1"></mat-radio-button>
+              </mat-radio-group>
+              <mat-label>Si</mat-label>
+            </mat-card>
+            <mat-card class="m-2">
+              <mat-radio-group aria-label="Select an option" class="text-center">
+                <mat-radio-button value="1"></mat-radio-button>
+              </mat-radio-group>
+              <mat-label>No</mat-label>
+            </mat-card>
+            <mat-card class="m-2">
+              <mat-radio-group aria-label="Select an option" class="text-center">
+                <mat-radio-button value="1"></mat-radio-button>
+              </mat-radio-group>
+              <mat-label>No aplica</mat-label>
+            </mat-card>
+          </mat-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile class="layout-row">
+          <mat-card class="m-3">
+            <mat-card-title>
+              <h3> <b>Habilitar trámite que permite recurso administrativo *</b> </h3>
+            </mat-card-title>
+            <hr>
+            <mat-card class="m-2">
+              <mat-radio-group aria-label="Select an option" class="text-center">
+                <mat-radio-button value="1"></mat-radio-button>
+              </mat-radio-group>
+              <mat-label>Si</mat-label>
+            </mat-card>
+            <mat-card class="m-2">
+              <mat-radio-group aria-label="Select an option" class="text-center">
+                <mat-radio-button value="1"></mat-radio-button>
+              </mat-radio-group>
+              <mat-label>No</mat-label>
+            </mat-card>
+            <mat-card class="m-2">
+              <mat-radio-group aria-label="Select an option" class="text-center">
+                <mat-radio-button value="1"></mat-radio-button>
+              </mat-radio-group>
+              <mat-label>No aplica</mat-label>
+            </mat-card>
+          </mat-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile class="layout-row">
+          <mat-card class="m-3">
+            <mat-card-title>
+              <h3> <b>Se encuentra dentro del plazo *</b> </h3>
+            </mat-card-title>
+            <hr>
+            <mat-card class="m-2">
+              <mat-radio-group aria-label="Select an option" class="text-center">
+                <mat-radio-button value="1"></mat-radio-button>
+              </mat-radio-group>
+              <mat-label>Si</mat-label>
+            </mat-card>
+            <mat-card class="m-2">
+              <mat-radio-group aria-label="Select an option" class="text-center">
+                <mat-radio-button value="1"></mat-radio-button>
+              </mat-radio-group>
+              <mat-label>No</mat-label>
+            </mat-card>
+            <mat-card class="m-2">
+              <mat-radio-group aria-label="Select an option" class="text-center">
+                <mat-radio-button value="1"></mat-radio-button>
+              </mat-radio-group>
+              <mat-label>No aplica</mat-label>
+            </mat-card>
+          </mat-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile class="layout-row">
+          <mat-card class="m-3">
+            <mat-card-title>
+              <h3> <b>Habilitar rectificación *</b> </h3>
+            </mat-card-title>
+            <hr>
+            <mat-card class="m-2">
+              <mat-radio-group aria-label="Select an option" class="text-center">
+                <mat-radio-button value="1"></mat-radio-button>
+              </mat-radio-group>
+              <mat-label>Si</mat-label>
+            </mat-card>
+            <mat-card class="m-2">
+              <mat-radio-group aria-label="Select an option" class="text-center">
+                <mat-radio-button value="1"></mat-radio-button>
+              </mat-radio-group>
+              <mat-label>No</mat-label>
+            </mat-card>
+            <mat-card class="m-2">
+              <mat-radio-group aria-label="Select an option" class="text-center">
+                <mat-radio-button value="1"></mat-radio-button>
+              </mat-radio-group>
+              <mat-label>No aplica</mat-label>
+            </mat-card>
+          </mat-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile class="layout-row">
+          <mat-card class="m-3">
+            <mat-card-title>
+              <h3> <b>Habilitar gestión de cancelación y suspensión de documento resolutivo *</b> </h3>
+            </mat-card-title>
+            <hr>
+            <mat-card class="m-2">
+              <mat-radio-group aria-label="Select an option" class="text-center">
+                <mat-radio-button value="1"></mat-radio-button>
+              </mat-radio-group>
+              <mat-label>Si</mat-label>
+            </mat-card>
+            <mat-card class="m-2">
+              <mat-radio-group aria-label="Select an option" class="text-center">
+                <mat-radio-button value="1"></mat-radio-button>
+              </mat-radio-group>
+              <mat-label>No</mat-label>
+            </mat-card>
+            <mat-card class="m-2">
+              <mat-radio-group aria-label="Select an option" class="text-center">
+                <mat-radio-button value="1"></mat-radio-button>
+              </mat-radio-group>
+              <mat-label>No aplica</mat-label>
+            </mat-card>
+          </mat-card>
+        </mat-grid-tile>
+
+      </mat-grid-list>
+
+      <div class="text-center">
+        <button mat-stroked-button color="warn">Cancelar Configuración</button>
+        <button mat-raised-button color="warn" class="m-2" routerLink="">Guardar</button>
+      </div>
     </div>
-    <mat-grid-list cols="3" rowHeight="1:1">
-      
-      <mat-grid-tile class="layout-row ">
-        <mat-card class="m-3">
-          <mat-card-title>
-            <h3> <b>Habilitar trámite de requerimiento de inspección posterior *</b> </h3>
-          </mat-card-title>
-          <hr>
-          <mat-card class="m-2">
-            <mat-radio-group aria-label="Select an option" class="text-center">
-              <mat-radio-button value="1"></mat-radio-button>
-            </mat-radio-group>
-            <mat-label>Si</mat-label>
-          </mat-card>
-          <mat-card class="m-2">
-            <mat-radio-group aria-label="Select an option" class="text-center">
-              <mat-radio-button value="1"></mat-radio-button>
-            </mat-radio-group>
-            <mat-label>No</mat-label>
-          </mat-card>
-          <mat-card class="m-2">
-            <mat-radio-group aria-label="Select an option" class="text-center">
-              <mat-radio-button value="1"></mat-radio-button>
-            </mat-radio-group>
-            <mat-label>No aplica</mat-label>
-          </mat-card>
-        </mat-card>
-      </mat-grid-tile>
-
-    <mat-grid-tile class="layout-row">
-      <mat-card class="m-3">
-        <mat-card-title><h3> <b>Habilitar trámite de ingreso o salida temporal *</b> </h3></mat-card-title>
-        <hr>
-        <mat-card class="m-2">
-          <mat-radio-group aria-label="Select an option" class="text-center">
-            <mat-radio-button value="1"></mat-radio-button>
-          </mat-radio-group>
-          <mat-label>Si</mat-label>
-        </mat-card>
-        <mat-card class="m-2">
-          <mat-radio-group aria-label="Select an option" class="text-center">
-            <mat-radio-button value="1"></mat-radio-button>
-          </mat-radio-group>
-          <mat-label>No</mat-label>
-        </mat-card>
-        <mat-card class="m-2">
-          <mat-radio-group aria-label="Select an option" class="text-center">
-            <mat-radio-button value="1"></mat-radio-button>
-          </mat-radio-group>
-          <mat-label>No aplica</mat-label>
-        </mat-card>
-      </mat-card>
-    </mat-grid-tile>
-
-    <mat-grid-tile class="layout-row">
-      <mat-card class="m-3">
-        <mat-card-title><h3> <b>Habilitar trámite que permite recurso administrativo *</b> </h3></mat-card-title>
-        <hr>
-        <mat-card class="m-2">
-          <mat-radio-group aria-label="Select an option" class="text-center">
-            <mat-radio-button value="1"></mat-radio-button>
-          </mat-radio-group>
-          <mat-label>Si</mat-label>
-        </mat-card>
-        <mat-card class="m-2">
-          <mat-radio-group aria-label="Select an option" class="text-center">
-            <mat-radio-button value="1"></mat-radio-button>
-          </mat-radio-group>
-          <mat-label>No</mat-label>
-        </mat-card>
-        <mat-card class="m-2">
-          <mat-radio-group aria-label="Select an option" class="text-center">
-            <mat-radio-button value="1"></mat-radio-button>
-          </mat-radio-group>
-          <mat-label>No aplica</mat-label>
-        </mat-card>
-      </mat-card>
-    </mat-grid-tile>
-
-    <mat-grid-tile class="layout-row">
-      <mat-card class="m-3">
-        <mat-card-title><h3> <b>Se encuentra dentro del plazo *</b> </h3></mat-card-title>
-        <hr>
-        <mat-card class="m-2">
-          <mat-radio-group aria-label="Select an option" class="text-center">
-            <mat-radio-button value="1"></mat-radio-button>
-          </mat-radio-group>
-          <mat-label>Si</mat-label>
-        </mat-card>
-        <mat-card class="m-2">
-          <mat-radio-group aria-label="Select an option" class="text-center">
-            <mat-radio-button value="1"></mat-radio-button>
-          </mat-radio-group>
-          <mat-label>No</mat-label>
-        </mat-card>
-        <mat-card class="m-2">
-          <mat-radio-group aria-label="Select an option" class="text-center">
-            <mat-radio-button value="1"></mat-radio-button>
-          </mat-radio-group>
-          <mat-label>No aplica</mat-label>
-        </mat-card>
-      </mat-card>
-    </mat-grid-tile>
-
-    <mat-grid-tile class="layout-row">
-      <mat-card class="m-3">
-        <mat-card-title><h3> <b>Habilitar rectificación *</b> </h3></mat-card-title>
-        <hr>
-        <mat-card class="m-2">
-          <mat-radio-group aria-label="Select an option" class="text-center">
-            <mat-radio-button value="1"></mat-radio-button>
-          </mat-radio-group>
-          <mat-label>Si</mat-label>
-        </mat-card>
-        <mat-card class="m-2">
-          <mat-radio-group aria-label="Select an option" class="text-center">
-            <mat-radio-button value="1"></mat-radio-button>
-          </mat-radio-group>
-          <mat-label>No</mat-label>
-        </mat-card>
-        <mat-card class="m-2">
-          <mat-radio-group aria-label="Select an option" class="text-center">
-            <mat-radio-button value="1"></mat-radio-button>
-          </mat-radio-group>
-          <mat-label>No aplica</mat-label>
-        </mat-card>
-      </mat-card>
-    </mat-grid-tile>
-
-    <mat-grid-tile class="layout-row">
-      <mat-card class="m-3">
-        <mat-card-title><h3> <b>Habilitar gestión de cancelación y suspensión de documento resolutivo  *</b> </h3></mat-card-title>
-        <hr>
-        <mat-card class="m-2">
-          <mat-radio-group aria-label="Select an option" class="text-center">
-            <mat-radio-button value="1"></mat-radio-button>
-          </mat-radio-group>
-          <mat-label>Si</mat-label>
-        </mat-card>
-        <mat-card class="m-2">
-          <mat-radio-group aria-label="Select an option" class="text-center">
-            <mat-radio-button value="1"></mat-radio-button>
-          </mat-radio-group>
-          <mat-label>No</mat-label>
-        </mat-card>
-        <mat-card class="m-2">
-          <mat-radio-group aria-label="Select an option" class="text-center">
-            <mat-radio-button value="1"></mat-radio-button>
-          </mat-radio-group>
-          <mat-label>No aplica</mat-label>
-        </mat-card>
-      </mat-card>
-    </mat-grid-tile>
-
-  </mat-grid-list>
-
-  <div class="text-center">
-    <button mat-stroked-button color="warn">Cancelar Configuración</button>
-    <button mat-raised-button color="warn" class="m-2" routerLink="">Guardar</button>
-  </div>
-  </div>
 
 
   </div>
 </div>
-

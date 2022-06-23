@@ -1,16 +1,22 @@
 .tituloPrincipal {
   display: inline-block;
-  padding: 5px;
+  padding: 15px;
   font-size: xx-large;
   font-weight: bolder;
-  padding-top: 50px;
+  padding-left: 0px;
+  
 }
+
+  
+
+  
 
 .comentarios {
   font-size: medium;
   display: inline-block;
-  padding: 15px 5px;
+  padding: 15px;
   color: gray;
+  padding-left: 0px;
 }
 
 
@@ -47,4 +53,9 @@ table {
 
 .mat-row:hover .mat-cell {
   border-color: currentColor;
+}
+
+.alinear{
+  padding: 5px;
+  padding-top: 30px;
 }

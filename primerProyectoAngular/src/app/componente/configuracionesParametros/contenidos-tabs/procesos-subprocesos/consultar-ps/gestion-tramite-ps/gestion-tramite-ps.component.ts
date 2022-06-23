@@ -20,7 +20,7 @@ export class GestionTramitePSComponent implements OnInit {
     this.vistaFormTramite = !this.vistaFormTramite;
     this.activarEditar= !this.activarEditar;
     if(this.icono=="add_circle_outline"){
-      this.icono= "minimize"
+      this.icono= "remove_circle_outline"
     }
     else{
       this.icono= "add_circle_outline"
@@ -31,7 +31,7 @@ export class GestionTramitePSComponent implements OnInit {
     this.vistaFormRegistroSolicitud = !this.vistaFormRegistroSolicitud;
     this.activarEditar= !this.activarEditar;
     if(this.icono=="add_circle_outline"){
-      this.icono= "minimize"
+      this.icono= "remove_circle_outline"
     }
     else{
       this.icono= "add_circle_outline"
@@ -42,7 +42,7 @@ export class GestionTramitePSComponent implements OnInit {
     this.vistaFormCreacionSuce = !this.vistaFormCreacionSuce;
     this.activarEditar= !this.activarEditar;
     if(this.icono=="add_circle_outline"){
-      this.icono= "minimize"
+      this.icono= "remove_circle_outline"
     }
     else{
       this.icono= "add_circle_outline"

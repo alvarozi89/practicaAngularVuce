@@ -1,0 +1,283 @@
+<div class="container">
+    <div class="tituloPrincipal">
+        Configuracion visualizacion de documentos
+    </div><br>
+    <div class="comentarios">
+        Seleccione que tipo de configuracion desea realizar.
+    </div>
+
+
+    <div class="container example-button-container mt-5">
+        <button class="boton-perzonalizado" mat-raised-button color="accent"
+            aria-label="Example icon button with a plus one icon" routerLink="/documentos-CP">
+            <mat-icon>arrow_back</mat-icon>
+        </button>
+        <h3 class="text-danger d-inline"> <b> Volver</b> </h3>
+    </div>
+
+    <div class="card m-2">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-11 my-1 text-center">
+                    <div class=" form-group">
+                        <h1> <b>Informe tecnico</b> </h1>
+                    </div>
+                </div>
+                <div class="d-flex flex-row-reverse col-lg-1 my-2">
+                    <div class="form-group">
+                        <button (click)="mostrarContenidoGestionTramite()" class="text-danger" mat-icon-button
+                            aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            <mat-icon>{{icono}}</mat-icon>
+                        </button>
+                        <button mat-icon-button [disabled]="activarEditar" color="warn"
+                            aria-label="Example icon button with a open in new tab icon">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="formDatosTramite" *ngIf="vistaFormTramite==true">
+
+        <!-- aqui inicia la card -->
+        <br>
+        <mat-grid-list cols="3" rowHeight="1:1">
+
+            <mat-grid-tile class="layout-row">
+                <mat-card class="m-3">
+                    <mat-card-title>
+                        <h3> <b>Requiere revisión Previa *</b> </h3>
+                    </mat-card-title>
+                    <hr>
+                    <mat-card class="m-2">
+                        <mat-radio-group aria-label="Select an option" class="text-center">
+                            <mat-radio-button value="1"></mat-radio-button>
+                        </mat-radio-group>
+                        <mat-label>Si</mat-label>
+                    </mat-card>
+                    <mat-card class="m-2">
+                        <mat-radio-group aria-label="Select an option" class="text-center">
+                            <mat-radio-button value="1"></mat-radio-button>
+                        </mat-radio-group>
+                        <mat-label>No</mat-label>
+                    </mat-card>
+                    <mat-card class="m-2">
+                        <mat-radio-group aria-label="Select an option" class="text-center">
+                            <mat-radio-button value="1"></mat-radio-button>
+                        </mat-radio-group>
+                        <mat-label>No aplica</mat-label>
+                    </mat-card>
+                </mat-card>
+            </mat-grid-tile>
+
+            <mat-grid-tile class="layout-row">
+                <mat-card class="m-3">
+                    <mat-card-title>
+                        <h3> <b>Resultado de la Revisión *</b> </h3>
+                    </mat-card-title>
+                    <hr>
+                    <mat-card class="m-2">
+                        <mat-radio-group aria-label="Select an option" class="text-center">
+                            <mat-radio-button value="1"></mat-radio-button>
+                        </mat-radio-group>
+                        <mat-label>Si</mat-label>
+                    </mat-card>
+                    <mat-card class="m-2">
+                        <mat-radio-group aria-label="Select an option" class="text-center">
+                            <mat-radio-button value="1"></mat-radio-button>
+                        </mat-radio-group>
+                        <mat-label>No</mat-label>
+                    </mat-card>
+                    <mat-card class="m-2">
+                        <mat-radio-group aria-label="Select an option" class="text-center">
+                            <mat-radio-button value="1"></mat-radio-button>
+                        </mat-radio-group>
+                        <mat-label>No aplica</mat-label>
+                    </mat-card>
+                </mat-card>
+            </mat-grid-tile>
+
+            <mat-grid-tile class="layout-row">
+                <mat-card class="m-3">
+                    <mat-card-title>
+                        <h3> <b>El trámite requiere Pago *</b> </h3>
+                    </mat-card-title>
+                    <hr>
+                    <mat-card class="m-2">
+                        <mat-radio-group aria-label="Select an option" class="text-center">
+                            <mat-radio-button value="1"></mat-radio-button>
+                        </mat-radio-group>
+                        <mat-label>Si</mat-label>
+                    </mat-card>
+                    <mat-card class="m-2">
+                        <mat-radio-group aria-label="Select an option" class="text-center">
+                            <mat-radio-button value="1"></mat-radio-button>
+                        </mat-radio-group>
+                        <mat-label>No</mat-label>
+                    </mat-card>
+                    <mat-card class="m-2">
+                        <mat-radio-group aria-label="Select an option" class="text-center">
+                            <mat-radio-button value="1"></mat-radio-button>
+                        </mat-radio-group>
+                        <mat-label>No aplica</mat-label>
+                    </mat-card>
+                </mat-card>
+            </mat-grid-tile>
+
+        </mat-grid-list>
+
+    </div>
+
+    <div class="card m-2">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-11 my-1 text-center">
+                    <div class=" form-group">
+                        <h1> <b>Modulo de inspeccion</b> </h1>
+                    </div>
+                </div>
+                <div class="d-flex flex-row-reverse col-lg-1 my-2">
+                    <div class="form-group">
+                        <button  class="text-danger" mat-icon-button
+                            aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            <mat-icon>{{icono}}</mat-icon>
+                        </button>
+                        <button mat-icon-button [disabled]="activarEditar" color="warn"
+                            aria-label="Example icon button with a open in new tab icon">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card m-2">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-11 my-1 text-center">
+                    <div class=" form-group">
+                        <h1> <b>Registrar tramite</b> </h1>
+                    </div>
+                </div>
+                <div class="d-flex flex-row-reverse col-lg-1 my-2">
+                    <div class="form-group">
+                        <button  class="text-danger" mat-icon-button
+                            aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            <mat-icon>{{icono}}</mat-icon>
+                        </button>
+                        <button mat-icon-button [disabled]="activarEditar" color="warn"
+                            aria-label="Example icon button with a open in new tab icon">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card m-2">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-11 my-1 text-center">
+                    <div class=" form-group">
+                        <h1> <b>Acta de inspeccion</b> </h1>
+                    </div>
+                </div>
+                <div class="d-flex flex-row-reverse col-lg-1 my-2">
+                    <div class="form-group">
+                        <button  class="text-danger" mat-icon-button
+                            aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            <mat-icon>{{icono}}</mat-icon>
+                        </button>
+                        <button mat-icon-button [disabled]="activarEditar" color="warn"
+                            aria-label="Example icon button with a open in new tab icon">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card m-2">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-11 my-1 text-center">
+                    <div class=" form-group">
+                        <h1> <b>Documento resolutivo aprobado</b> </h1>
+                    </div>
+                </div>
+                <div class="d-flex flex-row-reverse col-lg-1 my-2">
+                    <div class="form-group">
+                        <button  class="text-danger" mat-icon-button
+                            aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            <mat-icon>{{icono}}</mat-icon>
+                        </button>
+                        <button mat-icon-button [disabled]="activarEditar" color="warn"
+                            aria-label="Example icon button with a open in new tab icon">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card m-2">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-11 my-1 text-center">
+                    <div class=" form-group">
+                        <h1> <b>Documento resolutivo denegado</b> </h1>
+                    </div>
+                </div>
+                <div class="d-flex flex-row-reverse col-lg-1 my-2">
+                    <div class="form-group">
+                        <button  class="text-danger" mat-icon-button
+                            aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            <mat-icon>{{icono}}</mat-icon>
+                        </button>
+                        <button mat-icon-button [disabled]="activarEditar" color="warn"
+                            aria-label="Example icon button with a open in new tab icon">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card m-2">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-11 my-1 text-center">
+                    <div class=" form-group">
+                        <h1> <b>Documento resolutivo desistido</b> </h1>
+                    </div>
+                </div>
+                <div class="d-flex flex-row-reverse col-lg-1 my-2">
+                    <div class="form-group">
+                        <button  class="text-danger" mat-icon-button
+                            aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            <mat-icon>{{icono}}</mat-icon>
+                        </button>
+                        <button mat-icon-button [disabled]="activarEditar" color="warn"
+                            aria-label="Example icon button with a open in new tab icon">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
