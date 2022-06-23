@@ -57,11 +57,16 @@ import { ConfiguracionesGestionAreasComponent } from './componente/configuracion
 import { DocumentosResolutivosComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos-resolutivos/documentos-resolutivos.component';
 
 
+
 import { DocumentosComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos/documentos.component';
 import { DocumentosDigitalizadosComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos/documentos-digitalizados/documentos-digitalizados.component';
 
 
 
+
+
+import { ConfiguracionEmisionComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos-resolutivos/configuracion-emision/configuracion-emision.component';
+import { GestionfirmasComponent } from './componente/configuracionesParametros/contenidos-tabs/gestionfirmas/gestionfirmas.component';
 
 
 @NgModule({
@@ -87,11 +92,16 @@ import { DocumentosDigitalizadosComponent } from './componente/configuracionesPa
     ProductosComponent,
     ConsultarPsComponent,
     GestionTramitePSComponent,
+
     GestionAreasComponent,
     ConfiguracionesGestionAreasComponent,
     DocumentosResolutivosComponent,
     DocumentosComponent,
-    DocumentosDigitalizadosComponent
+    DocumentosDigitalizadosComponent,
+
+
+    ConfiguracionEmisionComponent,
+    GestionfirmasComponent,
 
 
 
