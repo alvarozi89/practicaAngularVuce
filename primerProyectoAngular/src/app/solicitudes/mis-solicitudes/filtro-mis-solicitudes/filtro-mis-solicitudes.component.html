@@ -55,124 +55,54 @@
     </div>
   </div>
 <div class="container">
-    <div class="mat-headline">Resultado parametrización</div>
-<div class="table">
-    <table mat-table [dataSource]="dataSourceMisSolicitudes" multiTemplateDataRows>
-      <!--id de los registros-->
-      <!-- <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef> ID </th>
-        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-      </ng-container> -->
+    <div class="mat-headline">Resultado de mis solicitudes</div>
+<!--Creación de tabla-->
+   <table mat-table
+       [dataSource]="dataSource" multiTemplateDataRows
+       class="mat-elevation-z8">
+  <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
+    <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+    <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+  </ng-container>
+  <ng-container matColumnDef="expand">
+    <th mat-header-cell *matHeaderCellDef aria-label="row actions">&nbsp;</th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button aria-label="expand row" (click)="(expandedElement = expandedElement === element ? null : element); $event.stopPropagation()">
+        <mat-icon *ngIf="expandedElement !== element">keyboard_arrow_down</mat-icon>
+        <mat-icon *ngIf="expandedElement === element">keyboard_arrow_up</mat-icon>
+      </button>
+    </td>
+  </ng-container>
 
-        <!-- Formato Column -->
-        <ng-container matColumnDef="formato">
-            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Formato </th>
-            <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.formato}} </td>
-       
-           
-        </ng-container>
-
-        <!-- Número Trámite Column -->
-        <ng-container matColumnDef="numeroTramite">
-            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Número Trámite </th>
-            <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.numeroTramite}} </td>
-        </ng-container>
-
-        <!-- Expediente Column -->
-        <ng-container matColumnDef="expediente">
-            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Expediente </th>
-            <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.expediente}} </td>
-        </ng-container>
-
-        <!-- Nombre Formato Column -->
-        <ng-container matColumnDef="estado">
-            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Estado</th>
-            <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.estado}} </td>
-        </ng-container>
-
-        <!-- Trámites en curso Column -->
-        <ng-container matColumnDef="dias">
-            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Días </th>
-            <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.dias}} </td>
-        </ng-container>
-
-        <!-- Tasa Column -->
-        <ng-container matColumnDef="fecha">
-            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Fecha </th>
-            <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fecha}} </td>
-        </ng-container>
-
-        <!-- Acciones Column -->
-        <ng-container matColumnDef="acciones">
-
-            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Acciones </th>
-            <td mat-cell *matCellDef="let element" class="tableColorCeldas">
-                <mat-icon aria-hidden="false" class="material-icons red-color">search</mat-icon>
-                <mat-icon aria-hidden="false" class="material-icons red-color" routerLink="/mis-solicitudes/seguimiento-tramite" aria-label="Star">access_time</mat-icon>
-                <mat-icon aria-hidden="false" class="material-icons red-color">attach_money</mat-icon>
-            </td>
-          
-         <!-- <td mat-cell *matCellDef="let element" class="tableColorCeldas"> -->
-          
-        </ng-container>
-        <ng-container matColumnDef="actions">
-          <th mat-header-cell *matHeaderCellDef class="tableColorTitulo">actions </th>
-          <td mat-cell *matCellDef="let element" class="tableColorCeldas"> 
-            <a button mat-icon-button href="javascript:void()" (click)="element.isExpanded = !element.isExpanded">expand_less</a>
-            <!-- <button mat-icon-button value=false *ngIf="show" (click)="expandirTabla(false)">
-              <span class="material-icons">expand_less</span> 
-            </button> -->
-          </td>
-        </ng-container>
-
-         <!-- Template for details row -->
-    <ng-container matColumnDef="expandedDetail">
-      <td mat-cell *matCellDef="let element" [attr.colspan]=" displayedColumns.length">
-
-        <div class="row student-element-detail" [@detailExpand]="element.esExpandible ? 'expanded' : 'collapsed'">
-          <mat-list>
-           
-            <mat-list-item *ngFor="let despliegue of element.despliegues">
-              <div mat-line>Entidad: {{despliegue.Entidad}}         TUPA: {{despliegue.tupa}}</div>
-              <!-- <div mat-line> {{despliegue.type}} | Grade: {{despliegue.grade}}</div> -->
-            </mat-list-item>
-          </mat-list>
+  <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+  <ng-container matColumnDef="expandedDetail">
+    <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplayWithExpand.length">
+      <div class="example-element-detail"
+           [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+        <div class="example-element-description">
+          <!-- <div class="example-element-position"> {{element.position}} </div>
+          <div class="example-element-symbol"> {{element.symbol}} </div>
+          <div class="example-element-name"> {{element.name}} </div>
+          <div class="example-element-weight"> {{element.weight}} </div> -->
+          <div ><b>Entidad</b>  {{element.entidad}}</div>
+          <div ><b>Nombre</b>   {{element.nombre}}</div>
         </div>
+        <div class="example-element-description">
+          <div> <b>TUPA</b>   {{element.tupa}}</div>
+          <div><b>Fecha de actualización</b>    {{element.fechaActualizacion}}</div>
+        </div>
+      </div>
+    </td>
+  </ng-container>
 
-      </td>
-    </ng-container>
-
-        <!-- Acciones Despliegue Column -->
-        <!-- <ng-container matColumnDef="despliegue">
-          <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"></th>
-          <td mat-cell *matCellDef="let element" class="tableColorCeldas">
-            expand_more-->
-            <!-- <button mat-icon-button value=false *ngIf="show" (click)="expandirTabla(false)">
-              <span class="material-icons">expand_less</span> 
-            </button> -->
-            <!-- <button mat-icon-button value=true *ngIf="show!=true" (click)="expandirTabla(true)">
-              <span class="material-icons">expand_more</span>
-            </button> -->
-            <!-- <mat-icon aria-hidden="false" class="material-icons " ></mat-icon>
-            <mat-icon aria-hidden="false" class="material-icons " [hidden]= >expand_more</mat-icon>
-              
-              </td>
-        </ng-container> -->
-
-        <!-- <mat-expansion-panel  *ngIf="show" [expanded]="true">HL1
-          <mat-expansion-panel-header>
-           
-          </mat-expansion-panel-header>
-          <div >
-           HL2_DIV
-          </div>
-        </mat-expansion-panel>  -->
-
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
-    </table>
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplayWithExpand"></tr>
+  <tr mat-row *matRowDef="let element; columns: columnsToDisplayWithExpand;"
+      class="example-element-row"
+      [class.example-expanded-row]="expandedElement === element"
+      (click)="expandedElement = expandedElement === element ? null : element">
+  </tr>
+  <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+</table>
     <mat-paginator [pageSizeOptions]="[5, 10, 25, 50, 100]" [pageSize]="5" [showFirstLastButtons]></mat-paginator>
-    <!-- <pre>{{expandedRows | json}}</pre> -->
-</div>
+   
 </div>

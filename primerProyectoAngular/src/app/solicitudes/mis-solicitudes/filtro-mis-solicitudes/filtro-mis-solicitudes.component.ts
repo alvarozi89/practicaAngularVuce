@@ -2,27 +2,32 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { ViewChild } from '@angular/core';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-filtro-mis-solicitudes',
   templateUrl: './filtro-mis-solicitudes.component.html',
-  styleUrls: ['./filtro-mis-solicitudes.component.css']
+  styleUrls: ['./filtro-mis-solicitudes.component.css'],
+  animations: [
+    trigger('detailExpand', [
+      state('collapsed', style({height: '0px', minHeight: '0'})),
+      state('expanded', style({height: '*'})),
+      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
+    ]),
+  ],
 })
 export class FiltroMisSolicitudesComponent implements OnInit {
 
-  esTablaExpandida = false;
 
-  public show: boolean = false;
-
-
-
-  displayedColumns = ['formato', 'numeroTramite', 'expediente', 'estado', 'dias', 'fecha', 'acciones', 'actions'];
-  dataSourceMisSolicitudes = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  columnsToDisplay = ['formato', 'numeroTramite', 'expediente','estado','dias','fecha','acciones'];
+  columnsToDisplayWithExpand = [...this.columnsToDisplay, 'expand'];
+  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  expandedElement: PeriodicElement | null | undefined;
 
   @ViewChild(MatPaginator, { static: false })
   set paginator(value: MatPaginator) {
-    if (this.dataSourceMisSolicitudes) {
-      this.dataSourceMisSolicitudes.paginator = value;
+    if (this.dataSource) {
+      this.dataSource.paginator = value;
     }
   }
 
@@ -31,79 +36,154 @@ export class FiltroMisSolicitudesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.dataSourceMisSolicitudes.paginator = this.paginator;
+    this.dataSource.paginator = this.paginator;
   }
 
-
-
-   expandirTabla(bandera: boolean) {
-     if (bandera == false) {
-       this.show = false
-     } else if (bandera == true) {
-       this.show = true;
-     }
-   }
 }
 
 export interface PeriodicElement {
   formato: string;
   numeroTramite: string;
+  position: number;
   expediente: string;
   estado: string;
   dias: string;
   fecha: string;
-  acciones: string;
-  despliegues?: any[];
-  id: number;
-  esExpandible:boolean;
+  nombre: string;
+  entidad: string;
+  tupa: number;
+  fechaActualizacion:string;
 }
 const ELEMENT_DATA: PeriodicElement[] = [
   {
-    id: 1,
+    position: 1,
     formato: 'DGF002',
     numeroTramite: '2022002890',
     expediente: '106-2020-CLV',
     estado: 'Pendiente respuesta de entidad',
-    dias: '0 a 5 dias', fecha: '00/00/0000',
-    acciones: 'prueba',
-    esExpandible: false,
-    despliegues: [
-      {
-        entidadLabel: "Entidad",
-        entidad: "SERFOR",
-        tupaLabel: "TUPA",
-        tupa: "34"
-      },
-      {
-        nombreLabel: "Nombre",
-        nombre: "Permiso para importación o re-exportación de flora y fauna silvestres",
-        fechaLabel: "Fecha de actualización",
-        fecha: "00/00/0000"
-      },
-    ]
+    dias: '0 de 5 días',
+    fecha: '00/00/0000',
+    nombre: `Permiso para importación o re-exportación de flora y fauna silvestre`,
+    entidad:'SERFOR',
+    tupa: 34,
+    fechaActualizacion: '00/00/0000'
+
   },
   {
-    id:2,
+    position: 2,
     formato: 'DGF002',
     numeroTramite: '2022002890',
     expediente: '106-2020-CLV',
     estado: 'Pendiente respuesta de entidad',
-    dias: '0 a 5 dias',
+    dias: '0 de 5 días',
     fecha: '00/00/0000',
-    acciones: 'prueba',
-    esExpandible: false,
-    despliegues: [
-      {
-       
-        entidad: "SERFOR",
-        tupa: "34"
-      },
-      {
-        nombreLabel: "Nombre",
-        nombre: "Permiso para importación o re-exportación de flora y fauna silvestres",
-        fechaLabel: "Fecha de actualización",
-        fecha: "00/00/0000"
-      },
-    ]
-  }
+    nombre: `Permiso para importación o re-exportación de flora y fauna silvestre`,
+    entidad:'SERFOR',
+    tupa: 34,
+    fechaActualizacion: '00/00/0000'
+  },
+  {
+    position: 3,
+    formato: 'DGF002',
+    numeroTramite: '2022002890',
+    expediente: '106-2020-CLV',
+    estado: 'Pendiente respuesta de entidad',
+    dias: '0 de 5 días',
+    fecha: '00/00/0000',
+    nombre: `Permiso para importación o re-exportación de flora y fauna silvestre`,
+    entidad:'SERFOR',
+    tupa: 34,
+    fechaActualizacion: '00/00/0000'
+  },
+  {
+    position: 4,
+    formato: 'DGF002',
+    numeroTramite: '2022002890',
+    expediente: '106-2020-CLV',
+    estado: 'Pendiente respuesta de entidad',
+    dias: '0 de 5 días',
+    fecha: '00/00/0000',
+    nombre: `Permiso para importación o re-exportación de flora y fauna silvestre`,
+    entidad:'SERFOR',
+    tupa: 34,
+    fechaActualizacion: '00/00/0000'
+  },
+  {
+    position: 5,
+    formato: 'DGF002',
+    numeroTramite: '2022002890',
+    expediente: '106-2020-CLV',
+    estado: 'Aprobado',
+    dias: '0 de 5 días',
+    fecha: '00/00/0000',
+    nombre: `Permiso para importación o re-exportación de flora y fauna silvestre`,
+    entidad:'SERFOR',
+    tupa: 34,
+    fechaActualizacion: '00/00/0000'
+  },
+  {
+    position: 6,
+    formato: 'DGF002',
+    numeroTramite: '2022002890',
+    expediente: '106-2020-CLV',
+    estado: 'Aprobado',
+    dias: '0 de 5 días',
+    fecha: '00/00/0000',
+    nombre: `Permiso para importación o re-exportación de flora y fauna silvestre`,
+    entidad:'SERFOR',
+    tupa: 34,
+    fechaActualizacion: '00/00/0000'
+  },
+  {
+    position: 7,
+    formato: 'DGF002',
+    numeroTramite: '2022002890',
+    expediente: '106-2020-CLV',
+    estado: 'Aprobado',
+    dias: '0 de 5 días',
+    fecha: '00/00/0000',
+    nombre: `Permiso para importación o re-exportación de flora y fauna silvestre`,
+    entidad:'SERFOR',
+    tupa: 34,
+    fechaActualizacion: '00/00/0000'
+  },
+  {
+    position: 8,
+    formato: 'DGF002',
+    numeroTramite: '2022002890',
+    expediente: '106-2020-CLV',
+    estado: 'Aprobado',
+    dias: '0 de 5 días',
+    fecha: '00/00/0000',
+    nombre: `Permiso para importación o re-exportación de flora y fauna silvestre`,
+    entidad:'SERFOR',
+    tupa: 34,
+    fechaActualizacion: '00/00/0000'
+  },
+  {
+    position: 9,
+    formato: 'DGF002',
+    numeroTramite: '2022002890',
+    expediente: '106-2020-CLV',
+    estado: 'Aprobado',
+    dias: '0 de 5 días',
+    fecha: '00/00/0000',
+    nombre: `Permiso para importación o re-exportación de flora y fauna silvestre`,
+    entidad:'SERFOR',
+    tupa: 34,
+    fechaActualizacion: '00/00/0000'
+  },
+  {
+    position: 10,
+    formato: 'DGF002',
+    numeroTramite: '2022002890',
+    expediente: '106-2020-CLV',
+    estado: 'Pendiente respuesta de entidad',
+    dias: '0 de 5 días',
+    fecha: '00/00/0000',
+    nombre: `Permiso para importación o re-exportación de flora y fauna silvestre`,
+    entidad:'SERFOR',
+    tupa: 34,
+    fechaActualizacion: '00/00/0000'
+  },
 ];
