@@ -1,0 +1,178 @@
+<div class="cardPrincipal">
+    <div class="card m-2">
+      <div class="card-body">
+        <div class="row">
+          <h4><b>Filtros de solicitud</b></h4>
+          <div class="col-lg-2 my-2">
+            <div class="form-group">
+              <select class="form-control">
+                <option value="">Número trámite</option>
+                <option value=""></option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-2 my-2">
+            <div class="form-group">
+              <select class="form-control">
+                <option value="">Entidad</option>
+                <option value=""></option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-2 my-2">
+            <div class="form-group">
+              <select class="form-control">
+                <option value="">Etapa</option>
+                <option value=""></option>
+              </select>
+            </div>
+          </div>       
+          <div class="col-lg-2 my-2">
+            <div class="form-group">
+              <select class="form-control">
+                <option value="">Estado</option>
+                <option value=""></option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-2 my-2">
+            <div class="form-group">
+              <select class="form-control">
+                <option value="">Fecha</option>
+                <option value=""></option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-2 my-2">
+            <div class="form-group">
+              <div class="cardHijo">
+              <button mat-raised-button color="warn" style="background-color: rgb(227, 8, 8);">Buscar <mat-icon>search</mat-icon></button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="container">
+    <div class="mat-headline">Resultado parametrización</div>
+<div class="table">
+    <table mat-table [dataSource]="dataSourceMisSolicitudes" multiTemplateDataRows>
+      <!--id de los registros-->
+      <!-- <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container> -->
+
+        <!-- Formato Column -->
+        <ng-container matColumnDef="formato">
+            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Formato </th>
+            <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.formato}} </td>
+       
+           
+        </ng-container>
+
+        <!-- Número Trámite Column -->
+        <ng-container matColumnDef="numeroTramite">
+            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Número Trámite </th>
+            <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.numeroTramite}} </td>
+        </ng-container>
+
+        <!-- Expediente Column -->
+        <ng-container matColumnDef="expediente">
+            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Expediente </th>
+            <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.expediente}} </td>
+        </ng-container>
+
+        <!-- Nombre Formato Column -->
+        <ng-container matColumnDef="estado">
+            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Estado</th>
+            <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.estado}} </td>
+        </ng-container>
+
+        <!-- Trámites en curso Column -->
+        <ng-container matColumnDef="dias">
+            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Días </th>
+            <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.dias}} </td>
+        </ng-container>
+
+        <!-- Tasa Column -->
+        <ng-container matColumnDef="fecha">
+            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Fecha </th>
+            <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fecha}} </td>
+        </ng-container>
+
+        <!-- Acciones Column -->
+        <ng-container matColumnDef="acciones">
+
+            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Acciones </th>
+            <td mat-cell *matCellDef="let element" class="tableColorCeldas">
+                <mat-icon aria-hidden="false" class="material-icons red-color">search</mat-icon>
+                <mat-icon aria-hidden="false" class="material-icons red-color" routerLink="/mis-solicitudes/seguimiento-tramite" aria-label="Star">access_time</mat-icon>
+                <mat-icon aria-hidden="false" class="material-icons red-color">attach_money</mat-icon>
+            </td>
+          
+         <!-- <td mat-cell *matCellDef="let element" class="tableColorCeldas"> -->
+          
+        </ng-container>
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef class="tableColorTitulo">actions </th>
+          <td mat-cell *matCellDef="let element" class="tableColorCeldas"> 
+            <a button mat-icon-button href="javascript:void()" (click)="element.isExpanded = !element.isExpanded">expand_less</a>
+            <!-- <button mat-icon-button value=false *ngIf="show" (click)="expandirTabla(false)">
+              <span class="material-icons">expand_less</span> 
+            </button> -->
+          </td>
+        </ng-container>
+
+         <!-- Template for details row -->
+    <ng-container matColumnDef="expandedDetail">
+      <td mat-cell *matCellDef="let element" [attr.colspan]=" displayedColumns.length">
+
+        <div class="row student-element-detail" [@detailExpand]="element.esExpandible ? 'expanded' : 'collapsed'">
+          <mat-list>
+           
+            <mat-list-item *ngFor="let despliegue of element.despliegues">
+              <div mat-line>Entidad: {{despliegue.Entidad}}         TUPA: {{despliegue.tupa}}</div>
+              <!-- <div mat-line> {{despliegue.type}} | Grade: {{despliegue.grade}}</div> -->
+            </mat-list-item>
+          </mat-list>
+        </div>
+
+      </td>
+    </ng-container>
+
+        <!-- Acciones Despliegue Column -->
+        <!-- <ng-container matColumnDef="despliegue">
+          <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"></th>
+          <td mat-cell *matCellDef="let element" class="tableColorCeldas">
+            expand_more-->
+            <!-- <button mat-icon-button value=false *ngIf="show" (click)="expandirTabla(false)">
+              <span class="material-icons">expand_less</span> 
+            </button> -->
+            <!-- <button mat-icon-button value=true *ngIf="show!=true" (click)="expandirTabla(true)">
+              <span class="material-icons">expand_more</span>
+            </button> -->
+            <!-- <mat-icon aria-hidden="false" class="material-icons " ></mat-icon>
+            <mat-icon aria-hidden="false" class="material-icons " [hidden]= >expand_more</mat-icon>
+              
+              </td>
+        </ng-container> -->
+
+        <!-- <mat-expansion-panel  *ngIf="show" [expanded]="true">HL1
+          <mat-expansion-panel-header>
+           
+          </mat-expansion-panel-header>
+          <div >
+           HL2_DIV
+          </div>
+        </mat-expansion-panel>  -->
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 50, 100]" [pageSize]="5" [showFirstLastButtons]></mat-paginator>
+    <!-- <pre>{{expandedRows | json}}</pre> -->
+</div>
+</div>

@@ -11,6 +11,8 @@ import { FiltroSucePreexistenteComponent } from './componente/suce-preexistente/
 import { TablaComponent } from './componente/mis-favoritos/tabla/tabla.component';
 import { PlantillasComponent } from './componente/suce-preexistente/plantillas/plantillas.component';
 import { TramitesFrecuentesComponent } from './componente/tramites/tramites-frecuentes/tramites-frecuentes.component';
+import { PlantillaSeguimientoTramiteComponent } from './solicitudes/mis-solicitudes/plantilla-seguimiento-tramite/plantilla-seguimiento-tramite.component';
+import { MisSolicitudesComponent } from './solicitudes/mis-solicitudes/mis-solicitudes.component';
 
 
 
@@ -24,6 +26,8 @@ const routes: Routes = [
   {path: 'mis-favoritos', component: TablaComponent},
   {path: 'plantillas', component: PlantillasComponent},
   {path: 'tramites', component: TramitesFrecuentesComponent},
+  {path: 'mis-solicitudes/seguimiento-tramite', component: PlantillaSeguimientoTramiteComponent},
+  {path: 'mis-solicitudes', component:MisSolicitudesComponent}
 
 ];
 

@@ -44,9 +44,10 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ToastrModule, ToastContainerModule } from 'ngx-toastr';
 import { AlertasComponent } from './componente/alertas/alertas.component';
-
-
-
+import { MisSolicitudesComponent } from './solicitudes/mis-solicitudes/mis-solicitudes.component';
+import { FiltroMisSolicitudesComponent } from './solicitudes/mis-solicitudes/filtro-mis-solicitudes/filtro-mis-solicitudes.component';
+import { PlantillaSeguimientoTramiteComponent } from './solicitudes/mis-solicitudes/plantilla-seguimiento-tramite/plantilla-seguimiento-tramite.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,8 +64,10 @@ import { AlertasComponent } from './componente/alertas/alertas.component';
     TablaComponent,
     PlantillasComponent,
     TramitesFrecuentesComponent,
-    AlertasComponent
-
+    AlertasComponent,
+    MisSolicitudesComponent,
+    FiltroMisSolicitudesComponent,
+    PlantillaSeguimientoTramiteComponent, 
   ],
   imports: [
     BrowserModule,
@@ -83,6 +86,7 @@ import { AlertasComponent } from './componente/alertas/alertas.component';
     HttpClientModule,
     CommonModule,
     DynamicFormModule,
+    MatExpansionModule,
     MatFormFieldModule,
     MatSelectModule,
     MatStepperModule,
