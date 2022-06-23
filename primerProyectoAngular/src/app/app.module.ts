@@ -8,6 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatGridListModule } from '@angular/material/grid-list';
+import {MatListModule} from '@angular/material/list';
 
 import { FiltroEntidadesComponent } from './componente/entidades/filtro-entidades/filtro-entidades.component';
 import { EntidadesCardComponent } from './componente/entidades/entidades-card/entidades-card.component';
@@ -40,7 +41,7 @@ import { TablaComponent } from './componente/mis-favoritos/tabla/tabla.component
 import { PlantillasComponent } from './componente/suce-preexistente/plantillas/plantillas.component';
 import { TramitesFrecuentesComponent } from './componente/tramites/tramites-frecuentes/tramites-frecuentes.component';
 
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule} from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ToastrModule, ToastContainerModule } from 'ngx-toastr';
 import { AlertasComponent } from './componente/alertas/alertas.component';
@@ -50,6 +51,8 @@ import { ProcesosSubprocesosComponent } from './componente/configuracionesParame
 import { ProductosComponent } from './componente/configuracionesParametros/contenidos-tabs/productos/productos.component';
 import { ConsultarPsComponent } from './componente/configuracionesParametros/contenidos-tabs/procesos-subprocesos/consultar-ps/consultar-ps.component';
 import { GestionTramitePSComponent } from './componente/configuracionesParametros/contenidos-tabs/procesos-subprocesos/consultar-ps/gestion-tramite-ps/gestion-tramite-ps.component';
+import { DocumentosComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos/documentos.component';
+import { DocumentosDigitalizadosComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos/documentos-digitalizados/documentos-digitalizados.component';
 
 
 
@@ -76,7 +79,9 @@ import { GestionTramitePSComponent } from './componente/configuracionesParametro
     ProcesosSubprocesosComponent,
     ProductosComponent,
     ConsultarPsComponent,
-    GestionTramitePSComponent
+    GestionTramitePSComponent,
+    DocumentosComponent,
+    DocumentosDigitalizadosComponent
 
 
   ],
@@ -108,12 +113,12 @@ import { GestionTramitePSComponent } from './componente/configuracionesParametro
     MatDialogModule,
     MatSnackBarModule,
     ToastrModule.forRoot(),
-    ToastContainerModule
-
-
-
-
+    ToastContainerModule,
+    MatListModule,
   ],
+
+  entryComponents:[ DocumentosDigitalizadosComponent ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
