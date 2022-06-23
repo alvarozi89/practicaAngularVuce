@@ -52,6 +52,8 @@ import { ConsultarPsComponent } from './componente/configuracionesParametros/con
 import { GestionTramitePSComponent } from './componente/configuracionesParametros/contenidos-tabs/procesos-subprocesos/consultar-ps/gestion-tramite-ps/gestion-tramite-ps.component';
 import { GestionAreasComponent } from './componente/configuracionesParametros/contenidos-tabs/gestion-areas/gestion-areas.component';
 import { ConfiguracionesGestionAreasComponent } from './componente/configuracionesParametros/contenidos-tabs/gestion-areas/configuraciones-gestion-areas/configuraciones-gestion-areas.component';
+import { DocumentosResolutivosComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos-resolutivos/documentos-resolutivos.component';
+
 
 
 
@@ -80,7 +82,9 @@ import { ConfiguracionesGestionAreasComponent } from './componente/configuracion
     ConsultarPsComponent,
     GestionTramitePSComponent,
     GestionAreasComponent,
-    ConfiguracionesGestionAreasComponent
+    ConfiguracionesGestionAreasComponent,
+    DocumentosResolutivosComponent
+
 
 
   ],
