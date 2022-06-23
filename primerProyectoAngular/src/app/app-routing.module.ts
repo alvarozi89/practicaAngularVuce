@@ -11,10 +11,12 @@ import { FiltroSucePreexistenteComponent } from './componente/suce-preexistente/
 import { TablaComponent } from './componente/mis-favoritos/tabla/tabla.component';
 import { PlantillasComponent } from './componente/suce-preexistente/plantillas/plantillas.component';
 import { TramitesFrecuentesComponent } from './componente/tramites/tramites-frecuentes/tramites-frecuentes.component';
+import { BarraComponent } from './componente/barra/barra.component';
 
 
 
 const routes: Routes = [
+  {path: '', component: FiltroEntidadesComponent},
   {path: 'entidades', component: FiltroEntidadesComponent},
   {path: 'cadena', component: FiltroCadenaComponent},
   {path: 'ipen', component: FiltroIpenComponent},
