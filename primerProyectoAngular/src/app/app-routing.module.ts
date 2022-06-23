@@ -16,6 +16,8 @@ import { GeneralesComponent } from './componente/configuracionesParametros/conte
 import { ProcesosSubprocesosComponent } from './componente/configuracionesParametros/contenidos-tabs/procesos-subprocesos/procesos-subprocesos.component';
 import { ConsultarPsComponent } from './componente/configuracionesParametros/contenidos-tabs/procesos-subprocesos/consultar-ps/consultar-ps.component';
 import { GestionTramitePSComponent } from './componente/configuracionesParametros/contenidos-tabs/procesos-subprocesos/consultar-ps/gestion-tramite-ps/gestion-tramite-ps.component';
+import { ProductosComponent } from './componente/configuracionesParametros/contenidos-tabs/productos/productos.component';
+import { DocumentosResolutivosComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos-resolutivos/documentos-resolutivos.component';
 const routes: Routes = [
   { path: 'entidades', component: FiltroEntidadesComponent },
   { path: 'cadena', component: FiltroCadenaComponent },
@@ -31,6 +33,8 @@ const routes: Routes = [
   { path: 'procesos-subprocesos', component: ProcesosSubprocesosComponent },
   { path: 'consultas-PS', component: ConsultarPsComponent },
   { path: 'gestion-tramite-PS', component: GestionTramitePSComponent },
+  { path: 'productos-PS', component:ProductosComponent},
+  { path: 'documentosResolutivos-PS', component:DocumentosResolutivosComponent},
 
 
 
