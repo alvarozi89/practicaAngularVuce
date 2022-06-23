@@ -1,7 +1,7 @@
 import { Component, OnInit, inject, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { NotificationService } from 'src/app/notification.service';
-import {MatListModule} from '@angular/material/list';
+import {FormBuilder} from '@angular/forms';
 
 @Component({
   selector: 'app-documentos-digitalizados',
@@ -11,11 +11,17 @@ import {MatListModule} from '@angular/material/list';
 
 export class DocumentosDigitalizadosComponent implements OnInit {
 
-  opciones : string [] = [ 'Botas' , 'Zuecos' , 'Mocasines' , 'Mocasines' , 'Zapatillas deportivas' ];
+  toppings = this._formBuilder.group({
+    opcion1: false,
+    opcion2: false,
+    opcion3: false,
+    opcion4: false,
+    opcion5: false,
+  });
 
   constructor(
     public dialogRef: MatDialogRef<DocumentosDigitalizadosComponent>,
-    @Inject(MAT_DIALOG_DATA) public message: string, private notifyService: NotificationService ) { }
+    @Inject(MAT_DIALOG_DATA) public message: string, private notifyService: NotificationService, private _formBuilder: FormBuilder ) { }
 
     onClickNO(){
       this.dialogRef.close();

@@ -8,7 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatGridListModule } from '@angular/material/grid-list';
-import {MatListModule} from '@angular/material/list';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { FiltroEntidadesComponent } from './componente/entidades/filtro-entidades/filtro-entidades.component';
 import { EntidadesCardComponent } from './componente/entidades/entidades-card/entidades-card.component';
@@ -41,7 +41,7 @@ import { TablaComponent } from './componente/mis-favoritos/tabla/tabla.component
 import { PlantillasComponent } from './componente/suce-preexistente/plantillas/plantillas.component';
 import { TramitesFrecuentesComponent } from './componente/tramites/tramites-frecuentes/tramites-frecuentes.component';
 
-import { MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ToastrModule, ToastContainerModule } from 'ngx-toastr';
 import { AlertasComponent } from './componente/alertas/alertas.component';
@@ -114,10 +114,10 @@ import { DocumentosDigitalizadosComponent } from './componente/configuracionesPa
     MatSnackBarModule,
     ToastrModule.forRoot(),
     ToastContainerModule,
-    MatListModule,
+    MatCheckboxModule,
   ],
 
-  entryComponents:[ DocumentosDigitalizadosComponent ],
+  entryComponents: [DocumentosDigitalizadosComponent],
 
   providers: [],
   bootstrap: [AppComponent]

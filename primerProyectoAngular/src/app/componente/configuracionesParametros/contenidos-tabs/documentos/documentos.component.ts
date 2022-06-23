@@ -18,7 +18,7 @@ export class DocumentosComponent implements OnInit {
 
   openDialog():void{
     const dialogRef = this.dialog.open(DocumentosDigitalizadosComponent, {
-      width:'350px',
+      width:'600px',
       data: 'are yot sure?'
     });
     dialogRef.afterClosed().subscribe(res => {
