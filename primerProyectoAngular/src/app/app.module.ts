@@ -50,6 +50,8 @@ import { ProcesosSubprocesosComponent } from './componente/configuracionesParame
 import { ProductosComponent } from './componente/configuracionesParametros/contenidos-tabs/productos/productos.component';
 import { ConsultarPsComponent } from './componente/configuracionesParametros/contenidos-tabs/procesos-subprocesos/consultar-ps/consultar-ps.component';
 import { GestionTramitePSComponent } from './componente/configuracionesParametros/contenidos-tabs/procesos-subprocesos/consultar-ps/gestion-tramite-ps/gestion-tramite-ps.component';
+import { GestionAreasComponent } from './componente/configuracionesParametros/contenidos-tabs/gestion-areas/gestion-areas.component';
+import { ConfiguracionesGestionAreasComponent } from './componente/configuracionesParametros/contenidos-tabs/gestion-areas/configuraciones-gestion-areas/configuraciones-gestion-areas.component';
 
 
 
@@ -76,7 +78,9 @@ import { GestionTramitePSComponent } from './componente/configuracionesParametro
     ProcesosSubprocesosComponent,
     ProductosComponent,
     ConsultarPsComponent,
-    GestionTramitePSComponent
+    GestionTramitePSComponent,
+    GestionAreasComponent,
+    ConfiguracionesGestionAreasComponent
 
 
   ],
