@@ -8,6 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { FiltroEntidadesComponent } from './componente/entidades/filtro-entidades/filtro-entidades.component';
 import { EntidadesCardComponent } from './componente/entidades/entidades-card/entidades-card.component';
@@ -50,9 +51,14 @@ import { ProcesosSubprocesosComponent } from './componente/configuracionesParame
 import { ProductosComponent } from './componente/configuracionesParametros/contenidos-tabs/productos/productos.component';
 import { ConsultarPsComponent } from './componente/configuracionesParametros/contenidos-tabs/procesos-subprocesos/consultar-ps/consultar-ps.component';
 import { GestionTramitePSComponent } from './componente/configuracionesParametros/contenidos-tabs/procesos-subprocesos/consultar-ps/gestion-tramite-ps/gestion-tramite-ps.component';
+
 import { GestionAreasComponent } from './componente/configuracionesParametros/contenidos-tabs/gestion-areas/gestion-areas.component';
 import { ConfiguracionesGestionAreasComponent } from './componente/configuracionesParametros/contenidos-tabs/gestion-areas/configuraciones-gestion-areas/configuraciones-gestion-areas.component';
 import { DocumentosResolutivosComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos-resolutivos/documentos-resolutivos.component';
+
+
+import { DocumentosComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos/documentos.component';
+import { DocumentosDigitalizadosComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos/documentos-digitalizados/documentos-digitalizados.component';
 
 
 
@@ -83,7 +89,9 @@ import { DocumentosResolutivosComponent } from './componente/configuracionesPara
     GestionTramitePSComponent,
     GestionAreasComponent,
     ConfiguracionesGestionAreasComponent,
-    DocumentosResolutivosComponent
+    DocumentosResolutivosComponent,
+    DocumentosComponent,
+    DocumentosDigitalizadosComponent
 
 
 
@@ -116,12 +124,12 @@ import { DocumentosResolutivosComponent } from './componente/configuracionesPara
     MatDialogModule,
     MatSnackBarModule,
     ToastrModule.forRoot(),
-    ToastContainerModule
-
-
-
-
+    ToastContainerModule,
+    MatCheckboxModule,
   ],
+
+  entryComponents: [DocumentosDigitalizadosComponent],
+
   providers: [],
   bootstrap: [AppComponent]
 })
