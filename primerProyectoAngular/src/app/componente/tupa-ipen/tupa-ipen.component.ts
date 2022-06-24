@@ -1,11 +1,10 @@
-import { Component, OnInit, ChangeDetectorRef  } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, ViewChild  } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { JsonFormData } from 'dynamic-form/src/lib/dynamic-form.component'
-import { FormBuilder, Validators } from '@angular/forms';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { ToastrService } from 'ngx-toastr';
+import { JsonFormData } from 'dynamic-form/src/lib/dynamic-form.component';
 import { NotificationService } from 'src/app/notification.service';
+import {MatTable} from '@angular/material/table';
+import {DataSource} from '@angular/cdk/collections';
+import {Observable, ReplaySubject} from 'rxjs';
 
 interface FixedOptions {
   value: string;
@@ -28,7 +27,11 @@ export class TupaIpenComponent implements OnInit {
   disabled = false;
   disabledButton = true;
   disabledRegistroTramite = true;
-  id=null;
+  id="";
+  modal=false;
+  idSubpartida="Productos del reino vegetal 5"
+  tipoProductoform="EQUIPO GENERADORES";
+  partidaArancelariaform="prueba1producto";
   title = 'formsTest';
   panelOpenState = false;
   public formData: JsonFormData;
@@ -38,9 +41,17 @@ export class TupaIpenComponent implements OnInit {
   displayedColumnsBusqueda: string[] = ['producto', 'seccion'];
   clickedRows = new Set<TablaBusqueda>();
   displayedColumns = ['fechaRegistro', 'etapa', 'descripcion', 'fechaEstimada', ];
-  dataSource = ELEMENT_DATA;
+  displayedColumnsProducto: string[]= ['tipoProducto', 'partidaArancelaria', 'subpartida' ];
+  
+  dataSourceTrazabilidad = ELEMENT_DATA_TRAZABILIDAD;
   dataSourceRequisitos = ELEMENT_DATA_REQUISITOS;
   dataSourceBusquedaTabla= ELEMENT_DATA_BUSQUEDA;
+  ELEMENT_DATA_PRODUCTO: producto[] = [
+    { tipoProducto: "EQUIPO GENERADORES", partidaArancelaria: "prueba1producto", subpartida: "Productos del reino vegetal 5"},
+   
+  ];
+  dataToDisplay = [...this.ELEMENT_DATA_PRODUCTO];
+  dataSourceProducto = new ExampleDataSource(this.dataToDisplay)
 
   constructor(private http: HttpClient, private notifyService: NotificationService) {
     this.formData = { controls: [] };
@@ -48,6 +59,7 @@ export class TupaIpenComponent implements OnInit {
     this.formDataDetalleSerfor = { controls: [] };
     this.formDataDocumento = { controls: [] };
   }
+
 
   ngOnInit(): void {
     this.http
@@ -109,9 +121,27 @@ export class TupaIpenComponent implements OnInit {
     this.vistaBusqueda=false;
   }
 
-  guardarProducto(){
+  abrirModal(){
+    this.modal=true;
+  }
 
-   this.vistaFormDocumento=false;
+
+  finalizarModal() {
+    this.notifyService.showSuccess("Se creo la solicitud exitosamente!", "Exito!")
+    this.botonDescargarAdjuntos = true
+
+  }
+
+  @ViewChild(MatTable)
+  table!: MatTable<PeriodicElement>;
+  guardarProducto(formDocumento:JsonFormData){
+  this.tipoProductoform="EQUIPO GENERADORES";
+  this.idSubpartida=this.id;
+  this.partidaArancelariaform="prueba1producto";
+  const randomElementIndex = Math.floor(Math.random() * this.ELEMENT_DATA_PRODUCTO.length);
+    this.dataToDisplay = [...this.dataToDisplay, this.ELEMENT_DATA_PRODUCTO[randomElementIndex]];
+    this.dataSourceProducto.setData(this.dataToDisplay);
+  this.vistaFormDocumento=false;
     
   }
   
@@ -138,7 +168,15 @@ export interface Requisitos {
 
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
+export interface producto {
+  tipoProducto: string;
+  partidaArancelaria: string;
+  subpartida: string;
+  
+}
+
+
+const ELEMENT_DATA_TRAZABILIDAD: PeriodicElement[] = [
   { fechaRegistro: new Date('dd/mm/yyyy'), etapa: 'prueba', descripcion: 'descripcion', fechaEstimada: new Date('dd/mm/yyyy'), responsable: 'responsable' },
   { fechaRegistro: new Date('dd/mm/yyyy'), etapa: 'prueba', descripcion: 'descripcion', fechaEstimada: new Date('dd/mm/yyyy'), responsable: 'responsable' },
   { fechaRegistro: new Date('dd/mm/yyyy'), etapa: 'prueba', descripcion: 'descripcion', fechaEstimada: new Date('dd/mm/yyyy'), responsable: 'responsable' },
@@ -162,4 +200,22 @@ const ELEMENT_DATA_BUSQUEDA: TablaBusqueda[] = [
  
 ];
 
+class ExampleDataSource extends DataSource<producto> {
+  private _dataStream = new ReplaySubject<producto[]>();
+
+  constructor(initialData: producto[]) {
+    super();
+    this.setData(initialData);
+  }
+
+  connect(): Observable<producto[]> {
+    return this._dataStream;
+  }
+
+  disconnect() {}
+
+  setData(data: producto[]) {
+    this._dataStream.next(data);
+  }
+}
 
