@@ -1,0 +1,57 @@
+.m-3 {
+
+  display: block;
+  align-items: stretch;
+  width: 100%;
+  min-height: 130px;
+  max-height: fit-content;
+  border-radius: 7%;
+}
+
+.centered {
+  text-align: center;
+}
+
+.divRadio {
+  align-items: center;
+}
+
+.tituloPrincipal {
+  display: inline-block;
+  padding: 15px;
+  padding-left: 0px;
+  font-size: xx-large;
+  font-weight: bolder;
+  
+}
+
+.titulosSecundarios {
+  display: inline-block;
+  padding: 15px;
+  padding-left: 0px;
+  font-size: x-large;
+  font-weight: 500;
+
+}
+
+.comentarios {
+  font-size: medium;
+  display: inline-block;
+  padding: 15px;
+  padding-left: 0px;
+  color: gray;
+}
+
+.boton-perzonalizado {
+  padding: 0 8px;
+  background-color: rgb(227, 8, 8);
+  min-width: 30px;
+  line-height: 34px
+
+}
+
+.alinear{
+ 
+  padding-top: 30px;
+}
+
