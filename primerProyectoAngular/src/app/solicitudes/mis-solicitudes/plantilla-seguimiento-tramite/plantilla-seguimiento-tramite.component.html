@@ -1,138 +1,194 @@
 <div class="container">
+    <div class="">
     <div class="tituloPrincipal">
-       Seguimiento de trámites
-      </div>
-      <br>
-      <div class="comentarios">
-       Consulta la información general y el seguimiento de trámite seleccionado
-      </div>
+        Seguimiento de trámites
+    </div>
+    <br>
+    <div class="comentarios">
+        Consulta la información general y el seguimiento de trámite seleccionado
+    </div>
 
-<div class="example-button-container m-2 ">
-    <div class="alinear">
-    <button class="boton-perzonalizado" mat-raised-button color="accent" aria-label="Example icon button with a plus one icon" routerLink="/mis-solicitudes">
-      <mat-icon>arrow_back</mat-icon>
-    </button>
-    <h3 class="text-danger d-inline"> <b>   Volver a mis solicitudes </b> </h3>
-  </div>
-  </div>
-<!--Tabs DatosGenerales, Seguimiento -->
+    <div class="example-button-container m-2">
+        <div class="alinear">
+            <button class="boton-perzonalizado" mat-raised-button color="accent"
+                aria-label="Example icon button with a plus one icon" routerLink="/mis-solicitudes">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+            <h3 class="text-danger d-inline"> <b> Volver a mis solicitudes </b> </h3>
+        </div>
+    </div>
 <div>
-<!-- <mat-expansion-panel-header>
-                <div class="tituloDesplegable">
-                  Datos generales
+    <mat-tab-group mat-stretch-tabs color="warn">
+        <mat-tab label="Datos generales">
+            <mat-grid-list cols="3" rowHeight="50px">
+                <mat-grid-tile>
+                    <div class="text-inside-grid">Número Trámite:</div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <div class="text-inside-grid">Fecha Solicitud:</div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <div class="text-inside-grid">Hora Solicitud:</div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <div class="text-inside-grid">Entidad:</div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <div class="text-inside-grid">Tupa:</div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <div class="text-inside-grid">Formato:</div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <div class="text-inside-grid">Nombre:</div>
+                </mat-grid-tile>
+            </mat-grid-list>
+            <div>
+                <br>
+                <div class="titulosSecundarios">Pagos</div>
+                <div class="table">
+                    <table mat-table [dataSource]="dataSourcePlantilla">
+
+                        <!-- Fecha registro Column -->
+                        <ng-container matColumnDef="monto">
+                            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo">Monto</th>
+                            <td mat-cell *matCellDef="let element" class="tableColorCeldas">{{element.monto}}</td>
+                        </ng-container>
+
+                        <!-- Etapa Column -->
+                        <ng-container matColumnDef="cpb">
+                            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo">CPB</th>
+                            <td mat-cell *matCellDef="let element" class="tableColorCeldas">{{element.cpb}}</td>
+                        </ng-container>
+
+                        <!-- Descripcion Column -->
+                        <ng-container matColumnDef="fechaGeneracion">
+                            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo">Fecha Generación</th>
+                            <td mat-cell *matCellDef="let element" class="tableColorCeldas">{{element.fechaGeneracion}}</td>
+                        </ng-container>
+
+                        <!-- Fecha Estimada Column -->
+                        <ng-container matColumnDef="fechaOperacion">
+                            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Fecha Operación </th>
+                            <td mat-cell *matCellDef="let element" class="tableColorCeldas">{{element.fechaOperacion}}</td>
+                        </ng-container>
+
+                        <!-- Name Column -->
+                        <ng-container matColumnDef="estado">
+                            <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Estado </th>
+                            <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.estado}} </td>
+                        </ng-container>
+                            <!-- Name Column -->
+                            <ng-container matColumnDef="acciones">
+
+                                <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Acciones </th>
+                                <td mat-cell *matCellDef="let element" class="tableColorCeldas">
+                                  <mat-icon >monetization_on</mat-icon>
+                                </td>
+                              </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumnsPlantilla"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumnsPlantilla;"></tr>
+                    </table>
                 </div>
-              </mat-expansion-panel-header> -->
-              <mat-tab-group mat-stretch-tabs color="warn">
-                <mat-tab label="Datos generales">
-                    <mat-grid-list cols="3" rowHeight="35px">
-                        <mat-grid-tile>
-                            <div class="text-inside-grid">Número Trámite:</div>
-                        </mat-grid-tile>
-                        <mat-grid-tile>
-                            <div class="text-inside-grid">Fecha Solicitud:</div>
-                        </mat-grid-tile>
-                        <mat-grid-tile>
-                            <div class="text-inside-grid">Hora Solicitud:</div>
-                        </mat-grid-tile>
-                        <mat-grid-tile>
-                            <div class="text-inside-grid">Entidad:</div>
-                        </mat-grid-tile>
-                        <mat-grid-tile>
-                            <div class="text-inside-grid">TUPA:</div>
-                        </mat-grid-tile>
-                        <mat-grid-tile>
-                            <div class="text-inside-grid">Formato:</div>
-                        </mat-grid-tile>
-                        <mat-grid-tile>
-                            <div class="text-inside-grid">Nombre:</div>
-                        </mat-grid-tile>
-                    </mat-grid-list>
-                    <!-- <div>
-                        <br>
-                        <div class="titulosSecundarios">Trazabilidad</div>
-                        <div class="table">
-                            <table mat-table [dataSource]="dataSource">
-
-                                <ng-container matColumnDef="monto">
-                                    <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Monto </th>
-                                    <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.monto}} </td>
-                                </ng-container>
-                                <ng-container matColumnDef="cpb">
-                                    <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> CPB </th>
-                                    <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.cpb}} </td>
-                                </ng-container>
-                                <ng-container matColumnDef="fechaGeneracion">
-                                    <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Fecha generación </th>
-                                    <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaGeneracion}} </td>
-                                </ng-container>
-                                <ng-container matColumnDef="fechaOperacion">
-                                    <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Fecha operación </th>
-                                    <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaOperacion}} </td>
-                                </ng-container>
-                                <ng-container matColumnDef="estado">
-                                    <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Estado </th>
-                                    <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.estado}} </td>
-                                </ng-container>
-                                <ng-container matColumnDef="acciones">
-                                    <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Acciones</th>
-                                    <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.acciones}} </td>
-                                </ng-container>
+            </div>
+        </mat-tab>
 
 
-                            </table>
-                        </div>
-                    </div> -->
-                       
-                </mat-tab>
-                
-                <mat-tab label="Seguimiento">
-                    <br>
-                    <br>
-                    <mat-grid-list cols="4" rowHeight="1:1">
-    
-                        <mat-grid-tile>
-                          <mat-card class="m-3">
-                            <mat-card-title><span class="material-icons icon-people-size">people_alt</span></mat-card-title>
-                            <h1>Solicitud </h1>
-                            <h2>05/10/2021 </h2>
-                                <span class="background-letter-color">Enviada</span>
-                          </mat-card>
-                        </mat-grid-tile>
+        <mat-tab label="Seguimiento">
+            <br>
+            <br>
+            <mat-grid-list cols="4" >
 
-                        <mat-grid-tile>
-                          <mat-card class="m-3">
-                            <mat-card-title><span class="material-icons icon-people-size">people_alt</span></mat-card-title>
-                            <h1>SUCE </h1>
-                            <h2>25/10/2021 </h2>
-                                <span class="background-letter-color">SUCE numerada</span>
-                          </mat-card>
-                        </mat-grid-tile>
-
-                        <mat-grid-tile>
-                          <mat-card class="m-3">
-                            <mat-card-title><span class="material-icons icon-people-size">people_alt</span></mat-card-title>
-                            <h1>Evaluación</h1>
-                            <h2>12/11/2021 </h2>
-                                <span class="background-letter-color-2">En proceso</span>
-                          </mat-card>
-                        </mat-grid-tile>
-                        <mat-grid-tile>
-                            <mat-card class="m-3">
-                              <mat-card-title><span class="material-icons icon-people-size">people_alt</span></mat-card-title>
-                              <h1>DR </h1>
-                              <h2>--/--/---- </h2>
-                                  <span class="background-letter-color-3">Pendiente</span>
-                            </mat-card>
-                          </mat-grid-tile>
-                                    
+                <mat-grid-tile>
+                    <mat-card class="m-3 icon-people">
+                        <mat-card-title><span class="material-icons icon-people-size">people_alt</span>
+                        </mat-card-title>
+                        <h1>Solicitud </h1>
+                        <h4>05/10/2021 </h4>
+                        <mat-card class="background-letter-color">
+                        <span >Enviada</span>
+                        </mat-card>
                       
-                     
-                      </mat-grid-list> 
+                    </mat-card>
+                </mat-grid-tile>
 
+                <mat-grid-tile>
+                    <mat-card class="m-3 icon-people" >
+                        <mat-card-title><span class="material-icons icon-people-size">people_alt</span>
+                        </mat-card-title>
+                        <h1>SUCE </h1>
+                        <h4>25/10/2021 </h4>
+                        <mat-card class="background-letter-color">
+                        <span >SUCE numerada</span>
+                    </mat-card>
+                    </mat-card>
+                </mat-grid-tile>
 
-                </mat-tab>
+                <mat-grid-tile>
+                    <mat-card class="m-3 icon-people">
+                        <mat-card-title><span class="material-icons icon-people-size">people_alt</span>
+                        </mat-card-title>
+                        <h1>Evaluación</h1>
+                        <h4>12/11/2021 </h4>
+                        <mat-card class="background-letter-color-2">
+                        <span>En proceso</span>
+                        </mat-card>
+                    </mat-card>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-card class="m-3 icon-people">
+                        <mat-card-title><span class="material-icons icon-people-size">people_alt</span>
+                        </mat-card-title>
+                        <h1>DR </h1>
+                        <h4>--/--/---- </h4>
+                        <mat-card class="background-letter-color-3">
+                        <span class="background-letter-color-3">Pendiente</span>
+                        </mat-card>
+                    </mat-card>
+                </mat-grid-tile>
+            </mat-grid-list>
+            <div class="titulosSecundarios">Trazabilidad</div>
+            <div class="table">
+              <table mat-table [dataSource]="dataSource">
+  
+                <!-- Fecha registro Column -->
+                <ng-container matColumnDef="fechaRegistro">
+                  <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Fecha Registro </th>
+                  <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaRegistro}} </td>
+                </ng-container>
+  
+                <!-- Etapa Column -->
+                <ng-container matColumnDef="etapa">
+                  <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Etapa </th>
+                  <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.etapa}} </td>
+                </ng-container>
+  
+                <!-- Descripcion Column -->
+                <ng-container matColumnDef="descripcion">
+                  <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Descripción detallada </th>
+                  <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.descripcion}} </td>
+                </ng-container>
+  
+                <!-- Fecha Estimada Column -->
+                <ng-container matColumnDef="fechaEstimada">
+                  <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Fecha Estimada </th>
+                  <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaEstimada}} </td>
+                </ng-container>
+  
+                <!-- Name Column -->
+                <ng-container matColumnDef="responsable">
+                  <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Responsable </th>
+                  <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.responsable}} </td>
+                </ng-container>
+  
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+            </div>
 
-              </mat-tab-group>
-            </div>     
+        </mat-tab>
+    </mat-tab-group>
 </div>
-           
+</div>
+</div>

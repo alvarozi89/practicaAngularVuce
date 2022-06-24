@@ -19,11 +19,18 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 export class FiltroMisSolicitudesComponent implements OnInit {
 
 
-  columnsToDisplay = ['formato', 'numeroTramite', 'expediente','estado','dias','fecha','acciones'];
+  columnsToDisplay = ['formato', 'numeroTramite', 'expediente','estado','dias','fecha'];
   columnsToDisplayWithExpand = [...this.columnsToDisplay, 'expand'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   expandedElement: PeriodicElement | null | undefined;
-
+  columnas=[
+    {titulo:"Formato", id:"formato"},
+    {titulo:"Número Trámite", id:"numeroTramite"},
+    {titulo:"Expediente", id:"expediente"},
+    {titulo:"Estado", id:"estado"},
+    {titulo:"Días", id:"dias"},
+    {titulo:"Fecha", id:"fecha"},
+  ];
   @ViewChild(MatPaginator, { static: false })
   set paginator(value: MatPaginator) {
     if (this.dataSource) {
@@ -39,6 +46,7 @@ export class FiltroMisSolicitudesComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }
 
+ 
 }
 
 export interface PeriodicElement {
@@ -47,6 +55,7 @@ export interface PeriodicElement {
   position: number;
   expediente: string;
   estado: string;
+  color: string;
   dias: string;
   fecha: string;
   nombre: string;
@@ -61,6 +70,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     numeroTramite: '2022002890',
     expediente: '106-2020-CLV',
     estado: 'Pendiente respuesta de entidad',
+    color: 'orange',
     dias: '0 de 5 días',
     fecha: '00/00/0000',
     nombre: `Permiso para importación o re-exportación de flora y fauna silvestre`,
@@ -75,6 +85,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     numeroTramite: '2022002890',
     expediente: '106-2020-CLV',
     estado: 'Pendiente respuesta de entidad',
+    color: 'orange',
     dias: '0 de 5 días',
     fecha: '00/00/0000',
     nombre: `Permiso para importación o re-exportación de flora y fauna silvestre`,
@@ -88,6 +99,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     numeroTramite: '2022002890',
     expediente: '106-2020-CLV',
     estado: 'Pendiente respuesta de entidad',
+    color: 'orange',
     dias: '0 de 5 días',
     fecha: '00/00/0000',
     nombre: `Permiso para importación o re-exportación de flora y fauna silvestre`,
@@ -100,6 +112,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     formato: 'DGF002',
     numeroTramite: '2022002890',
     expediente: '106-2020-CLV',
+    color: 'orange',
     estado: 'Pendiente respuesta de entidad',
     dias: '0 de 5 días',
     fecha: '00/00/0000',
@@ -114,6 +127,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     numeroTramite: '2022002890',
     expediente: '106-2020-CLV',
     estado: 'Aprobado',
+    color: 'green',
     dias: '0 de 5 días',
     fecha: '00/00/0000',
     nombre: `Permiso para importación o re-exportación de flora y fauna silvestre`,
@@ -127,6 +141,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     numeroTramite: '2022002890',
     expediente: '106-2020-CLV',
     estado: 'Aprobado',
+    color: 'green',
     dias: '0 de 5 días',
     fecha: '00/00/0000',
     nombre: `Permiso para importación o re-exportación de flora y fauna silvestre`,
@@ -140,6 +155,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     numeroTramite: '2022002890',
     expediente: '106-2020-CLV',
     estado: 'Aprobado',
+    color: 'green',
     dias: '0 de 5 días',
     fecha: '00/00/0000',
     nombre: `Permiso para importación o re-exportación de flora y fauna silvestre`,
@@ -153,6 +169,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     numeroTramite: '2022002890',
     expediente: '106-2020-CLV',
     estado: 'Aprobado',
+    color: 'green',
     dias: '0 de 5 días',
     fecha: '00/00/0000',
     nombre: `Permiso para importación o re-exportación de flora y fauna silvestre`,
@@ -166,6 +183,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     numeroTramite: '2022002890',
     expediente: '106-2020-CLV',
     estado: 'Aprobado',
+    color: 'green',
     dias: '0 de 5 días',
     fecha: '00/00/0000',
     nombre: `Permiso para importación o re-exportación de flora y fauna silvestre`,
@@ -179,6 +197,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     numeroTramite: '2022002890',
     expediente: '106-2020-CLV',
     estado: 'Pendiente respuesta de entidad',
+    color: 'orange',
     dias: '0 de 5 días',
     fecha: '00/00/0000',
     nombre: `Permiso para importación o re-exportación de flora y fauna silvestre`,

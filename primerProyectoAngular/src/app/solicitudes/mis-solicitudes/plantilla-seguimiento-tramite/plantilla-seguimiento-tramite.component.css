@@ -33,10 +33,16 @@
     font-size: medium;
     padding-top: 15px;
   }
+  
 
   .table{
     padding-top: 15px;
   }
+
+  table {
+    width: 100%;
+  }
+  
 
   .tableColorTitulo{
     background-color: grey;
@@ -58,14 +64,22 @@
     padding-top: 15px;
   }
   
-  .icon-people-size{
-    font-size: 75px;
+  .icon-people{
+    font-size: medium;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+  
+   }
+   .icon-people-size{
+    font-size: 50px;
+    
   
    }
 
    .background-letter-color{
-    border-radius: 5px;
-    background-color: greenyellow;
+    border-radius: 10px;
+    background-color: rgb(30, 204, 44);
     font-size: medium;
     color: darkgreen;
 
