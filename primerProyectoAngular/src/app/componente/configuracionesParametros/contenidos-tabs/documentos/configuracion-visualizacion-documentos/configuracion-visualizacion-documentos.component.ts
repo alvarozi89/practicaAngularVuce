@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder} from '@angular/forms';
 
 @Component({
   selector: 'app-configuracion-visualizacion-documentos',
@@ -6,13 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./configuracion-visualizacion-documentos.component.css']
 })
 export class ConfiguracionVisualizacionDocumentosComponent implements OnInit {
+  panelOpenState = false
   vistaFormTramite=false;
+  vistaOpciones = false;
   vistaFormRegistroSolicitud= false;
   activarEditar=true;
   vistaFormCreacionSuce=false
   icono="add_circle_outline"
 
-  constructor() { }
+  toppings = this._formBuilder.group({
+    opcion1: false,
+    opcion2: false,
+    opcion3: false,
+    opcion4: false,
+  });
+
+  constructor(private _formBuilder: FormBuilder ) { }
 
   ngOnInit(): void {
   }
@@ -28,5 +38,17 @@ export class ConfiguracionVisualizacionDocumentosComponent implements OnInit {
     }
   }
 
+  mostrarOpciones() {
+    this.vistaOpciones = !this.vistaOpciones;
+    this.activarEditar= !this.activarEditar;
+    if(this.icono=="add_circle_outline"){
+      this.icono= "remove_circle_outline"
+    }
+    else{
+      this.icono= "add_circle_outline"
+    }
+  }
+
   
 }
+

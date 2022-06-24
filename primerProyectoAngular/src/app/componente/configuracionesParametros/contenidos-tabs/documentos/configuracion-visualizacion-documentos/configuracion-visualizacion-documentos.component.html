@@ -43,87 +43,67 @@
     <div class="formDatosTramite" *ngIf="vistaFormTramite==true">
 
         <!-- aqui inicia la card -->
-        <br>
         <mat-grid-list cols="3" rowHeight="1:1">
 
             <mat-grid-tile class="layout-row">
                 <mat-card class="m-3">
+                    
                     <mat-card-title>
-                        <h3> <b>Requiere revisión Previa *</b> </h3>
+                        <h3> <b>Confidencialidad*</b> </h3>
+                        <button (click)="mostrarOpciones()" class="text-danger" mat-icon-button
+                            aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            <mat-icon>{{icono}}</mat-icon>
+                        </button>
                     </mat-card-title>
+                    
                     <hr>
-                    <mat-card class="m-2">
-                        <mat-radio-group aria-label="Select an option" class="text-center">
-                            <mat-radio-button value="1"></mat-radio-button>
-                        </mat-radio-group>
-                        <mat-label>Si</mat-label>
-                    </mat-card>
-                    <mat-card class="m-2">
-                        <mat-radio-group aria-label="Select an option" class="text-center">
-                            <mat-radio-button value="1"></mat-radio-button>
-                        </mat-radio-group>
-                        <mat-label>No</mat-label>
-                    </mat-card>
-                    <mat-card class="m-2">
-                        <mat-radio-group aria-label="Select an option" class="text-center">
-                            <mat-radio-button value="1"></mat-radio-button>
-                        </mat-radio-group>
-                        <mat-label>No aplica</mat-label>
-                    </mat-card>
+               
+                    <div *ngIf="vistaOpciones==true">
+                        <mat-card class="m-2">
+                            <mat-radio-group aria-label="Select an option" class="text-center">
+                                <mat-radio-button value="1"></mat-radio-button>
+                            </mat-radio-group>
+                            <mat-label>Si</mat-label>
+                        </mat-card>
+                        <mat-card class="m-2">
+                            <mat-radio-group aria-label="Select an option" class="text-center">
+                                <mat-radio-button value="1"></mat-radio-button>
+                            </mat-radio-group>
+                            <mat-label>No</mat-label>
+                        </mat-card>
+                        <mat-card class="m-2">
+                            <mat-radio-group aria-label="Select an option" class="text-center">
+                                <mat-radio-button value="1"></mat-radio-button>
+                            </mat-radio-group>
+                            <mat-label>No aplica</mat-label>
+                        </mat-card>
+                </div>
                 </mat-card>
             </mat-grid-tile>
 
             <mat-grid-tile class="layout-row">
                 <mat-card class="m-3">
                     <mat-card-title>
-                        <h3> <b>Resultado de la Revisión *</b> </h3>
+                        <h3> <b>Visualizacion para el usuario*</b> </h3>
                     </mat-card-title>
                     <hr>
-                    <mat-card class="m-2">
-                        <mat-radio-group aria-label="Select an option" class="text-center">
-                            <mat-radio-button value="1"></mat-radio-button>
-                        </mat-radio-group>
-                        <mat-label>Si</mat-label>
-                    </mat-card>
-                    <mat-card class="m-2">
-                        <mat-radio-group aria-label="Select an option" class="text-center">
-                            <mat-radio-button value="1"></mat-radio-button>
-                        </mat-radio-group>
-                        <mat-label>No</mat-label>
-                    </mat-card>
-                    <mat-card class="m-2">
-                        <mat-radio-group aria-label="Select an option" class="text-center">
-                            <mat-radio-button value="1"></mat-radio-button>
-                        </mat-radio-group>
-                        <mat-label>No aplica</mat-label>
-                    </mat-card>
-                </mat-card>
-            </mat-grid-tile>
-
-            <mat-grid-tile class="layout-row">
-                <mat-card class="m-3">
-                    <mat-card-title>
-                        <h3> <b>El trámite requiere Pago *</b> </h3>
-                    </mat-card-title>
-                    <hr>
-                    <mat-card class="m-2">
-                        <mat-radio-group aria-label="Select an option" class="text-center">
-                            <mat-radio-button value="1"></mat-radio-button>
-                        </mat-radio-group>
-                        <mat-label>Si</mat-label>
-                    </mat-card>
-                    <mat-card class="m-2">
-                        <mat-radio-group aria-label="Select an option" class="text-center">
-                            <mat-radio-button value="1"></mat-radio-button>
-                        </mat-radio-group>
-                        <mat-label>No</mat-label>
-                    </mat-card>
-                    <mat-card class="m-2">
-                        <mat-radio-group aria-label="Select an option" class="text-center">
-                            <mat-radio-button value="1"></mat-radio-button>
-                        </mat-radio-group>
-                        <mat-label>No aplica</mat-label>
-                    </mat-card>
+                    <div class="m-2">
+                        <section class="example-section" [formGroup]="toppings">
+                            <mat-card class="m-2">
+                                <mat-checkbox color="warn" formControlName="opcion1">Evaluador</mat-checkbox>
+                            </mat-card>
+                            <mat-card class="m-2">
+                                <mat-checkbox color="warn" formControlName="opcion2">Resolutor</mat-checkbox>
+                            </mat-card>
+                            <mat-card class="m-2">
+                                <mat-checkbox color="warn" formControlName="opcion3">Administrado</mat-checkbox>
+                            </mat-card>
+                            <mat-card class="m-2">
+                                <mat-checkbox color="warn" formControlName="opcion4">Terceros</mat-checkbox>
+                            </mat-card>
+                        </section>
+                    </div>
                 </mat-card>
             </mat-grid-tile>
 
@@ -141,7 +121,7 @@
                 </div>
                 <div class="d-flex flex-row-reverse col-lg-1 my-2">
                     <div class="form-group">
-                        <button  class="text-danger" mat-icon-button
+                        <button class="text-danger" mat-icon-button
                             aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                             <mat-icon>{{icono}}</mat-icon>
@@ -166,7 +146,7 @@
                 </div>
                 <div class="d-flex flex-row-reverse col-lg-1 my-2">
                     <div class="form-group">
-                        <button  class="text-danger" mat-icon-button
+                        <button class="text-danger" mat-icon-button
                             aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                             <mat-icon>{{icono}}</mat-icon>
@@ -191,7 +171,7 @@
                 </div>
                 <div class="d-flex flex-row-reverse col-lg-1 my-2">
                     <div class="form-group">
-                        <button  class="text-danger" mat-icon-button
+                        <button class="text-danger" mat-icon-button
                             aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                             <mat-icon>{{icono}}</mat-icon>
@@ -216,7 +196,7 @@
                 </div>
                 <div class="d-flex flex-row-reverse col-lg-1 my-2">
                     <div class="form-group">
-                        <button  class="text-danger" mat-icon-button
+                        <button class="text-danger" mat-icon-button
                             aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                             <mat-icon>{{icono}}</mat-icon>
@@ -241,7 +221,7 @@
                 </div>
                 <div class="d-flex flex-row-reverse col-lg-1 my-2">
                     <div class="form-group">
-                        <button  class="text-danger" mat-icon-button
+                        <button class="text-danger" mat-icon-button
                             aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                             <mat-icon>{{icono}}</mat-icon>
@@ -266,7 +246,7 @@
                 </div>
                 <div class="d-flex flex-row-reverse col-lg-1 my-2">
                     <div class="form-group">
-                        <button  class="text-danger" mat-icon-button
+                        <button class="text-danger" mat-icon-button
                             aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                             <mat-icon>{{icono}}</mat-icon>
@@ -280,4 +260,6 @@
             </div>
         </div>
     </div>
+
+    
 </div>

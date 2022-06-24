@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { FiltroEntidadesComponent } from './componente/entidades/filtro-entidades/filtro-entidades.component';
 import { EntidadesCardComponent } from './componente/entidades/entidades-card/entidades-card.component';
@@ -128,6 +129,7 @@ import { ConfiguracionVisualizacionDocumentosComponent } from './componente/conf
     ToastrModule.forRoot(),
     ToastContainerModule,
     MatCheckboxModule,
+    MatExpansionModule,
   ],
 
   entryComponents: [DocumentosDigitalizadosComponent],
