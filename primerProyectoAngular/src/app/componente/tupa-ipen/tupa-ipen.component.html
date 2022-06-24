@@ -131,7 +131,7 @@
             </mat-grid-list>
 
       <div class="titulosSecundarios">Datos representante legal</div>
-          <lib-dynamicForm [jsonFormData]="formData" style="width: 100%; "></lib-dynamicForm>
+          <lib-dynamicForm [jsonFormData]="formData" style="width: 100%; " (eventData)="getDynamicFormData($event)"></lib-dynamicForm>
           <div _ngcontent-bvl-c85="" class="form-group m-2 text-center">
 
 

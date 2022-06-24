@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { JsonFormData } from 'dynamic-form/src/lib/dynamic-form.component'
-import {FormBuilder, Validators} from '@angular/forms';
+import { JsonFormData } from 'projects/dynamic-form/src/lib/dynamic-form.component';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 
 interface FixedOptions {
@@ -29,6 +29,20 @@ export class TupaIpenComponent implements OnInit {
   displayedColumns = ['fechaRegistro', 'etapa', 'descripcion', 'fechaEstimada', ];
   dataSource = ELEMENT_DATA;
 
+  /*FormGroup con todos los datos del formulario de formData */
+  formDataRetrieved = new FormGroup({
+    /*Poner aqui los campos base que están en el mismo <form> de formData así:
+    miCampoBase: new FormControl()
+    ... */
+   });
+
+   /*FormGroup con todos los datos del formulario de formDataDetalle */
+  formDataDetalleRetrieved = new FormGroup({ 
+    /*Poner aqui los campos base que están en el mismo <form> de formDataDetalle así:
+    miCampoBase: new FormControl()
+    ... */
+  });
+
   constructor(private http: HttpClient) {
     this.formData = {controls:[]};
     this.formDataDetalle = {controls:[]};
@@ -55,7 +69,12 @@ export class TupaIpenComponent implements OnInit {
 
   }
 
-
+  /**agrega los controles de form a formDataRetrieved */
+  getDynamicFormData(form: FormGroup){
+    Object.keys(form.value).forEach(key =>{
+      this.formDataRetrieved.addControl(key, form.controls[key]); 
+    })
+  }
 
 }
 export interface PeriodicElement {

@@ -11,9 +11,7 @@ describe('DynamicFormComponent', () => {
       declarations: [ DynamicFormComponent ]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(DynamicFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

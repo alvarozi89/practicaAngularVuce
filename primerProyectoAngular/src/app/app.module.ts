@@ -24,7 +24,7 @@ import {  FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {  MatNativeDateModule} from '@angular/material/core';
 import {  HttpClientModule} from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { DynamicFormModule } from 'dynamic-form/src/public-api';
+import { DynamicFormModule } from '../../projects/dynamic-form/src/public-api';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { TabsNumberComponent } from './componente/tupa-ipen/tabs-number/tabs-number.component';
@@ -32,7 +32,7 @@ import { MatInputModule } from '@angular/material/input';
 
 import {MatStepperModule} from '@angular/material/stepper';
 
-import { MaterialExampleModule } from 'dynamic-form/src/material.module';
+import { MaterialAllModule } from '../../projects/dynamic-form/src/material.module';
 
 
 
@@ -70,10 +70,8 @@ import { MaterialExampleModule } from 'dynamic-form/src/material.module';
 
     MatSelectModule,
     MatStepperModule,
-    MatInputModule
-
-,
-    MaterialExampleModule
+    MatInputModule,
+    MaterialAllModule
 
 
   ],
