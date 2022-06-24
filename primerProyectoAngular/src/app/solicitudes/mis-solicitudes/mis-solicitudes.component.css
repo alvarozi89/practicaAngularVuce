@@ -1,0 +1,15 @@
+.tituloPrincipal {
+    display: inline-block;
+    padding: 13px;
+    font-size: xx-large;
+    font-weight: bolder;
+    padding-top: 50px;
+  }
+
+  .comentarios {
+    font-size: medium;
+    display: inline-block;
+    padding: 13px;
+    color:gray;
+    padding-top: 25px;
+  }
