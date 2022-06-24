@@ -1,3 +1,5 @@
+<div class="container">
+  <app-barra></app-barra>
 <div class="card m-2">
   <div class="card-body">
     <div class="row">
@@ -13,7 +15,7 @@
       <div class="col-lg-2 my-2">
         <div class="form-group">
           <select class="form-control">
-            <option value="">Tipo de mercancia</option>
+            <option value="1" (onclick)="cambiarValor('1')">Tipo de mercancia</option>
             <option value=""></option>
           </select>
         </div>
@@ -52,3 +54,4 @@
   </div>
 </div>
 <app-card-tramite></app-card-tramite>
+</div>

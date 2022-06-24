@@ -13,10 +13,12 @@ import { PlantillasComponent } from './componente/suce-preexistente/plantillas/p
 import { TramitesFrecuentesComponent } from './componente/tramites/tramites-frecuentes/tramites-frecuentes.component';
 import { PlantillaSeguimientoTramiteComponent } from './solicitudes/mis-solicitudes/plantilla-seguimiento-tramite/plantilla-seguimiento-tramite.component';
 import { MisSolicitudesComponent } from './solicitudes/mis-solicitudes/mis-solicitudes.component';
+import { BarraComponent } from './componente/barra/barra.component';
 
 
 
 const routes: Routes = [
+  {path: '', component: FiltroEntidadesComponent},
   {path: 'entidades', component: FiltroEntidadesComponent},
   {path: 'cadena', component: FiltroCadenaComponent},
   {path: 'ipen', component: FiltroIpenComponent},
