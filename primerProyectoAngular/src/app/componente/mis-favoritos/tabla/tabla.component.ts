@@ -25,27 +25,27 @@ export class TablaComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }
 
-  
+
   //Notificaciónes de alerta
   title = 'toaster-not';
-   
+
   showToasterSuccess(){
       this.notifyService.showSuccess("Agregada a mis favoritos exitosamente", "Éxito");
-     
+
   }
 
   funcion(){
     this.notifyService.showError("Something is wrong", "tutsmake.com");
   }
- /*  
+ /*
   showToasterError(){
       this.notifyService.showError("Something is wrong", "tutsmake.com")
   }
-   
+
   showToasterInfo(){
       this.notifyService.showInfo("This is info", "tutsmake.com")
   }
-   
+
   showToasterWarning(){
       this.notifyService.showWarning("This is warning", "tutsmake.com")
   }*/

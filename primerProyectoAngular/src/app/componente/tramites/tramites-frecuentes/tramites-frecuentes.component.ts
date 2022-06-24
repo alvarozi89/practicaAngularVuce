@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
+
+import { NotificationService } from 'src/app/notification.service';
 @Component({
   selector: 'app-tramites-frecuentes',
   templateUrl: './tramites-frecuentes.component.html',
@@ -18,12 +20,45 @@ export class TramitesFrecuentesComponent implements OnInit {
 
   }
 
-  constructor() { }
+  constructor(private notifyService : NotificationService) { }
 
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
-
   }
+  title = 'toaster-not';
+  mostrar = true;
+  mostrarEstrella = false;
+
+  showToasterSuccess(valor: string ){
+      if(valor == '1'){
+        this.mostrar = false;
+        this.mostrarEstrella = true;
+        this.notifyService.showSuccess("Agregada a mis favoritos exitosamente", "Éxito");
+
+      }else if (valor == "2") {
+        this.mostrar = true;
+        this.mostrarEstrella = false;
+        this.notifyService.showSuccess("Se ha eliminado de mis favoritos exitosamente", "Éxito");
+      }
+  }
+
+  funcion(){
+    this.notifyService.showError("Something is wrong", "tutsmake.com");
+  }
+
+/*
+
+  showToasterError(){
+      this.notifyService.showError("Something is wrong", "tutsmake.com")
+  }
+
+  showToasterInfo(){
+      this.notifyService.showInfo("This is info", "tutsmake.com")
+  }
+
+  showToasterWarning(){
+      this.notifyService.showWarning("This is warning", "tutsmake.com")
+  }*/
 
 }
 export interface PeriodicElement {
