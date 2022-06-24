@@ -41,7 +41,7 @@
                         <div class="example-button-container m-2">
                             <button  data-bs-toggle="modal"
                                 data-bs-target="#exampleModal" mat-raised-button color="warn"
-                                style="background-color: rgb(227, 8, 8);">Buscar
+                                style="background-color: rgb(227, 8, 8);" (click)="mostrarContenidoDocResolutivo()">Buscar
                                 <mat-icon>search</mat-icon>
                             </button>
 
@@ -70,16 +70,17 @@
                     <h2><b>¿Requiere firma?</b></h2>
                     <div>
                         <mat-radio-group col="2" aria-label="Select an option">
-                            <mat-radio-button class="radioButton " (click)="desplegarComponente('1')" value="1"><b>Si
+                            <mat-radio-button class="radioButton " (click)="mostrarRadioDocResol('1')" value="1"><b>Si
                                 </b>
                             </mat-radio-button>
-                            <mat-radio-button (click)="desplegarComponente('2')" value="2"><b>No</b>
+                            <mat-radio-button (click)="mostrarRadioDocResol('2')" value="2"><b>No</b>
                             </mat-radio-button>
                         </mat-radio-group>
 
                     </div>
-                    <h2><b>¿Tipo de firma?</b></h2>
-                    <div class=" ">
+                    
+                    <div *ngIf="vistaRadio ==true" class=" ">
+                        <h2><b>¿Tipo de firma?</b></h2>
                         <mat-radio-group col="2" aria-label="Select an option">
                             <mat-radio-button class="radioButton" (click)="desplegarComponente('1')" value="1">Firma
                                 digital
@@ -92,7 +93,7 @@
                 </div>
                 <div class="text-center">
                     <button type="button" class="btn btn-outline-danger m-2" data-bs-dismiss="modal">Cancelar</button>
-                    <button (click)="showToasterSuccess()" (click)="mostrarContenidoDocResolutivo()" data-bs-dismiss="modal" mat-raised-button color="warn"
+                    <button (click)="showToasterSuccess()" (click)="mostrarIconoDocResol()" data-bs-dismiss="modal" mat-raised-button color="warn"
                         style="background-color: rgb(227, 8, 8);" routerLink="/gestionFirmas">Guardar </button>
                 </div>
             </div>
@@ -143,7 +144,7 @@
                         <button routerLink="" class="text-danger" mat-icon-button
                             aria-label="Example icon button with a vertical three dot icon"
                             data-bs-target="#exampleModal">
-                            <mat-icon matTooltip="firma digital"
+                            <mat-icon *ngIf="vistaIconoProcesos==true" matTooltip="firma digital"
                                 aria-label="Button that displays a tooltip when focused or hovered over"
                                 class="color-icono">
                                 <mat-icon>insert_drive_file</mat-icon>

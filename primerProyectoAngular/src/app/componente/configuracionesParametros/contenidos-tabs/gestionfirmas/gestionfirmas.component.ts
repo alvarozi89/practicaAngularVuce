@@ -9,6 +9,8 @@ import { NotificationService } from 'src/app/notification.service';
 export class GestionfirmasComponent implements OnInit {
   botonBuscarGF = false;
   vistaFormProcesos=false
+  vistaIconoProcesos=false
+  vistaRadio=false
   public show: boolean = false;
   dataSource = ELEMENT_DATA;
   dataSourceRequisitos = ELEMENT_DATA_REQUISITOS;
@@ -36,6 +38,20 @@ export class GestionfirmasComponent implements OnInit {
 
 mostrarContenidoDocResolutivo() {
   this.vistaFormProcesos = true;
+}
+
+mostrarIconoDocResol() {
+  this.vistaIconoProcesos = true;
+}
+
+
+mostrarRadioDocResol(valor: string) {
+
+  if (valor == "1") {
+    this.vistaRadio = true;
+  } else if (valor == "2") {
+    this.vistaRadio = false;
+  }
 }
 }
 
