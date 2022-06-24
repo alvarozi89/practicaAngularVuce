@@ -1,0 +1,79 @@
+<div class="container">
+  <h1><b>Gestión de areas</b></h1>
+<p>Aplique las configuraciones pertinentes</p>
+
+<div class="container example-button-container">
+  <button class="boton-perzonalizado" mat-raised-button color="accent"
+  aria-label="Example icon button with a plus one icon" routerLink="/gestion-area">
+  <mat-icon>arrow_back</mat-icon>
+  </button>
+  <h3 class="text-danger d-inline"> <b> Volver</b> </h3>
+  </div>
+
+<mat-grid-list cols="3" rowHeight="1:1">
+
+  <mat-grid-tile class="layout-row ">
+    <mat-card class="m-3">
+      <mat-card-title>
+        <h3> <b>Criterios de asignación*</b> </h3>
+      </mat-card-title>
+      <hr>
+      <mat-card class="m-2">
+        <mat-radio-group aria-label="Select an option" class="text-center">
+          <mat-radio-button value="1"></mat-radio-button>
+        </mat-radio-group>
+        <mat-label>Estado del funcionario</mat-label>
+      </mat-card>
+      <mat-card class="m-2">
+        <mat-radio-group aria-label="Select an option" class="text-center">
+          <mat-radio-button value="1"></mat-radio-button>
+        </mat-radio-group>
+        <mat-label>Sobrecarga de trabajo del funcionario</mat-label>
+      </mat-card>
+      <mat-card class="m-2">
+        <mat-radio-group aria-label="Select an option" class="text-center">
+          <mat-radio-button value="1"></mat-radio-button>
+        </mat-radio-group>
+        <mat-label>Experiencia en el tipo de trámite</mat-label>
+      </mat-card>
+    </mat-card>
+  </mat-grid-tile>
+
+<mat-grid-tile class="layout-row">
+  <mat-card class="m-3">
+    <mat-card-title><h3> <b>Límite de dias para la ejecución (Inspección/Evaluación)*</b> </h3></mat-card-title>
+    <hr>
+      <mat-form-field appearance="fill">
+        <mat-label>Dias</mat-label>
+        <input matInput>
+      </mat-form-field>
+  </mat-card>
+</mat-grid-tile>
+
+<mat-grid-tile class="layout-row">
+  <mat-card class="m-3">
+    <mat-card-title><h3> <b>Cantidad de reasignaciones*</b> </h3></mat-card-title>
+    <hr>
+      <mat-form-field appearance="fill">
+        <mat-label>Reasignaciones</mat-label>
+        <input matInput>
+      </mat-form-field>
+  </mat-card>
+</mat-grid-tile>
+
+
+
+
+
+
+
+
+</mat-grid-list>
+
+<div class="text-center">
+  <button mat-stroked-button color="warn">Cancelar Configuración</button>
+  <button mat-raised-button color="warn" class="m-2" routerLink="">Guardar</button>
+</div>
+
+</div>
+

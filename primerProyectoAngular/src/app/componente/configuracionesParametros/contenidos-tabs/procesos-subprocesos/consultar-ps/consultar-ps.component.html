@@ -1,0 +1,92 @@
+<div class="container">
+  <h1><b>IPEN</b></h1>
+  <p>Selecciones los radio button que considere pertinentes.</p>
+  <div class="container example-button-container">
+    <button class="boton-perzonalizado" mat-raised-button color="accent"
+    aria-label="Example icon button with a plus one icon" routerLink="/procesos-subprocesos">
+    <mat-icon>arrow_back</mat-icon>
+    </button>
+    <h3 class="text-danger d-inline"> <b> Volver</b> </h3>
+    </div>
+
+
+<!--
+
+  <mat-accordion class="m-5">
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <div class="tituloDesplegable">
+          Gestión de trámite
+        </div>
+      </mat-expansion-panel-header>
+
+    </mat-expansion-panel>
+  </mat-accordion> -->
+
+  <div class="card m-2">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-lg-3 my-2">
+          <div class="form-group">
+            <h1> <b>Gestión de trámite</b> </h1>
+          </div>
+        </div>
+        <div class="d-flex flex-row-reverse col-lg-9 my-2">
+          <div class="form-group">
+            <button routerLink="/gestion-tramite-PS" class="text-danger" mat-icon-button
+            aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            <mat-icon>add_circle_outline</mat-icon>
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card m-2">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-lg-3 my-2">
+          <div class="form-group">
+            <h1> <b>Gestión de inspección superior</b> </h1>
+          </div>
+        </div>
+        <div class="d-flex flex-row-reverse col-lg-9 my-2">
+          <div class="form-group">
+            <button routerLink="/consultas-PS" class="text-danger" mat-icon-button
+            aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            <mat-icon>add_circle_outline</mat-icon>
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card m-2">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-lg-3 my-2">
+          <div class="form-group">
+            <h1> <b>Gestión de recursos administrativos</b> </h1>
+          </div>
+        </div>
+        <div class="d-flex flex-row-reverse col-lg-9 my-2">
+          <div class="form-group">
+            <button routerLink="/consultas-PS" class="text-danger" mat-icon-button
+            aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            <mat-icon>add_circle_outline</mat-icon>
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
