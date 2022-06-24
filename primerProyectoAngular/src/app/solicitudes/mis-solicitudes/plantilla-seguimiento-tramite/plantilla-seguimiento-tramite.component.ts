@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-plantilla-seguimiento-tramite',
@@ -8,8 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class PlantillaSeguimientoTramiteComponent implements OnInit {
   //Declaraciones
   panelOpenState = false;
+
+  displayedColumnsPlantilla = ['monto', 'cpb', 'fechaGeneracion', 'fechaOperacion', 'estado', 'acciones'];
+  dataSourcePlantilla = new MatTableDataSource<SeguimientoTramite>(ELEMENT_DATA);
   displayedColumns = ['fechaRegistro', 'etapa', 'descripcion', 'fechaEstimada', ];
-  dataSource = ELEMENT_DATA;
+  dataSource = ELEMENT_DATA_TRAZABILIDAD;
 
   //constructor
   constructor() { }
@@ -19,6 +23,14 @@ export class PlantillaSeguimientoTramiteComponent implements OnInit {
 
 }
 
+export interface PeriodicElement {
+  fechaRegistro: Date;
+  etapa: string;
+  descripcion: string;
+  fechaEstimada: Date;
+  responsable: string;
+
+}
 export interface SeguimientoTramite {
   monto:string;
   cpb: string;
@@ -29,8 +41,14 @@ export interface SeguimientoTramite {
 
 }
 const ELEMENT_DATA: SeguimientoTramite[] = [
+  {monto:'S/31.00', cpb: '848220200071486100', fechaGeneracion:new Date('dd/mm/yyyy'), fechaOperacion:new Date('dd/mm/yyyy'),estado:'Pendiente pago',acciones:'cadena'},
+  {monto:'S/31.00', cpb: '848220200071486100', fechaGeneracion:new Date('dd/mm/yyyy'), fechaOperacion:new Date('dd/mm/yyyy'),estado:'Pendiente pago',acciones:'cadena'},
   {monto:'S/31.00', cpb: '848220200071486100', fechaGeneracion:new Date('dd/mm/yyyy'), fechaOperacion:new Date('dd/mm/yyyy'),estado:'Pendiente pago',acciones:'cadena'}
-  // { fechaRegistro: new Date('dd/mm/yyyy'), etapa: 'prueba', descripcion: 'descripcion', fechaEstimada: new Date('dd/mm/yyyy'), responsable: 'responsable' },
-  // { fechaRegistro: new Date('dd/mm/yyyy'), etapa: 'prueba', descripcion: 'descripcion', fechaEstimada: new Date('dd/mm/yyyy'), responsable: 'responsable' },
-  // { fechaRegistro: new Date('dd/mm/yyyy'), etapa: 'prueba', descripcion: 'descripcion', fechaEstimada: new Date('dd/mm/yyyy'), responsable: 'responsable' },
+
+];
+
+const ELEMENT_DATA_TRAZABILIDAD: PeriodicElement[] = [
+  { fechaRegistro: new Date('dd/mm/yyyy'), etapa: 'prueba', descripcion: 'descripcion', fechaEstimada: new Date('dd/mm/yyyy'), responsable: 'responsable' },
+  { fechaRegistro: new Date('dd/mm/yyyy'), etapa: 'prueba', descripcion: 'descripcion', fechaEstimada: new Date('dd/mm/yyyy'), responsable: 'responsable' },
+  { fechaRegistro: new Date('dd/mm/yyyy'), etapa: 'prueba', descripcion: 'descripcion', fechaEstimada: new Date('dd/mm/yyyy'), responsable: 'responsable' },
 ];

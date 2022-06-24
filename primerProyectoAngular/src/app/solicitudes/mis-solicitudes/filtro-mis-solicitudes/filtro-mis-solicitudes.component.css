@@ -68,7 +68,9 @@
   }
   
   .example-element-description {
-    padding: 16px;
+    padding: 10px;
+    padding-top: 3px;
+    
   }
   
   .example-element-description-attribution {
@@ -85,4 +87,9 @@
   
   .red-color {
     color: red;
+    margin-left: 15px;
+  }
+
+  .espacioButton{
+   margin-left: 25px;
   }
