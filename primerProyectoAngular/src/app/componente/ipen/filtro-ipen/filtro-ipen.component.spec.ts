@@ -8,9 +8,9 @@ describe('FiltroIpenComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FiltroIpenComponent ]
+      declarations: [FiltroIpenComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(FiltroIpenComponent);
     component = fixture.componentInstance;

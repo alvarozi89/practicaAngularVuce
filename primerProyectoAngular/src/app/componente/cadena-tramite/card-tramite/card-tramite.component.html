@@ -1,85 +1,116 @@
-<!-- <div class="container">
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">IPEN</h5>
-      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Dirección general.</p>
-    </div>
-  </div>
-</div> -->
 <br>
 <div class="mat-headline">Resultado parametrización</div>
-<mat-grid-list cols="3" rowHeight="2:1">
-  <mat-grid-tile >
-    <mat-card class="m-2">
-    <mat-card-title>IPEN</mat-card-title>
-    <h4 class="text-primary">TUPA 16 - Pre-requsito N/A</h4>
-    <mat-card-subtitle>Autorización de servicios de importación y/o comercializacion de fuentes de radiación ionizante.</mat-card-subtitle>
-    <mat-radio-group aria-label="Select an option" class="text-center" >
-      <mat-radio-button value="1"></mat-radio-button>
-      <mat-radio-button value="2"></mat-radio-button>
+<mat-grid-list cols="2" rowHeight="10:1">
+  <mat-grid-tile>
+  <div>¿Su empresa es generadora de residuos sólidos?</div>
+  <div class="raddioButton">
+    <mat-radio-group aria-label="Select an option" >
+      <mat-radio-button class="raddioButton" (click)="desplegarComponente('1')" value="1">Si</mat-radio-button>
+      <mat-radio-button class="raddioButton" (click)="desplegarComponente('2')" value="2">No</mat-radio-button>
     </mat-radio-group>
-  </mat-card >
+  </div>
 </mat-grid-tile>
-
-<mat-grid-tile >
-  <mat-card class="m-2">
-  <mat-card-title>IPEN</mat-card-title>
-  <h4 class="text-primary">TUPA 16 - Pre-requsito N/A</h4>
-  <mat-card-subtitle>Autorización de servicios de importación y/o comercializacion de fuentes de radiación ionizante.</mat-card-subtitle>
-  <mat-radio-group aria-label="Select an option" class="text-center" >
-    <mat-radio-button value="1"></mat-radio-button>
-    <mat-radio-button value="2"></mat-radio-button>
-  </mat-radio-group>
-</mat-card >
-</mat-grid-tile>
-
-<mat-grid-tile >
-  <mat-card class="m-2">
-  <mat-card-title>IPEN</mat-card-title>
-  <h4 class="text-primary">TUPA 16 - Pre-requsito N/A</h4>
-  <mat-card-subtitle>Autorización de servicios de importación y/o comercializacion de fuentes de radiación ionizante.</mat-card-subtitle>
-  <mat-radio-group aria-label="Select an option" class="text-center" >
-    <mat-radio-button value="1"></mat-radio-button>
-    <mat-radio-button value="2"></mat-radio-button>
-  </mat-radio-group>
-</mat-card >
-</mat-grid-tile>
-
-<mat-grid-tile >
-  <mat-card class="m-2">
-  <mat-card-title>IPEN</mat-card-title>
-  <h4 class="text-primary">TUPA 16 - Pre-requsito N/A</h4>
-  <mat-card-subtitle>Autorización de servicios de importación y/o comercializacion de fuentes de radiación ionizante.</mat-card-subtitle>
-  <mat-radio-group aria-label="Select an option" class="text-center" >
-    <mat-radio-button value="1"></mat-radio-button>
-    <mat-radio-button value="2"></mat-radio-button>
-  </mat-radio-group>
-</mat-card >
-</mat-grid-tile>
-
-<mat-grid-tile >
-  <mat-card class="m-2">
-  <mat-card-title>IPEN</mat-card-title>
-  <h4 class="text-primary">TUPA 16 - Pre-requsito N/A</h4>
-  <mat-card-subtitle>Autorización de servicios de importación y/o comercializacion de fuentes de radiación ionizante.</mat-card-subtitle>
-  <mat-radio-group aria-label="Select an option" class="text-center" >
-    <mat-radio-button value="1"></mat-radio-button>
-    <mat-radio-button value="2"></mat-radio-button>
-  </mat-radio-group>
-</mat-card >
-</mat-grid-tile>
-
-<mat-grid-tile >
-  <mat-card class="m-2">
-  <mat-card-title>IPEN</mat-card-title>
-  <h4 class="text-primary">TUPA 16 - Pre-requsito N/A</h4>
-  <mat-card-subtitle>Autorización de servicios de importación y/o comercializacion de fuentes de radiación ionizante.</mat-card-subtitle>
-  <mat-radio-group aria-label="Select an option" class="text-center" >
-    <mat-radio-button value="1"></mat-radio-button>
-    <mat-radio-button value="2"></mat-radio-button>
-  </mat-radio-group>
-</mat-card >
+<mat-grid-tile>
+  <mat-label *ngIf="show">¿Cuenta con registro?</mat-label>
+  <br>
+  <div *ngIf="show" class="raddioButton">
+    <mat-radio-group aria-label="Select an option" class="text-center">
+      <mat-radio-button class="raddioButton" value="1" >Si</mat-radio-button>
+      <mat-radio-button class="raddioButton" value="2" >No</mat-radio-button>
+    </mat-radio-group>
+  </div>
 </mat-grid-tile>
 </mat-grid-list>
+<div class="grilla">
+  <mat-grid-list cols="3" rowHeight="1:1">
+  <mat-grid-tile>
+    <mat-card class="m-2">
+      <mat-card-title>IPEN</mat-card-title>
+      <h4 class="text-primary">TUPA 16 - Pre-requsito N/A</h4>
+      <mat-card-subtitle>Autorización de servicios de importación y/o comercializacion de fuentes de radiación
+        ionizante.</mat-card-subtitle>
+      <div class="comentarios" *ngIf="showTexto">
+        <h3>Tramites en curso</h3>
+        <h3>Tasa</h3>
+        <h3>Plazo</h3>
+      </div>
+      <div *ngIf="showTexto" class="form-group m-2 text-center">
+        <button type="button" class="btn btn-danger" routerLink="/tabsNumber">Iniciar Solicitud</button>
+      </div>
+      <div>
+      <mat-radio-group aria-label="Select an option" class="text-center">
+        <div class="raddioButton">
+        <mat-radio-button value="1" (click)="desplegarComponenteTexto('1')"></mat-radio-button>
+        <mat-radio-button value="2" (click)="desplegarComponenteTexto('2')"></mat-radio-button>
+        </div>
+      </mat-radio-group>
+    </div>
+    </mat-card>
+  </mat-grid-tile>
 
+  <mat-grid-tile>
+    <mat-card class="m-2">
+      <mat-card-title>IPEN</mat-card-title>
+      <h4 class="text-primary">TUPA 16 - Pre-requsito N/A</h4>
+      <mat-card-subtitle>Autorización de servicios de importación y/o comercializacion de fuentes de radiación
+        ionizante.</mat-card-subtitle>
+      <mat-radio-group aria-label="Select an option" class="text-center">
+        <mat-radio-button value="1"></mat-radio-button>
+        <mat-radio-button value="2"></mat-radio-button>
+      </mat-radio-group>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card class="m-2">
+      <mat-card-title>IPEN</mat-card-title>
+      <h4 class="text-primary">TUPA 16 - Pre-requsito N/A</h4>
+      <mat-card-subtitle>Autorización de servicios de importación y/o comercializacion de fuentes de radiación
+        ionizante.</mat-card-subtitle>
+      <mat-radio-group aria-label="Select an option" class="text-center">
+        <mat-radio-button value="1"></mat-radio-button>
+        <mat-radio-button value="2"></mat-radio-button>
+      </mat-radio-group>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card class="m-2">
+      <mat-card-title>IPEN</mat-card-title>
+      <h4 class="text-primary">TUPA 16 - Pre-requsito N/A</h4>
+      <mat-card-subtitle>Autorización de servicios de importación y/o comercializacion de fuentes de radiación
+        ionizante.</mat-card-subtitle>
+      <mat-radio-group aria-label="Select an option" class="text-center">
+        <mat-radio-button value="1"></mat-radio-button>
+        <mat-radio-button value="2"></mat-radio-button>
+      </mat-radio-group>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card class="m-2">
+      <mat-card-title>IPEN</mat-card-title>
+      <h4 class="text-primary">TUPA 16 - Pre-requsito N/A</h4>
+      <mat-card-subtitle>Autorización de servicios de importación y/o comercializacion de fuentes de radiación
+        ionizante.</mat-card-subtitle>
+      <mat-radio-group aria-label="Select an option" class="text-center">
+        <mat-radio-button value="1"></mat-radio-button>
+        <mat-radio-button value="2"></mat-radio-button>
+      </mat-radio-group>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card class="m-2">
+      <mat-card-title>IPEN</mat-card-title>
+      <h4 class="text-primary">TUPA 16 - Pre-requsito N/A</h4>
+      <mat-card-subtitle>Autorización de servicios de importación y/o comercializacion de fuentes de radiación
+        ionizante.</mat-card-subtitle>
+      <mat-radio-group aria-label="Select an option" class="text-center">
+        <mat-radio-button value="1"></mat-radio-button>
+        <mat-radio-button value="2"></mat-radio-button>
+      </mat-radio-group>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+</div>

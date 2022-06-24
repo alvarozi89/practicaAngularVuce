@@ -32,6 +32,7 @@ interface JsonFormControls {
   name: string;
   label: string;
   value: string;
+  router: string;
   type: string;
   options?: JsonFormControlOptions;
   required: boolean;
@@ -122,5 +123,5 @@ export class DynamicFormComponent implements OnInit {
     this.eventData.emit(this.myForm);
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 }

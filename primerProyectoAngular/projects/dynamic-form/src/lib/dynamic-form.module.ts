@@ -5,7 +5,6 @@ import { MaterialAllModule } from '../material.module';
 import { DynamicFormComponent } from './dynamic-form.component';
 
 
-
 @NgModule({
   declarations: [
     DynamicFormComponent

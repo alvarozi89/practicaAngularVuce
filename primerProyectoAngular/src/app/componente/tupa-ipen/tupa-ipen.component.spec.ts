@@ -8,9 +8,9 @@ describe('TupaIpenComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TupaIpenComponent ]
+      declarations: [TupaIpenComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(TupaIpenComponent);
     component = fixture.componentInstance;

@@ -1,0 +1,155 @@
+{
+  "controls": [
+    {
+      "name": "tipoTramite",
+      "label": "Tipo trámite",
+      "type": "select",
+      "options": {
+        "items": [
+          {
+            "value": "0",
+            "viewValue": "-Seleccione-"
+          },
+          {
+            "value": "1",
+            "viewValue": "IMPORTACIÓN"
+          },
+          {
+            "value": "2",
+            "viewValue": "RE-EXPORTACIÓN"
+          }
+        ]
+      },
+      "validators": {
+        "required": true
+      }
+    },
+    {
+      "name": "esCites",
+      "label": "Es cites?",
+      "type": "select",
+      "options": {
+        "items": [
+          {
+            "value": "0",
+            "viewValue": "-Seleccione-"
+          },
+          {
+            "value": "1",
+            "viewValue": "SI"
+          },
+          {
+            "value": "2",
+            "viewValue": "NO"
+          }
+        ]
+      },
+      "validators": {
+        "required": true
+      }
+    },
+    {
+      "name": "motivo",
+      "label": "Motivo",
+      "type": "select",
+      "options": {
+        "items": [
+          {
+            "value": "0",
+            "viewValue": "-Seleccione-"
+          },
+          {
+            "value": "1",
+            "viewValue": "T:Comercial"
+          },
+          {
+            "value": "2",
+            "viewValue": "Z:Parque Zoologico"
+          },
+          {
+            "value": "3",
+            "viewValue": "..."
+          },
+          {
+            "value": "4",
+            "viewValue": "nn"
+          }
+        ]
+      },
+      "validators": {
+        "required": true
+      }
+    },
+    {
+      "name": "lugarDeposito",
+      "label": "Lugar de depósito",
+      "value": "",
+      "type": "textarea",
+      "validators": {
+        "required": true
+      }
+    },
+    {
+      "name": "consignatario",
+      "label": "Consignatario",
+      "value": "",
+      "type": "textarea",
+      "validators": {
+        "required": true
+      }
+    },
+    {
+      "name": "direccion",
+      "label": "Dirección",
+      "value": "",
+      "type": "textarea",
+      "validators": {
+        "required": true
+      }
+    },
+    {
+      "name": "fecha",
+      "label": "fecha",
+      "value": "",
+      "type": "date",
+      "format": "dateTime",
+      "validators": {
+        "required": true
+      }
+    },
+    {
+      "name": "paisDestinoFinal",
+      "label": "País de destino final:",
+      "type": "select",
+      "options": {
+        "items": [
+          {
+            "value": "0",
+            "viewValue": "-Seleccione-"
+          },
+          {
+            "value": "1",
+            "viewValue": "AFGANISTAN"
+          },
+          {
+            "value": "2",
+            "viewValue": "ALBANIA"
+          },
+          {
+            "value": "3",
+            "viewValue": "ALEMANIA"
+          },
+          {
+            "value": "4",
+            "viewValue": "..."
+          }
+        ]
+      },
+      "validators": {
+        "required": true
+      }
+    }
+  ],
+  "id": 1,
+  "version": 1
+}
