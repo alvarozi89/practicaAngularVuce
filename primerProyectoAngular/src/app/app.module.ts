@@ -69,6 +69,7 @@ import { ConfiguracionVisualizacionDocumentosComponent } from './componente/conf
 
 import { ConfiguracionEmisionComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos-resolutivos/configuracion-emision/configuracion-emision.component';
 import { GestionfirmasComponent } from './componente/configuracionesParametros/contenidos-tabs/gestionfirmas/gestionfirmas.component';
+import { ConfiguracionFirmasComponent } from './componente/configuracionesParametros/contenidos-tabs/gestionfirmas/configuracion-firmas/configuracion-firmas.component';
 
 
 @NgModule({
@@ -106,7 +107,8 @@ import { GestionfirmasComponent } from './componente/configuracionesParametros/c
     ConfiguracionEmisionComponent,
     GestionfirmasComponent,
 
-    ConfiguracionVisualizacionDocumentosComponent
+    ConfiguracionVisualizacionDocumentosComponent,
+      ConfiguracionFirmasComponent
 
 
 

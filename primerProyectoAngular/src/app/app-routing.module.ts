@@ -28,6 +28,9 @@ import { ConfiguracionVisualizacionDocumentosComponent } from './componente/conf
 import { ConfiguracionEmisionComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos-resolutivos/configuracion-emision/configuracion-emision.component';
 import { GestionfirmasComponent } from './componente/configuracionesParametros/contenidos-tabs/gestionfirmas/gestionfirmas.component';
 import { DocumentosResolutivosComponent } from './componente/configuracionesParametros/contenidos-tabs/documentos-resolutivos/documentos-resolutivos.component';
+
+import { ConfiguracionFirmasComponent } from './componente/configuracionesParametros/contenidos-tabs/gestionfirmas/configuracion-firmas/configuracion-firmas.component';
+
 const routes: Routes = [
   { path: 'entidades', component: FiltroEntidadesComponent },
   { path: 'cadena', component: FiltroCadenaComponent },
@@ -56,6 +59,7 @@ const routes: Routes = [
   { path: 'documentosResolutivos', component:DocumentosResolutivosComponent},
   { path: 'configuracionEmisionDR', component:ConfiguracionEmisionComponent},
   { path: 'gestionFirmas', component:GestionfirmasComponent},
+  { path: 'configuracion-firmas', component:ConfiguracionFirmasComponent},
 
 
 
