@@ -54,7 +54,7 @@ const routes: Routes = [
   { path: 'consultas-PS', component: ConsultarPsComponent },
   { path: 'gestion-tramite-PS', component: GestionTramitePSComponent },
   {path: 'mis-solicitudes/seguimiento-tramite', component: PlantillaSeguimientoTramiteComponent},
-  {path: 'mis-solicitudes', component:MisSolicitudesComponent}
+  {path: 'mis-solicitudes', component:MisSolicitudesComponent},
 
   { path: 'gestion-area', component: GestionAreasComponent },
   { path: 'gestion-area-configuraciones', component: ConfiguracionesGestionAreasComponent },

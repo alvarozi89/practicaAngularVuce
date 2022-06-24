@@ -9,7 +9,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatExpansionModule } from '@angular/material/expansion';
 import { FiltroEntidadesComponent } from './componente/entidades/filtro-entidades/filtro-entidades.component';
 import { EntidadesCardComponent } from './componente/entidades/entidades-card/entidades-card.component';
 import { FiltroCadenaComponent } from './componente/cadena-tramite/filtro-cadena/filtro-cadena.component';
@@ -92,10 +91,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
     ConfiguracionEmisionComponent,
     GestionfirmasComponent,
     ConfiguracionVisualizacionDocumentosComponent,
-    ConfiguracionFirmasComponent
+    ConfiguracionFirmasComponent,
     MisSolicitudesComponent,
     FiltroMisSolicitudesComponent,
-    PlantillaSeguimientoTramiteComponent, 
+    PlantillaSeguimientoTramiteComponent,
   ],
   imports: [
     BrowserModule,
