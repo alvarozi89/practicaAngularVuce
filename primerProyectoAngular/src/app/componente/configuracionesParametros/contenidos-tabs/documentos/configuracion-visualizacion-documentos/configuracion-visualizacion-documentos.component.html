@@ -47,19 +47,18 @@
 
             <mat-grid-tile class="layout-row">
                 <mat-card class="m-3">
-                    
-                    <mat-card-title>
-                        <h3> <b>Confidencialidad*</b> </h3>
-                        <button (click)="mostrarOpciones()" class="text-danger" mat-icon-button
-                            aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                            <mat-icon>{{icono}}</mat-icon>
-                        </button>
-                    </mat-card-title>
-                    
-                    <hr>
-               
-                    <div *ngIf="vistaOpciones==true">
+
+                    <mat-card-title-group>
+                        <h1> <b>Informe tecnico*</b> </h1>                  
+                            <button (click)="mostrarOpciones2()" class="text-danger" mat-icon-button
+                                aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                <mat-icon>{{icono}}</mat-icon>
+                            </button>                    
+                    </mat-card-title-group>
+
+                    <div *ngIf="vistaOpciones2==true">
+                        <hr>
                         <mat-card class="m-2">
                             <mat-radio-group aria-label="Select an option" class="text-center">
                                 <mat-radio-button value="1"></mat-radio-button>
@@ -78,36 +77,48 @@
                             </mat-radio-group>
                             <mat-label>No aplica</mat-label>
                         </mat-card>
-                </div>
+                    </div>
                 </mat-card>
             </mat-grid-tile>
 
             <mat-grid-tile class="layout-row">
                 <mat-card class="m-3">
-                    <mat-card-title>
-                        <h3> <b>Visualizacion para el usuario*</b> </h3>
-                    </mat-card-title>
-                    <hr>
-                    <div class="m-2">
-                        <section class="example-section" [formGroup]="toppings">
-                            <mat-card class="m-2">
-                                <mat-checkbox color="warn" formControlName="opcion1">Evaluador</mat-checkbox>
-                            </mat-card>
-                            <mat-card class="m-2">
-                                <mat-checkbox color="warn" formControlName="opcion2">Resolutor</mat-checkbox>
-                            </mat-card>
-                            <mat-card class="m-2">
-                                <mat-checkbox color="warn" formControlName="opcion3">Administrado</mat-checkbox>
-                            </mat-card>
-                            <mat-card class="m-2">
-                                <mat-checkbox color="warn" formControlName="opcion4">Terceros</mat-checkbox>
-                            </mat-card>
-                        </section>
+
+                    <mat-card-title-group>
+                        <h1> <b>Visualizacion para el usuario*</b> </h1>              
+                            <button (click)="mostrarOpciones()" class="text-danger" mat-icon-button
+                                aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                <mat-icon>{{icono}}</mat-icon>
+                            </button>
+                    </mat-card-title-group>
+
+                    <div *ngIf="vistaOpciones==true">
+                        <hr>
+                        <div class="m-2">
+                            <section class="example-section" [formGroup]="toppings">
+                                <mat-card class="m-2">
+                                    <mat-checkbox color="warn" formControlName="opcion1">Evaluador</mat-checkbox>
+                                </mat-card>
+                                <mat-card class="m-2">
+                                    <mat-checkbox color="warn" formControlName="opcion2">Resolutor</mat-checkbox>
+                                </mat-card>
+                                <mat-card class="m-2">
+                                    <mat-checkbox color="warn" formControlName="opcion3">Administrado</mat-checkbox>
+                                </mat-card>
+                                <mat-card class="m-2">
+                                    <mat-checkbox color="warn" formControlName="opcion4">Terceros</mat-checkbox>
+                                </mat-card>
+                            </section>
+                        </div>
                     </div>
                 </mat-card>
             </mat-grid-tile>
 
+
         </mat-grid-list>
+
+
 
     </div>
 
@@ -261,5 +272,5 @@
         </div>
     </div>
 
-    
+
 </div>

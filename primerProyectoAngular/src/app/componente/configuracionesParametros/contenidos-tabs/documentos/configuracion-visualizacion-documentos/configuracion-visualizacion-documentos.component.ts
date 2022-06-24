@@ -10,6 +10,7 @@ export class ConfiguracionVisualizacionDocumentosComponent implements OnInit {
   panelOpenState = false
   vistaFormTramite=false;
   vistaOpciones = false;
+  vistaOpciones2 = false;
   vistaFormRegistroSolicitud= false;
   activarEditar=true;
   vistaFormCreacionSuce=false
@@ -40,6 +41,17 @@ export class ConfiguracionVisualizacionDocumentosComponent implements OnInit {
 
   mostrarOpciones() {
     this.vistaOpciones = !this.vistaOpciones;
+    this.activarEditar= !this.activarEditar;
+    if(this.icono=="add_circle_outline"){
+      this.icono= "remove_circle_outline"
+    }
+    else{
+      this.icono= "add_circle_outline"
+    }
+  }
+
+  mostrarOpciones2() {
+    this.vistaOpciones2 = !this.vistaOpciones2;
     this.activarEditar= !this.activarEditar;
     if(this.icono=="add_circle_outline"){
       this.icono= "remove_circle_outline"
