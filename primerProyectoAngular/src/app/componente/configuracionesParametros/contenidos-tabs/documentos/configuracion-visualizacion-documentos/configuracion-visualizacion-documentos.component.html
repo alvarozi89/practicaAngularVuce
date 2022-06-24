@@ -49,15 +49,15 @@
                 <mat-card class="m-3">
 
                     <mat-card-title-group>
-                        <h1> <b>Informe tecnico*</b> </h1>                  
-                            <button (click)="mostrarOpciones2()" class="text-danger" mat-icon-button
+                        <h1> <b>Informe tecnico*</b> </h1>                      
+                            <button (click)="mostrarOpciones()" class="text-danger" mat-icon-button
                                 aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">
-                                <mat-icon>{{icono}}</mat-icon>
-                            </button>                    
+                                <mat-icon>{{icono2}}</mat-icon>
+                            </button>                     
                     </mat-card-title-group>
 
-                    <div *ngIf="vistaOpciones2==true">
+                    <div *ngIf="vistaOpciones==true">
                         <hr>
                         <mat-card class="m-2">
                             <mat-radio-group aria-label="Select an option" class="text-center">
@@ -83,17 +83,16 @@
 
             <mat-grid-tile class="layout-row">
                 <mat-card class="m-3">
-
                     <mat-card-title-group>
-                        <h1> <b>Visualizacion para el usuario*</b> </h1>              
-                            <button (click)="mostrarOpciones()" class="text-danger" mat-icon-button
+                        <h1> <b>Visualizacion para el usuario*</b> </h1>       
+                            <button (click)="mostrarOpciones2()" class="text-danger" mat-icon-button
                                 aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">
-                                <mat-icon>{{icono}}</mat-icon>
+                                <mat-icon>{{icono3}}</mat-icon>
                             </button>
                     </mat-card-title-group>
 
-                    <div *ngIf="vistaOpciones==true">
+                    <div *ngIf="vistaOpciones2==true">
                         <hr>
                         <div class="m-2">
                             <section class="example-section" [formGroup]="toppings">

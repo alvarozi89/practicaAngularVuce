@@ -11,10 +11,10 @@ export class ConfiguracionVisualizacionDocumentosComponent implements OnInit {
   vistaFormTramite=false;
   vistaOpciones = false;
   vistaOpciones2 = false;
-  vistaFormRegistroSolicitud= false;
   activarEditar=true;
-  vistaFormCreacionSuce=false
   icono="add_circle_outline"
+  icono2="add_circle_outline"
+  icono3="add_circle_outline"
 
   toppings = this._formBuilder.group({
     opcion1: false,
@@ -41,23 +41,21 @@ export class ConfiguracionVisualizacionDocumentosComponent implements OnInit {
 
   mostrarOpciones() {
     this.vistaOpciones = !this.vistaOpciones;
-    this.activarEditar= !this.activarEditar;
-    if(this.icono=="add_circle_outline"){
-      this.icono= "remove_circle_outline"
+    if(this.icono2=="add_circle_outline"){
+      this.icono2= "remove_circle_outline"
     }
     else{
-      this.icono= "add_circle_outline"
+      this.icono2= "add_circle_outline"
     }
   }
 
   mostrarOpciones2() {
     this.vistaOpciones2 = !this.vistaOpciones2;
-    this.activarEditar= !this.activarEditar;
-    if(this.icono=="add_circle_outline"){
-      this.icono= "remove_circle_outline"
+    if(this.icono3=="add_circle_outline"){
+      this.icono3= "remove_circle_outline"
     }
     else{
-      this.icono= "add_circle_outline"
+      this.icono3= "add_circle_outline"
     }
   }
 
