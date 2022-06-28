@@ -9,8 +9,11 @@ import { NotificationService } from 'src/app/notification.service';
   styleUrls: ['./tramites-frecuentes.component.css']
 })
 export class TramitesFrecuentesComponent implements OnInit {
+  currentRate = 6;
   displayedColumns = ['favoritos', 'entidad', 'tupa', 'formato', 'nombreFormato', 'tramiteCurso', 'tasa', 'plazo', 'acciones'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  clickedRows = new Set<PeriodicElement>();
+  selectedRow: any;
 
   @ViewChild(MatPaginator, { static: false })
   set paginator(value: MatPaginator) {
@@ -29,18 +32,19 @@ export class TramitesFrecuentesComponent implements OnInit {
   mostrar = true;
   mostrarEstrella = false;
 
-  showToasterSuccess(valor: string ){
-      if(valor == '1'){
+  showToasterSuccess(valor: boolean ){
+      if(valor == true){
         this.mostrar = false;
         this.mostrarEstrella = true;
         this.notifyService.showSuccess("Agregada a mis favoritos exitosamente", "Éxito");
 
-      }else if (valor == "2") {
+      }else if (valor == false) {
         this.mostrar = true;
         this.mostrarEstrella = false;
         this.notifyService.showSuccess("Se ha eliminado de mis favoritos exitosamente", "Éxito");
       }
   }
+
 
   funcion(){
     this.notifyService.showError("Something is wrong", "tutsmake.com");
@@ -62,7 +66,7 @@ export class TramitesFrecuentesComponent implements OnInit {
 
 }
 export interface PeriodicElement {
-  favoritos: string,
+  favoritos: Boolean,
   entidad: string;
   tupa: string;
   formato: string;
@@ -75,12 +79,12 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
-  { favoritos: 'icono', entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: true, entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: false, entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: false, entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: true, entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: false, entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: true, entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: false, entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
+  { favoritos: true, entidad: 'prueba', tupa: 'descripcion', formato: 'prueba', nombreFormato: 'prueba', tramiteCurso: 2, tasa: 'prueba', plazo: 'prueba', acciones: 'prueba' },
 ]

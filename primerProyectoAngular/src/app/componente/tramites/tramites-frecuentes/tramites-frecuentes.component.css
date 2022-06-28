@@ -36,3 +36,7 @@ table {
   font-weight: 500;
   padding-top: 30px;
 }
+
+.selected {
+  background-color: red;
+}
