@@ -378,8 +378,8 @@
               <div class="modalPrueba">
                 Exitoso
                 <br>
-                <span class="material-icons  modal-icon-start">check_circle_outline</span>        
-            
+                <span class="material-icons  modal-icon-start">check_circle_outline</span>
+
                 <h3>Has registrado exitosamente</h3>
                 <h3>La solicitud No. 548789</h3>
               </div>
@@ -388,7 +388,7 @@
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="finalizarModal()" routerLink="/entidades">Aceptar</button>
               </div>
             </div>
-           
+
         </div>
       </div>
     </div>
@@ -460,17 +460,15 @@
 
       </div>
       <div class="comentarios">
-
         Selecciona los documentos a adjuntar(Maximo de 10 MB): Archivos*.PDF, *.DOC
-
       </div>
 
       <div class="text-center">
-
         <button type="button" class="btn btn-outline-danger m-2" data-bs-dismiss="modal">Cancelar</button>
-        <button  data-bs-dismiss="modal" mat-raised-button color="warn"
+        <button (click)="showToasterSuccess()" data-bs-dismiss="modal" mat-raised-button color="warn"
           style="background-color: rgb(227, 8, 8);" routerLink="/tabsNumber">Adjuntar archivo </button>
       </div>
+
     </div>
   </div>
 </div>
