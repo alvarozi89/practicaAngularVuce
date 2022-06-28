@@ -1,0 +1,234 @@
+<div class="container">
+  <h1>Configuración de firma digital</h1>
+
+  <h2>Entidad: IPEN</h2>
+
+  <div class="row">
+
+    <div class="col-6">
+
+    <h1>Procedimiento: Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h1>
+    </div>
+    <div class="col-6">
+      <h1>Tipo de documento: DR aprobado</h1>
+      </div>
+  </div>
+
+  <div class="container example-button-container">
+    <button class="boton-perzonalizado" mat-raised-button color="accent"
+    aria-label="Example icon button with a plus one icon" routerLink="/gestionFirmas">
+    <mat-icon>arrow_back</mat-icon>
+    </button>
+    <h3 class="text-danger d-inline"> <b> Volver</b> </h3>
+    </div>
+  <hr>
+
+  <div class="col-lg-3 my-4">
+    <div class="form-group">
+      <select class="form-control">
+        <option value="">Tipo de archivo</option>
+        <option value=""></option>
+      </select>
+    </div>
+  </div>
+
+    <div class="card my-4">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-3 my-2">
+            <div class="form-group">
+              <h1> <b>Rol 1</b> </h1>
+            </div>
+          </div>
+          <div class="d-flex flex-row-reverse col-lg-9 my-2">
+            <div class="form-group">
+              <button (click)="mostrarContenidoGestionTramite()"   class="text-danger" mat-icon-button
+              aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+              <mat-icon>{{icono}}</mat-icon>
+            </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="formDatosTramite" *ngIf="vistaFormTramite==true">
+
+      <!-- aqui inicia la card -->
+  <br>
+  <mat-grid-list cols="3" rowHeight="1:1">
+
+    <mat-grid-tile class="layout-row">
+      <mat-card class="m-3">
+        <mat-card class="m-2">
+          <mat-form-field appearance="fill">
+            <mat-label>Motivo</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-card>
+        <mat-card class="m-2">
+          <mat-form-field appearance="fill">
+            <mat-label>Alineación horizontal</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-card>
+        <mat-card class="m-2">
+          <mat-form-field appearance="fill">
+            <mat-label>Alineación vertical</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-card>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile class="layout-row">
+      <mat-card class="m-3">
+        <mat-card-title><h3> <b>Tipo de firma *</b> </h3></mat-card-title>
+        <hr>
+        <mat-card class="m-2">
+          <section class="example-section" [formGroup]="toppings">
+            <p><mat-checkbox formControlName="pepperoni">I= Individual</mat-checkbox></p>
+          </section>
+        </mat-card>
+        <mat-card class="m-2">
+          <section class="example-section" [formGroup]="toppings">
+            <p><mat-checkbox formControlName="pepperoni">A= Automatizada</mat-checkbox></p>
+          </section>
+        </mat-card>
+      </mat-card>
+    </mat-grid-tile>
+
+
+    <mat-grid-tile class="layout-row">
+      <mat-card class="m-3">
+        <mat-card-title><h3> <b>Posición imagen *</b> </h3></mat-card-title>
+        <hr>
+        <mat-card class="m-2">
+          <section class="example-section" [formGroup]="toppings">
+            <p><mat-checkbox formControlName="pepperoni">H= Horizontal</mat-checkbox></p>
+          </section>
+        </mat-card>
+        <mat-card class="m-2">
+          <section class="example-section" [formGroup]="toppings">
+            <p><mat-checkbox formControlName="pepperoni">V= Vertical</mat-checkbox></p>
+          </section>
+        </mat-card>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile class="layout-row">
+      <mat-card class="m-3">
+        <mat-card-title><h3> <b>Posición Firma *</b> </h3></mat-card-title>
+        <hr>
+        <mat-card class="m-1">
+          <div class="row">
+            <div class="col-3">
+              <a mat-stroked-button  target="_blank">1</a>
+              <a mat-stroked-button  target="_blank">4</a>
+              <a mat-stroked-button  target="_blank">7</a>
+
+            </div>
+
+            <div class="col-3">
+              <a mat-stroked-button  target="_blank">2</a>
+              <a mat-stroked-button  target="_blank">5</a>
+              <a mat-stroked-button  target="_blank">8</a>
+
+            </div>
+
+            <div class="col-3">
+              <a mat-stroked-button  target="_blank">3</a>
+              <a mat-stroked-button  target="_blank">6</a>
+              <a mat-stroked-button  target="_blank">9</a>
+
+            </div>
+
+          </div>
+
+
+        </mat-card>
+
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile class="layout-row">
+
+        <mat-card class="m-2">
+          <mat-form-field appearance="fill">
+            <mat-label>Página de firma</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-card>
+
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+  </div>
+
+    <div class="card my-4">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-3 my-2">
+            <div class="form-group">
+              <h1> <b>Rol 2</b> </h1>
+            </div>
+          </div>
+          <div class="d-flex flex-row-reverse col-lg-9 my-2">
+            <div class="form-group">
+              <button class="text-danger" mat-icon-button
+              aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+              <mat-icon>{{icono}}</mat-icon>
+            </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card my-4">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-3 my-2">
+            <div class="form-group">
+              <h1> <b>Rol 3</b> </h1>
+            </div>
+          </div>
+          <div class="d-flex flex-row-reverse col-lg-9 my-2">
+            <div class="form-group">
+              <button class="text-danger" mat-icon-button
+              aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+              <mat-icon>{{icono}}</mat-icon>
+            </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <button mat-stroked-button color="warn">Cancelar Configuración</button>
+      <button mat-raised-button color="warn" class="m-2" routerLink="">Guardar</button>
+    </div>
+
+</div>

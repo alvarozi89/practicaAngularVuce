@@ -1,0 +1,101 @@
+.mat-form-field+.mat-form-field {
+    margin-left: 8px;
+}
+
+.text-inside-grid {
+    position: absolute;
+    left: 5px;
+    font-size: medium;
+    padding-top: 15px;
+}
+
+.example-container {
+    height: 400px;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+}
+
+.tituloPrincipal {
+    display: inline-block;
+    padding: 15px;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.titulosSecundarios {
+    display: inline-block;
+    padding: 5px;
+    font-size: x-large;
+    font-weight: 500;
+    padding-top: 15px;
+}
+
+.comentarios {
+    font-size: medium;
+    display: inline-block;
+    padding: 15px;
+    color: gray;
+}
+
+.table {
+    padding-top: 15px;
+}
+
+.tableColorTitulo {
+    background-color: grey;
+    color: white;
+    font-size: medium;
+
+}
+
+.tableColorCeldas {
+    background-color: rgb(238, 236, 236);
+    font-size: medium;
+}
+
+.tituloDesplegable {
+    display: inline-block;
+    padding: 5px;
+    font-size: x-large;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+.tabs {
+    font-weight: 500;
+    text-decoration-color: red;
+}
+
+.demo-table {
+    width: 100%;
+}
+
+.mat-row .mat-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+}
+
+.mat-row:hover .mat-cell {
+    border-color: currentColor;
+}
+
+.demo-row-is-clicked {
+    font-weight: bold;
+}
+
+.boton-perzonalizado {
+    padding: 0 8px;
+    background-color: rgb(227, 8, 8);
+    min-width: 30px;
+    line-height: 34px
+}
+
+:checked {
+    padding: 0 8px;
+    background-color: rgb(227, 8, 8);
+
+  }
