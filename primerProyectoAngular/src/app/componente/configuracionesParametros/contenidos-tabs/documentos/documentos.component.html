@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="tituloPrincipal">
+    Documentos
+  </div><br>
+  <div class="comentarios">
+    Seleccione que tipo de configuracion desea realizar.
+  </div>
+
+  <app-tabs></app-tabs>
+  <div class="alinear">
+    <div class="table">
+      <table mat-table [dataSource]="dataSource">
+
+
+        <ng-container matColumnDef="entidad">
+          <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Entidad </th>
+          <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.entidad}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="tupa">
+          <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Tupa </th>
+          <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.tupa}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="procedimiento">
+          <th mat-header-cell *matHeaderCellDef class=" tableColorTitulo"> Procedimiento</th>
+          <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.procedimiento}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="acciones">
+          <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Acciones </th>
+          <td mat-cell *matCellDef="let element" class="tableColorCeldas">
+            <button routerLink="/configuracion-visualizacion-de-documentos" class="text-danger" mat-icon-button
+              aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+              <mat-icon matTooltip="Visualizacion" aria-label="Button that displays a tooltip when focused or hovered over"
+                class="color-icono">
+                <mat-icon>assignment_turned_in</mat-icon>
+              </mat-icon>
+            </button>
+            <button (click)="openDialog()" class="text-danger" mat-icon-button >
+              <mat-icon matTooltip="Doc. digitalizado" 
+                class="color-icono">
+                <mat-icon>desktop_windows</mat-icon>
+              </mat-icon>
+            </button>
+          </td>
+
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+
+  </div>

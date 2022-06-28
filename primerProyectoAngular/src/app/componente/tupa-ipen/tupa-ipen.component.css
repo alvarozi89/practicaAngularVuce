@@ -89,3 +89,21 @@ table {
   padding-top: 25px;
  
 }
+
+.modalPrueba{
+  font-size: xx-large;
+  padding-top: 15px;
+  align-content: center;
+  text-align: center;
+}
+
+.modal-icon-start{
+ padding-top: 25px;
+ color: green;
+ font-size: 90px;;
+}
+
+.boton{
+  text-align: center;
+ 
+}

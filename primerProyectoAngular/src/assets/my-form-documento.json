@@ -25,30 +25,12 @@
       }
     },
     {
-      "name": "subpartidaNacional",
-      "label": "Subpartida Nacional",
-      "value": "",
-      "type": "text-area-icon",
-      "validators": {
-        "required": true
-      }
-    },
-    {
       "name": "unidadMedidaFisica",
       "label": "unidad de Medida Fisica",
       "type": "select",
       "options": {
         "items": []
       },
-      "validators": {
-        "required": true
-      }
-    },
-    {
-      "name": "numeroLicenciaIpen",
-      "label": "Número de licencia IPEN",
-      "value": "",
-      "type": "text",
       "validators": {
         "required": true
       }

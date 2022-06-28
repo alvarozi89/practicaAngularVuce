@@ -1,0 +1,113 @@
+.tituloPrincipal {
+    display: inline-block;
+    padding: 13px;
+    font-size: xx-large;
+    font-weight: bolder;
+    padding-top: 50px;
+  }
+
+  .comentarios {
+    font-size: medium;
+    display: inline-block;
+    padding: 13px;
+    color:gray;
+    padding-top: 25px;
+  }
+
+  .accordion{
+    padding-top: 25px;
+   
+  }
+
+  .tituloDesplegable{
+    display: inline-block;
+    padding: 5px;
+    font-size: x-large;
+    font-weight: 500;
+    padding-top: 10px;
+  }
+
+  .text-inside-grid {
+    position: absolute;
+    left: 5px;
+    font-size: medium;
+    padding-top: 15px;
+  }
+  
+
+  .table{
+    padding-top: 15px;
+  }
+
+  table {
+    width: 100%;
+  }
+  
+
+  .tableColorTitulo{
+    background-color: grey;
+    color: white;
+    font-size: medium;
+    
+  }
+
+  .tableColorCeldas{
+    background-color: rgb(238, 236, 236);
+    font-size: medium;
+  }
+
+  .titulosSecundarios {
+    display: inline-block;
+    padding: 10px;
+    font-size: x-large;
+    font-weight: 500;
+    padding-top: 15px;
+  }
+  
+  .icon-people{
+    font-size: medium;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+  
+   }
+   .icon-people-size{
+    font-size: 50px;
+    
+  
+   }
+
+   .background-letter-color{
+    border-radius: 10px;
+    background-color: rgb(30, 204, 44);
+    font-size: medium;
+    color: darkgreen;
+
+   }
+   .background-letter-color-2{
+    border-radius: 5px;
+    background-color: rgb(224, 216, 156);
+    font-size: medium;
+    color: rgb(216, 153, 26);
+
+   }
+   .background-letter-color-3{
+    border-radius: 5px;
+    background-color: rgb(200, 202, 198);
+    font-size: medium;
+    color: rgb(116, 117, 116);
+
+   }
+
+   .alinear{
+    padding: 5px;
+    padding-top: 15px;
+  }
+  .boton-perzonalizado{
+
+    background-color: rgb(227, 8, 8);
+    min-width: 40px;
+    line-height: 34px;
+    padding: 0 8px;
+    
+  } 

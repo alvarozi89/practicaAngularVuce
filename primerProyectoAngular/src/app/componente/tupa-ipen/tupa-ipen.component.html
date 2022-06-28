@@ -38,7 +38,7 @@
           <br>
           <div class="titulosSecundarios">Trazabilidad</div>
           <div class="table">
-            <table mat-table [dataSource]="dataSource">
+            <table mat-table [dataSource]="dataSourceTrazabilidad">
 
               <!-- Fecha registro Column -->
               <ng-container matColumnDef="fechaRegistro">
@@ -148,7 +148,7 @@
       </mat-tab>
     </mat-tab-group>
   </mat-expansion-panel>
-  
+
   <!--Finaliza datos solicitante-->
   <!-- otro tab -->
   <!--Inicia registro de tramite-->
@@ -175,7 +175,7 @@
       <!--finaliza tab detalle-->
       <!--Inicia tab producto-->
       <mat-tab label="Producto">
-        
+
         <mat-grid-list cols="3" rowHeight="fit">
           <div *ngIf="vistaBusqueda != true">
           <div class="container example-button-container my-2">
@@ -193,7 +193,7 @@
           </mat-form-field>
           <div class="d-flex flex-row-reverse m-2" *ngIf="vistaFormDocumento==true">
             <div class="form-group">
-              <button mat-raised-button color="warn" style="background-color: rgb(227, 8, 8);" (click)="guardarProducto()"> Guardar </button>
+              <button mat-raised-button color="warn" style="background-color: rgb(227, 8, 8);" (click)="guardarProducto(formDataDocumento)"> Guardar </button>
             </div>
           </div>
         </div>
@@ -267,24 +267,24 @@
 
             <div *ngIf="vistaFormDocumento!=true">
             <div  *ngIf="vistaBusqueda != true "class="table">
-              <table mat-table [dataSource]="dataSource">
+              <table mat-table [dataSource]="dataSourceProducto">
 
                 <!-- Fecha registro Column -->
-                <ng-container matColumnDef="fechaRegistro">
+                <ng-container matColumnDef="tipoProducto">
                   <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Tipo producto </th>
-                  <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaRegistro}} </td>
+                  <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{tipoProductoform}} </td>
                 </ng-container>
 
                 <!-- Etapa Column -->
-                <ng-container matColumnDef="etapa">
+                <ng-container matColumnDef="partidaArancelaria">
                   <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Partida arancelaria </th>
-                  <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.etapa}} </td>
+                  <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{partidaArancelariaform}} </td>
                 </ng-container>
 
                 <!-- Descripcion Column -->
-                <ng-container matColumnDef="descripcion">
+                <ng-container matColumnDef="subpartida">
                   <th mat-header-cell *matHeaderCellDef class="tableColorTitulo"> Subpartida nacional </th>
-                  <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.descripcion}} </td>
+                  <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{idSubpartida}} </td>
                 </ng-container>
 
                 <!-- Fecha Estimada Column -->
@@ -293,10 +293,8 @@
                   <td mat-cell *matCellDef="let element" class="tableColorCeldas"> {{element.fechaEstimada}} </td>
                 </ng-container>
 
-
-
-                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                <tr mat-header-row *matHeaderRowDef="displayedColumnsProducto"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumnsProducto;"></tr>
               </table>
             </div>
           </div>
@@ -366,12 +364,35 @@
 
 
     </mat-tab-group>
-
+    <div class="Modal">
     <div class="text-center">
       <button mat-stroked-button color="warn">Cancelar proceso</button>
-      <button mat-raised-button color="warn" class="m-2" [disabled]="disabledButton">Enviar solicitud</button>
+      <button data-bs-toggle="modal" data-bs-target="#exampleModal2" mat-raised-button color="warn" class="m-2" [disabled]="!botonDescargarAdjuntos" (click)="abrirModal()">Enviar solicitud</button>
     </div>
 
+     <!-- Modal -->
+     <div *ngIf="modal" class="modal fade modal-dialog modal-lg" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+              <div class="modalPrueba">
+                Exitoso
+                <br>
+                <span class="material-icons  modal-icon-start">check_circle_outline</span>        
+            
+                <h3>Has registrado exitosamente</h3>
+                <h3>La solicitud No. 548789</h3>
+              </div>
+
+              <div class="boton" >
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="finalizarModal()" routerLink="/entidades">Aceptar</button>
+              </div>
+            </div>
+           
+        </div>
+      </div>
+    </div>
+    </div>
   </mat-expansion-panel>
 
 </mat-accordion>
@@ -447,7 +468,7 @@
       <div class="text-center">
 
         <button type="button" class="btn btn-outline-danger m-2" data-bs-dismiss="modal">Cancelar</button>
-        <button (click)="showToasterSuccess()" data-bs-dismiss="modal" mat-raised-button color="warn"
+        <button  data-bs-dismiss="modal" mat-raised-button color="warn"
           style="background-color: rgb(227, 8, 8);" routerLink="/tabsNumber">Adjuntar archivo </button>
       </div>
     </div>
