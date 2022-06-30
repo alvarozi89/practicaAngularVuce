@@ -95,4 +95,4 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ScrollingModule,
   ],
 })
-export class MaterialExampleModule {}
+export class MaterialAllModule {}

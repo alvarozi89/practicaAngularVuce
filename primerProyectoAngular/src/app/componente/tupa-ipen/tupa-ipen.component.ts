@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef, ViewChild  } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { JsonFormData } from 'dynamic-form/src/lib/dynamic-form.component';
+import { JsonFormData } from 'projects/dynamic-form/src/lib/dynamic-form.component';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import { NotificationService } from 'src/app/notification.service';
 import {MatTable} from '@angular/material/table';
 import {DataSource} from '@angular/cdk/collections';
@@ -53,6 +54,21 @@ export class TupaIpenComponent implements OnInit {
   dataToDisplay = [...this.ELEMENT_DATA_PRODUCTO];
   dataSourceProducto = new ExampleDataSource(this.dataToDisplay)
 
+  /*FormGroup con todos los datos del formulario de formData */
+  formDataRetrieved = new FormGroup({
+    /*Poner aqui los campos base que están en el mismo <form> de formData así:
+    miCampoBase: new FormControl()
+    ... */
+   });
+
+   /*FormGroup con todos los datos del formulario de formDataDetalle */
+  formDataDetalleRetrieved = new FormGroup({ 
+    /*Poner aqui los campos base que están en el mismo <form> de formDataDetalle así:
+    miCampoBase: new FormControl()
+    ... */
+  });
+
+
   constructor(private http: HttpClient, private notifyService: NotificationService) {
     this.formData = { controls: [] };
     this.formDataDetalle = { controls: [] };
@@ -94,6 +110,13 @@ export class TupaIpenComponent implements OnInit {
 
   }
 
+  /**agrega los controles de form a formDataRetrieved */
+  getDynamicFormData(form: FormGroup){
+    Object.keys(form.value).forEach(key =>{
+      this.formDataRetrieved.addControl(key, form.controls[key]); 
+    })
+  }
+  
   mostrarFormProducto() {
     this.vistaFormDocumento = true;
 

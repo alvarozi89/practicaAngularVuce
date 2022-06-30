@@ -1,5 +1,5 @@
-import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, Input, OnInit, Output, SimpleChanges, EventEmitter } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 interface JsonFormValidators {
   min?: number;
@@ -46,28 +46,26 @@ export interface JsonFormData {
 @Component({
   selector: 'lib-dynamicForm',
   templateUrl: './dynamic-form.component.html',
-  styleUrls: ['./dynamic-form.component.css'],
+  styleUrls: ['./dynamic-form.component.css']
 })
 export class DynamicFormComponent implements OnInit {
-  @Input() jsonFormData: JsonFormData;
-  darkMode: boolean = false;
+  @Input()jsonFormData: JsonFormData;
+  @Output()eventData = new EventEmitter<FormGroup>();
+  public myForm: FormGroup;
 
-  public myForm: FormGroup = this.fb.group({});
-
-  constructor(private fb: FormBuilder) {
-    this.jsonFormData = { controls: [] };
-  }
-
-  toggleDarkModeHandler() {
-    this.darkMode = !this.darkMode;
+  constructor(private fb: FormBuilder) { 
+    this.jsonFormData = {controls:[]};
+    this.myForm = this.fb.group({});
+    /*Cada cambio en el formulario llama a sendForm */
+    this.myForm.valueChanges.subscribe(data => {
+      this.sendForm();
+    })
   }
 
   ngOnChanges(changes: SimpleChanges) {
     if (!changes['jsonFormData'].firstChange) {
       this.createForm(this.jsonFormData.controls);
     }
-    console.log('Form valid: ', this.myForm.valid);
-    console.log('Form values: ', this.myForm.value);
   }
 
   createForm(controls: JsonFormControls[]) {
@@ -116,22 +114,13 @@ export class DynamicFormComponent implements OnInit {
         }
       }
 
-      this.myForm.addControl(
-        control.name,
-        this.fb.control(control.value, validatorsToAdd)
-      );
+      this.myForm.addControl( control.name, this.fb.control(control.value, validatorsToAdd) );
     }
   }
 
-  onSubmit() {
-    if (this.myForm.valid)
-      document.body.classList.toggle('dark', this.darkMode);
-    if (this.myForm.valid) {
-      let fechaActual = new Date();
-      this.myForm.addControl('fecha', this.fb.control(fechaActual, []));
-    }
-    console.log('Form valid: ', this.myForm.valid);
-    console.log('Form values: ', this.myForm.value);
+  /*Envia los valores de myForm  como evento hacía el lugar donde fue llamada la librería */
+  sendForm(): void {
+    this.eventData.emit(this.myForm);
   }
 
   ngOnInit(): void {}
