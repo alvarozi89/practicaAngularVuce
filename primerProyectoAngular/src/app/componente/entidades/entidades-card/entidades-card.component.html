@@ -1,214 +1,33 @@
 <div class="container">
 <div class="titulosSecundarios">Entidades</div>
 
-<div class="cards">
-<mat-grid-list cols="3" rowHeight="2:1">
-  <mat-grid-tile class="layout-row">
-    <mat-card class="m-3">
-      <mat-card-title>DIGEMID</mat-card-title>
-      <mat-card-subtitle>Dirección general de medicamentos e insumos y drogas</mat-card-subtitle>
-      <mat-radio-group aria-label="Select an option" class="text-center">
-        <mat-radio-button value="1"></mat-radio-button>
-        <mat-radio-button value="2"></mat-radio-button>
-      </mat-radio-group>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile class="layout-row">
-    <mat-card class="m-3">
-      <mat-card-title>DIGESA</mat-card-title>
-      <mat-card-subtitle>Dirección general de salud ambiental</mat-card-subtitle>
-      <mat-radio-group aria-label="Select an option" class="text-center">
-        <mat-radio-button value="1"></mat-radio-button>
-        <mat-radio-button value="2"></mat-radio-button>
-      </mat-radio-group>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile class="layout-row">
-    <mat-card class="m-3">
-      <mat-card-title>IPEN</mat-card-title>
-      <mat-card-subtitle>Instituto Peruano de Energía Nuclear</mat-card-subtitle>
-
-      <div class="form-group" *ngIf="show">
-        <select class="form-control">
-          <option value="">Selecciona trámite</option>
-          <option value="">Exportación</option>
-          <option value="">Importación</option>
-        </select>
-
-        <div class="form-group m-2 text-center">
-          <button type="button" class="btn btn-danger" routerLink="/ipen">Continuar</button>
-        </div>
-      </div>
-
-      <mat-radio-group aria-label="Select an option" class="text-center">
-        <div id="divRadio">
-          <mat-radio-button (click)="desplegarComponente('1')" value="1"></mat-radio-button>
-          <mat-radio-button (click)="desplegarComponente('2')" value="2"></mat-radio-button>
-        </div>
-      </mat-radio-group>
-
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile class="layout-row">
-    <mat-card class="m-3">
-      <mat-card-title>MTC</mat-card-title>
-      <mat-card-subtitle>Ministerio de transportes y comunicaciones</mat-card-subtitle>
-      <mat-radio-group aria-label="Select an option" class="text-center">
-        <mat-radio-button value="1"></mat-radio-button>
-        <mat-radio-button value="2"></mat-radio-button>
-      </mat-radio-group>
-    </mat-card>
-
-  </mat-grid-tile>
-
-  <mat-grid-tile class="layout-row">
-    <mat-card class="m-3">
-      <mat-card-title>PRODUCE</mat-card-title>
-      <mat-card-subtitle>Ministerio de la producción</mat-card-subtitle>
-      <mat-radio-group aria-label="Select an option" class="text-center">
-        <mat-radio-button value="1"></mat-radio-button>
-        <mat-radio-button value="2"></mat-radio-button>
-      </mat-radio-group>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile class="layout-row">
-    <mat-card class="m-3">
-      <mat-card-title>SANIPES</mat-card-title>
-      <mat-card-subtitle>Organismo nacional de sanidad pesquera</mat-card-subtitle>
-      <mat-radio-group aria-label="Select an option" class="text-center">
-        <mat-radio-button value="1"></mat-radio-button>
-        <mat-radio-button value="2"></mat-radio-button>
-      </mat-radio-group>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile class="layout-row">
-    <mat-card class="m-3">
-      <mat-card-title>SENASA</mat-card-title>
-      <mat-card-subtitle>Servicio nacional de sanidad agraria</mat-card-subtitle>
-      <mat-radio-group aria-label="Select an option" class="text-center">
-        <mat-radio-button value="1"></mat-radio-button>
-        <mat-radio-button value="2"></mat-radio-button>
-      </mat-radio-group>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile class="layout-row">
-    <mat-card class="m-3">
-      <mat-card-title>SERFOR</mat-card-title>
-      <mat-card-subtitle>Servicio forestal y de fauna silvestre</mat-card-subtitle>
-      <div class="form-group" *ngIf="show">
-        <select class="form-control">
-          <option value="">Selecciona trámite</option>
-          <option value="">Exportación</option>
-          <option value="">Importación</option>
-          <option value="">Gestión</option>
-        </select>
-
-        <div class="form-group m-2 text-center">
-          <button type="button" class="btn btn-danger" routerLink="/ipen">Continuar</button>
-        </div>
-      </div>
-
-      <mat-radio-group aria-label="Select an option" class="text-center">
-        <div id="divRadio">
-          <mat-radio-button (click)="desplegarComponente('1')" value="1"></mat-radio-button>
-          <mat-radio-button (click)="desplegarComponente('2')" value="2"></mat-radio-button>
-        </div>
-      </mat-radio-group>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile class="layout-row">
-    <mat-card class="m-3">
-      <mat-card-title>SUCAMEC</mat-card-title>
-      <mat-card-subtitle>Super intendencia nacional de control de servicios de seguridad</mat-card-subtitle>
-      <mat-radio-group aria-label="Select an option" class="text-center">
-        <mat-radio-button value="1"></mat-radio-button>
-        <mat-radio-button value="2"></mat-radio-button>
-      </mat-radio-group>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile class="layout-row">
-    <mat-card class="m-3">
-      <mat-card-title>MINEM</mat-card-title>
-      <mat-card-subtitle>Ministerio de energía y minas</mat-card-subtitle>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile class="layout-row">
-    <mat-card class="m-3 ">
-      <mat-card-title>AGN</mat-card-title>
-      <mat-card-subtitle>Archivo general de la nación</mat-card-subtitle>
-      <mat-radio-group aria-label="Select an option" class="text-center">
-        <mat-radio-button value="1"></mat-radio-button>
-        <mat-radio-button value="2"></mat-radio-button>
-      </mat-radio-group>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile class="layout-row">
-    <mat-card class="m-3">
-      <mat-card-title>BNP</mat-card-title>
-      <mat-card-subtitle>Biblioteca nacional del perú</mat-card-subtitle>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile class="layout-row">
-    <mat-card class="m-3">
-      <mat-card-title>MINAGRI</mat-card-title>
-      <mat-card-subtitle>Ministerio de la agricultura y riego</mat-card-subtitle>
-      <mat-radio-group aria-label="Select an option" class="text-center">
-        <mat-radio-button value="1"></mat-radio-button>
-        <mat-radio-button value="2"></mat-radio-button>
-      </mat-radio-group>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile class="layout-row">
-    <mat-card class="m-3">
-      <mat-card-title>MINAM</mat-card-title>
-      <mat-card-subtitle>Ministerio de ambiente</mat-card-subtitle>
-      <div class="form-group" *ngIf="show">
-        <select class="form-control">
-          <option value="">Selecciona trámite</option>
-          <option value="">Exportación</option>
-          <option value="">Importación</option>
-          <option value="">Gestión</option>
-        </select>
-
-        <div class="form-group m-2 text-center">
-          <button type="button" class="btn btn-danger" routerLink="/ipen">Continuar</button>
-        </div>
-      </div>
-
-      <mat-radio-group aria-label="Select an option" class="text-center">
-        <div id="divRadio">
-          <mat-radio-button (click)="desplegarComponente('1')" value="1"></mat-radio-button>
-          <mat-radio-button (click)="desplegarComponente('2')" value="2"></mat-radio-button>
-        </div>
-      </mat-radio-group>
+<div class="cards" >
+<mat-grid-list cols="3" rowHeight="2:1" >
     
-    
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile class="layout-row">
+  <mat-grid-tile id="card" class="layout-row" *ngFor="let card of informacionCards; let index=index">
     <mat-card class="m-3">
-      <mat-card-title>DIGESA TACNA</mat-card-title>
-      <mat-card-subtitle>Dirección regional de salud Tacna</mat-card-subtitle>
+      <mat-card-title>{{card.nombre}}</mat-card-title>
+      <mat-card-subtitle>{{card.descripcion}}</mat-card-subtitle>
+
+      <div class="form-group" *ngIf="show">
+        <select class="form-control">
+          <option value="" *ngFor= "let tipo of tipoOperacion;">{{tipo.value}}</option>
+        </select>
+
+        <div class="form-group m-2 text-center">
+          <button type="button" class="btn btn-danger" routerLink="/ipen">Continuar</button>
+        </div>
+      </div>
+
       <mat-radio-group aria-label="Select an option" class="text-center">
-        <mat-radio-button value="1"></mat-radio-button>
-        <mat-radio-button value="2"></mat-radio-button>
+        <div id="divRadio">
+          <mat-radio-button (click)="desplegarComponente('1', index)" value="card.id"></mat-radio-button>
+          <mat-radio-button (click)="desplegarComponente('2', index)" value="card.id"></mat-radio-button>
+        </div>
       </mat-radio-group>
+
     </mat-card>
   </mat-grid-tile>
-
 </mat-grid-list>
 
 </div>

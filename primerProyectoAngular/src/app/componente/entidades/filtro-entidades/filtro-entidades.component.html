@@ -7,27 +7,23 @@
         <div class="row">
           <h4><b>Filtros de trámite</b></h4>
           <div class="col-lg-2 my-2">
-            <div class="form-group">
-              <select class="form-control">
-                <option value="">Tipo de operación</option>
-                <option value="">Importación</option>
-                <option value="">Exportación</option>
+            <div class="form-group" >
+              <select class="form-control" id="tipoOperacion" >
+               <option value="tipo.id" *ngFor="let tipo of informacionFiltro;" >{{tipo.value}}</option>
               </select>
             </div>
           </div>
           <div class="col-lg-2 my-2">
             <div class="form-group">
               <select class="form-control">
-                <option value="">Tupa</option>
-                <option value=""></option>
+                <option value="tupa.id" *ngFor="let tupa of informacionTupa;" >{{tupa.value}}</option>
               </select>
             </div>
           </div>
           <div class="col-lg-2 my-2">
             <div class="form-group">
               <select class="form-control">
-                <option value="">Formato</option>
-                <option value=""></option>
+                <option value="formato.id" *ngFor="let formato of informacionFormato;" >{{formato.value}}</option>
               </select>
             </div>
           </div>

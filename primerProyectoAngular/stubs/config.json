@@ -1,0 +1,25 @@
+[
+    {
+      "request": {
+        "url": "^/auth-service/v1/auth$",
+        "method": "GET"
+      },
+      "response": {
+        "status": 200,
+        "file": "./filtroTramite.json"
+      }
+
+      
+    },
+    {
+    "request": {
+        "url": "^/auth-service/v1/auth/cardEntidades",
+        "method": "GET"
+        },
+       "response": {
+          "status": 200,
+          "file": "./cardTramite.json"
+       }
+    }
+    
+   ]
