@@ -71,13 +71,13 @@
         <mat-radio-group aria-label="Select an option" class="text-center">
           <mat-radio-button value="1"></mat-radio-button>
         </mat-radio-group>
-        <mat-label>Si</mat-label>
+        <mat-label>Subsanar</mat-label>
       </mat-card>
       <mat-card class="m-2">
         <mat-radio-group aria-label="Select an option" class="text-center">
           <mat-radio-button value="1"></mat-radio-button>
         </mat-radio-group>
-        <mat-label>No</mat-label>
+        <mat-label>Aprovado</mat-label>
       </mat-card>
       <mat-card class="m-2">
         <mat-radio-group aria-label="Select an option" class="text-center">
@@ -456,5 +456,33 @@
   </div>
 </div>
 
+
+  <div class="text-center">
+    <button  type="button" class="btn btn-outline-danger m-2" data-bs-toggle="modal" data-bs-target="#exampleModal" >Cancelar configuración</button>
+    <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal" mat-raised-button color="warn"
+      style="background-color: rgb(227, 8, 8);" >Guardar</button>
+  </div>
+
+
 </div>
 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ¿Está seguro que no desea guardar los cambios?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">No</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" routerLink="/consultas-PS">Si</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -48,7 +48,7 @@ table {
   background-color: grey;
   color: white;
   font-size: medium;
-  
+
 }
 .tableColorCeldas{
   background-color: rgb(238, 236, 236);
@@ -87,7 +87,7 @@ table {
 
 .accordion{
   padding-top: 25px;
- 
+
 }
 
 .modalPrueba{
@@ -105,5 +105,11 @@ table {
 
 .boton{
   text-align: center;
- 
+
+}
+.boton-perzonalizado {
+  padding: 0 8px;
+  background-color: rgb(227, 8, 8);
+  min-width: 30px;
+  line-height: 34px
 }

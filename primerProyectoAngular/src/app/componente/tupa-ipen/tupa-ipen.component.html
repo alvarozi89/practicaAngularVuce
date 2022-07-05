@@ -346,7 +346,7 @@
                   </button>
                   <button class="text-danger" mat-icon-button
                     aria-label="Example icon button with a vertical three dot icon" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
+                    data-bs-target="#exampleModal4">
                     <mat-icon>cloud_upload</mat-icon>
                   </button>
                 </td>
@@ -369,19 +369,19 @@
     <div class="Modal">
     <div class="text-center">
       <button mat-stroked-button color="warn">Cancelar proceso</button>
-      <button data-bs-toggle="modal" data-bs-target="#exampleModal2" mat-raised-button color="warn" class="m-2" [disabled]="!botonDescargarAdjuntos" (click)="abrirModal()">Enviar solicitud</button>
+      <button data-bs-toggle="modal" data-bs-target="#exampleModal3" mat-raised-button color="warn" class="m-2" [disabled]="!botonDescargarAdjuntos" (click)="abrirModal()">Enviar solicitud</button>
     </div>
 
      <!-- Modal -->
-     <div *ngIf="modal" class="modal fade modal-dialog modal-lg" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div *ngIf="modal" class="modal fade modal-lg" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
               <div class="modalPrueba">
                 Exitoso
                 <br>
-                <span class="material-icons  modal-icon-start">check_circle_outline</span>        
-            
+                <span class="material-icons  modal-icon-start">check_circle_outline</span>
+
                 <h3>Has registrado exitosamente</h3>
                 <h3>La solicitud No. 548789</h3>
               </div>
@@ -390,7 +390,7 @@
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="finalizarModal()" routerLink="/entidades">Aceptar</button>
               </div>
             </div>
-           
+
         </div>
       </div>
     </div>
@@ -401,7 +401,7 @@
 
 <!-- modal -->
 <!-- Modal -->
-<div class="modal fade modal-dialog modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+<div class="modal fade modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
   aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -462,16 +462,78 @@
 
       </div>
       <div class="comentarios">
-
         Selecciona los documentos a adjuntar(Maximo de 10 MB): Archivos*.PDF, *.DOC
-
       </div>
 
       <div class="text-center">
+<<<<<<< HEAD
 
         <button type="button" class="btn btn-outline-danger m-2" data-bs-dismiss="modal">Cancelar</button>
         <button  data-bs-dismiss="modal" mat-raised-button color="warn"
           style="background-color: rgb(227, 8, 8);" routerLink="/tabsNumber" (click)="showToasterSuccess()">Adjuntar archivo </button>
+=======
+        <button type="button" class="btn btn-outline-danger m-2" data-bs-toggle="modal" data-bs-target="#exampleModal2">Cancelar</button>
+        <button (click)="showToasterSuccess()" data-bs-dismiss="modal" mat-raised-button color="warn"
+          style="background-color: rgb(227, 8, 8);" routerLink="/tabsNumber">Adjuntar archivo </button>
+>>>>>>> alv
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ¿Está seguro cancelar el cargue de los archivos?  Si lo hace perderá los archivos seleccionados
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">No</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Si</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h1 class="modal-title text-center" id="exampleModalLabel">Cargue de archivos</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="row">
+
+          <div class="col-12">
+            <div class="mb-3">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Seleccione el tipo de cargue *</option>
+                <option value="1">Nuevo archivo</option>
+                <option value="1">Adjuntos Digitalizados</option>
+              </select>
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <div class="text-center">
+          <button  type="button" class="btn btn-outline-danger m-2" data-bs-dismiss="modal" >Cancelar</button>
+          <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal" mat-raised-button color="warn"
+            style="background-color: rgb(227, 8, 8);" >Cargar archivos </button>
+        </div>
       </div>
     </div>
   </div>
