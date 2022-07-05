@@ -184,14 +184,16 @@
                 style="background-color: rgb(227, 8, 8);" (click)=" mostrarFormProducto()">Nuevo Producto</button>
             </div>
           </div>
-          <lib-dynamicForm *ngIf="vistaFormDocumento==true" [jsonFormData]="formDataDocumento" style="width: 100%; ">
+          <div *ngIf="vistaFormDocumento" >
+          <lib-dynamicForm [jsonFormData]="formDataDocumento" style="width: 100%; ">
           </lib-dynamicForm>
-          <mat-form-field *ngIf="vistaFormDocumento==true" class="example-full-width" appearance="fill">
+        </div>
+          <mat-form-field *ngIf="vistaFormDocumento" class="example-full-width" appearance="fill">
             <mat-label>Subpartida Nacional <mat-icon>search</mat-icon>
             </mat-label>
             <textarea matInput (click)="mostrarBusquedaSubpartida()">{{id}}</textarea>
           </mat-form-field>
-          <div class="d-flex flex-row-reverse m-2" *ngIf="vistaFormDocumento==true">
+          <div class="d-flex flex-row-reverse m-2" *ngIf="vistaFormDocumento">
             <div class="form-group">
               <button mat-raised-button color="warn" style="background-color: rgb(227, 8, 8);" (click)="guardarProducto(formDataDocumento)"> Guardar </button>
             </div>
@@ -469,7 +471,7 @@
 
         <button type="button" class="btn btn-outline-danger m-2" data-bs-dismiss="modal">Cancelar</button>
         <button  data-bs-dismiss="modal" mat-raised-button color="warn"
-          style="background-color: rgb(227, 8, 8);" routerLink="/tabsNumber">Adjuntar archivo </button>
+          style="background-color: rgb(227, 8, 8);" routerLink="/tabsNumber" (click)="showToasterSuccess()">Adjuntar archivo </button>
       </div>
     </div>
   </div>

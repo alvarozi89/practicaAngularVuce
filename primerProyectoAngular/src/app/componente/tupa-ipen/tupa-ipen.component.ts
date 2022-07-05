@@ -95,8 +95,8 @@ export class TupaIpenComponent implements OnInit {
       });
     this.http
       .get('/assets/my-form-documento.json')
-      .subscribe((formDataElmento: any) => {
-        this.formDataDocumento = formDataElmento;
+      .subscribe((formDataDocumento: any) => {
+        this.formDataDocumento = formDataDocumento;
       });
   }
 
@@ -161,9 +161,6 @@ export class TupaIpenComponent implements OnInit {
   this.tipoProductoform="EQUIPO GENERADORES";
   this.idSubpartida=this.id;
   this.partidaArancelariaform="prueba1producto";
-  const randomElementIndex = Math.floor(Math.random() * this.ELEMENT_DATA_PRODUCTO.length);
-    this.dataToDisplay = [...this.dataToDisplay, this.ELEMENT_DATA_PRODUCTO[randomElementIndex]];
-    this.dataSourceProducto.setData(this.dataToDisplay);
   this.vistaFormDocumento=false;
     
   }
