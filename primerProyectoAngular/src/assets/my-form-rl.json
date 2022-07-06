@@ -38,6 +38,15 @@
       "validators": {
         "required": true
       }
+    },
+    {
+      "name": "direccionRepreLegal",
+      "label": "Dirección del Representante Legal",
+      "value": "",
+      "type": "text",
+      "validators": {
+        "required": true
+      }
     }
   ],
   "id": 1,
