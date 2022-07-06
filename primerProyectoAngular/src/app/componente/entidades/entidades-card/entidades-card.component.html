@@ -9,8 +9,8 @@
       <mat-card-title>{{card.nombre}}</mat-card-title>
       <mat-card-subtitle>{{card.descripcion}}</mat-card-subtitle>
 
-      <div class="form-group" *ngIf="show">
-        <select class="form-control">
+      <div class="form-group">
+        <select class="form-control" *ngIf="card.habilitar" >
           <option value="" *ngFor= "let tipo of tipoOperacion;">{{tipo.value}}</option>
         </select>
 
@@ -21,8 +21,8 @@
 
       <mat-radio-group aria-label="Select an option" class="text-center">
         <div id="divRadio">
-          <mat-radio-button (click)="desplegarComponente('1', index)" value="card.id"></mat-radio-button>
-          <mat-radio-button (click)="desplegarComponente('2', index)" value="card.id"></mat-radio-button>
+          <mat-radio-button (click)="desplegarComponente(false, index)" value="habilitar"></mat-radio-button>
+          <mat-radio-button (click)="desplegarComponente(true, index)" value="deshabilitar"></mat-radio-button>
         </div>
       </mat-radio-group>
 

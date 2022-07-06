@@ -18,21 +18,17 @@ export class EntidadesCardComponent implements OnInit {
     this.listarCard();
   }
 
-  desplegarComponente(valor: string, idCard: any) {
+  desplegarComponente(valor: boolean, idCard: any) {
+    console.log(this.informacionCards);
     this.listarTipoOperacion(idCard);
-   
-    if (valor == "2") {
-      this.show = true;
-    } else if (valor == "1") {
-      this.show = false;
-    }
+    console.log(this.informacionCards[idCard].habilitar=valor);
+    console.log(this.informacionCards);
 
   }
 
   listarTipoOperacion(idCard: any){
     this.cardTramiteService.obtenerInformacionCards().subscribe(res=>{
       this.tipoOperacion=res.entidades[idCard].tipoOperacion;
-      console.log(this.tipoOperacion)
     })
   }
 
