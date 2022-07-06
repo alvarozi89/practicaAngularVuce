@@ -1,0 +1,46 @@
+{
+       "tipoOperacion":[{
+            "id":"0",
+            "value": "Tipo Operación"
+        },
+        {
+            "id":"1",
+            "value": "Importación"
+        },
+        {
+            "id":"2",
+            "value": "Exportación"
+        }],
+
+        "tupa": [{
+            "id":"0",
+            "value": "Tupa"
+
+        },{
+            "id":"1",
+            "value": "Tupa 11"
+
+        },{
+            "id":"2",
+            "value": "Tupa 12"
+        }
+    ],
+    "formato": [{
+        "id":"0",
+        "value": "Formato"
+
+    },{
+        "id":"1",
+        "value": "IPN-001 Pre requisito TUPA 11"
+
+    }, 
+    {
+        "id":"2",
+        "value": "IPN-003 Pre requisito TUPA 11"
+    }, {
+        "id":"3",
+        "value": "IPN-004 Pre requisito TUPA 11"
+    }
+        
+]
+}

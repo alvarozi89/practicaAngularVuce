@@ -1,0 +1,45 @@
+{
+    "entidades":[{
+
+     "id": "01",
+     "nombre":"DIGEMID",
+     "descripcion": "Dirección General de Medicamentos e insumos y drogas",
+     "habilitado": false,
+     "tipoOperacion":[{
+        "id":"01",
+        "value":"Importación"
+    },{
+        "id":"02",
+        "value":"Exportación"
+    }]
+    },{
+        "id": "02",
+        "nombre":"DIGESA",
+        "descripcion": "Dirección General de Salud ambiental",
+        "habilitado": false,
+        "tipoOperacion":[{
+            "id":"01",
+            "value":"Importación"
+        },{
+            "id":"02",
+            "value":"Exportación"
+        },{
+
+            "id":"03",
+            "value":"Prueba"
+        }
+    ]
+    },{
+        "id": "03",
+        "nombre":"IPEN",
+        "descripcion": "Instituto Peruano de Energía Nuclear",
+        "habilitado": false,
+        "tipoOperacion":[{
+            "id":"01",
+            "value":"Importación"
+        },{
+            "id":"02",
+            "value":"Exportación"
+        }]
+    }]
+}
